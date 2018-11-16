@@ -769,7 +769,6 @@
 				["timing"] = (P_BMM_SINGLE_PROPERTY) <
 					name = <"timing">
 					type = <"DV_PARSABLE">
-					is_mandatory = <True>
 				>
 				["action_archetype_id"] = (P_BMM_SINGLE_PROPERTY) <
 					name = <"action_archetype_id">

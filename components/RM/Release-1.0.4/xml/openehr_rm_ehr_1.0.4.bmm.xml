@@ -732,7 +732,6 @@
   <properties id="timing">
    <name>timing</name>
    <type>DV_PARSABLE</type>
-   <is_mandatory>true</is_mandatory>
   </properties>
   <properties id="action_archetype_id">
    <name>action_archetype_id</name>

@@ -790,8 +790,7 @@
 				},
 				"timing": {
 					"name": "timing",
-					"type": "DV_PARSABLE",
-					"is_mandatory": true
+					"type": "DV_PARSABLE"
 				},
 				"action_archetype_id": {
 					"name": "action_archetype_id",
