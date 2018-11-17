@@ -12,7 +12,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/templates/_header.php');
 			
 			<h1><?php echo "$PageName";?></h1>
 			
-			<p>The following files are the openEHR Reference Model expressed in BMM format. Models in this format are used by the openEHR <a href="/downloads/ADLworkbench/home">ADL Workbench</a>, and also in the <a href="http://www.hl7.org/Special/Committees/cimi/index.cfm">CIMI project</a>. You can view the models using the ADL Workbench.</p>
+			<p>The following files are the openEHR BASE component models expressed in BMM format. Models in this format are used by the openEHR <a href="/downloads/ADLworkbench/home">ADL Workbench</a>, and also in the <a href="http://www.hl7.org/Special/Committees/cimi/index.cfm">CIMI project</a>. You can view the models using the ADL Workbench.</p>
 			<p>The openEHR Reference Model:</p>
 			<ul>
 				<?php
