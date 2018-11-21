@@ -45,23 +45,17 @@ packages = <
 			>
 			["structures"] = <
 				name = <"structures">
-				classes = <"List", "Array", "Set", "Hash", "Aggregate">
+				classes = <"List", "Array", "Set", "Hash", "Container">
 			>
 			["interval"] = <
 				name = <"interval">
 				classes = <"Interval">
 			>
-			["time"] = <
-				name = <"time">
-				classes = <
-					"IDate", "ITime", "IDate_time", "IDuration",
-					"Date", "Time", "Date_time", "Duration"
-				>
-			>
 			["iso8601_time"] = <
 				name = <"iso8601_time">
 				classes = <
-					"Iso8601_type", "Iso8601_date", "Iso8601_time", "Iso8601_date_time", "Iso8601_duration"
+					"Temporal", "Iso8601_type", 
+					"Iso8601_date", "Iso8601_time", "Iso8601_date_time", "Iso8601_duration"
 				>
 			>
 		>
@@ -84,19 +78,6 @@ packages = <
 			["resource"] = <
 				name = <"resource">
 				classes = <"AUTHORED_RESOURCE", "TRANSLATION_DETAILS", "RESOURCE_DESCRIPTION", "RESOURCE_DESCRIPTION_ITEM"> 
-			>
-		>
-	>
-	["org.openehr.base.expressions"] = <
-		name = <"org.openehr.base.expressions">
-		packages = <
-			["types"] = <
-				name = <"types">
-				classes = <"EXPR_TYPE_DEF", 
-					"TYPE_DEF_BOOLEAN",
-					"TYPE_DEF_INTEGER", "TYPE_DEF_REAL", 
-					"TYPE_DEF_DATE", "TYPE_DEF_DATE_TIME", "TYPE_DEF_TIME", "TYPE_DEF_DURATION", 
-					"TYPE_DEF_STRING", "TYPE_DEF_URI", "TYPE_DEF_TERMINOLOGY_CODE">
 			>
 		>
 	>
@@ -172,30 +153,30 @@ primitive_types = <
 
 	["List"] = <
 		name = <"List">
-		ancestors = <"Aggregate">
+		ancestors = <"Container">
 		generic_parameter_defs = <
-			["T"] = <
-				name = <"T">
+			["V"] = <
+				name = <"V">
 			>
 		>
 	>
 
 	["Array"] = <
 		name = <"Array">
-		ancestors = <"Aggregate">
+		ancestors = <"Container">
 		generic_parameter_defs = <
-			["T"] = <
-				name = <"T">
+			["V"] = <
+				name = <"V">
 			>
 		>
 	>
 
 	["Set"] = <
 		name = <"Set">
-		ancestors = <"Aggregate">
+		ancestors = <"Container">
 		generic_parameter_defs = <
-			["T"] = <
-				name = <"T">
+			["V"] = <
+				name = <"V">
 			>
 		>
 	>
@@ -241,7 +222,7 @@ primitive_types = <
 	["Hash"] = <
 		name = <"Hash">
 		documentation = <"Type defining Hash table / hash map structure, whose type parameters V and K represent a value type and an Ordered key type respectively.">
-		ancestors = <"Any">
+		ancestors = <"Container">
 		generic_parameter_defs = <
 			["V"] = <
 				name = <"V">
@@ -253,97 +234,27 @@ primitive_types = <
 		>
 	>
 
-	["Aggregate"] = <
-		name = <"Aggregate">
+	["Container"] = <
+		name = <"Container">
 		ancestors = <"Any">
 		generic_parameter_defs = <
-			["T"] = <
-				name = <"T">
+			["V"] = <
+				name = <"V">
 			>
 		>
 		is_abstract = <True>
 	>
 
-	["IDate"] = <
-		name = <"IDate">
-		documentation = <"Standard interface for Date concept.">
-		ancestors = <"Any">
+	["Temporal"] = <
+		name = <"Temporal">
+		ancestors = <"Ordered">
 		is_abstract = <True>
-	>
-
-	["ITime"] = <
-		name = <"ITime">
-		documentation = <"Standard interface for Time concept.">
-		ancestors = <"Any">
-		is_abstract = <True>
-	>
-
-	["IDate_time"] = <
-		name = <"IDate_time">
-		documentation = <"Standard interface for Date_time concept.">
-		ancestors = <"Any">
-		is_abstract = <True>
-	>
-
-	["IDuration"] = <
-		name = <"IDuration">
-		documentation = <"Standard interface for Duration concept.">
-		ancestors = <"Any">
-		is_abstract = <True>
-	>
-
-	["Date"] = <
-		name = <"Date">
-		documentation = <"Primitive System Date type.">
-		ancestors = <"IDate">
-		properties = <
-			["value"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"value">
-				type = <"Integer">
-			>
-		>
-	>
-
-	["Time"] = <
-		name = <"Time">
-		documentation = <"Primitive system Time type.">
-		ancestors = <"ITime">
-		properties = <
-			["value"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"value">
-				type = <"Integer">
-			>
-		>
-	>
-
-	["Date_time"] = <
-		name = <"Date_time">
-		documentation = <"Primitive system Date Time type.">
-		ancestors = <"IDate_time">
-		properties = <
-			["value"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"value">
-				type = <"Integer">
-			>
-		>
-	>
-
-	["Duration"] = <
-		name = <"Duration">
-		documentation = <"Primitive system Duration type.">
-		ancestors = <"IDuration">
-		properties = <
-			["value"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"value">
-				type = <"Integer">
-			>
-		>
 	>
 
 	["Iso8601_type"] = <
 		name = <"Iso8601_type">
 		documentation = <"Parent of ISO8601 types.">
-		ancestors = <"Any">
+		ancestors = <"Temporal">
 		properties = <
 			["value"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"value">
@@ -355,25 +266,25 @@ primitive_types = <
 	["Iso8601_date"] = <
 		name = <"Iso8601_date">
 		documentation = <"Date type based on IS8601 representation.">
-		ancestors = <"IDate", "Iso8601_type">
+		ancestors = <"Iso8601_type">
 	>
 
 	["Iso8601_time"] = <
 		name = <"Iso8601_time">
 		documentation = <"Time type based on IS8601 representation.">
-		ancestors = <"ITime", "Iso8601_type">
+		ancestors = <"Iso8601_type">
 	>
 
 	["Iso8601_date_time"] = <
 		name = <"Iso8601_date_time">
 		documentation = <"Date Time type based on IS8601 representation.">
-		ancestors = <"IDate_time", "Iso8601_type">
+		ancestors = <"Iso8601_type">
 	>
 
 	["Iso8601_duration"] = <
 		name = <"Iso8601_duration">
 		documentation = <"Duration type based on IS8601 representation.">
-		ancestors = <"IDuration", "Iso8601_type">
+		ancestors = <"Iso8601_type">
 	>
 
 	["Terminology_term"] = <
@@ -753,148 +664,6 @@ class_definitions = <
 					root_type = <"Hash">
 					generic_parameters = <"String", "String">
 				>
-				is_mandatory = <True>
-			>
-		>
-	>
-
-	--
-	--------------------- base.expressions.types ------------------
-	--
-
-	["EXPR_TYPE_DEF"] = <
-		name = <"EXPR_TYPE_DEF">
-		ancestors = <"Any">
-		is_abstract = <True>
-		properties = <
-			["type_name"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"type_name">
-				type = <"String">
-				is_mandatory = <True>
-			>
-			["type_anchor"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"type_anchor">
-				type = <"Any">
-				is_mandatory = <True>
-			>
-		>
-	>
-
-	["TYPE_DEF_BOOLEAN"] = <
-		name = <"TYPE_DEF_BOOLEAN">
-		ancestors = <"EXPR_TYPE_DEF">
-		properties = <
-			["type_anchor"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"type_anchor">
-				type = <"Boolean">
-				is_mandatory = <True>
-			>
-		>
-	>
-
-	["TYPE_DEF_INTEGER"] = <
-		name = <"TYPE_DEF_INTEGER">
-		ancestors = <"EXPR_TYPE_DEF">
-		properties = <
-			["type_anchor"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"type_anchor">
-				type = <"Integer">
-				is_mandatory = <True>
-			>
-		>
-	>
-
-	["TYPE_DEF_REAL"] = <
-		name = <"TYPE_DEF_REAL">
-		ancestors = <"EXPR_TYPE_DEF">
-		properties = <
-			["type_anchor"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"type_anchor">
-				type = <"Real">
-				is_mandatory = <True>
-			>
-		>
-	>
-
-	["TYPE_DEF_DATE"] = <
-		name = <"TYPE_DEF_DATE">
-		ancestors = <"EXPR_TYPE_DEF">
-		properties = <
-			["type_anchor"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"type_anchor">
-				type = <"Date">
-				is_mandatory = <True>
-			>
-		>
-	>
-
-	["TYPE_DEF_DATE_TIME"] = <
-		name = <"TYPE_DEF_DATE_TIME">
-		ancestors = <"EXPR_TYPE_DEF">
-		properties = <
-			["type_anchor"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"type_anchor">
-				type = <"Date_time">
-				is_mandatory = <True>
-			>
-		>
-	>
-
-	["TYPE_DEF_TIME"] = <
-		name = <"TYPE_DEF_TIME">
-		ancestors = <"EXPR_TYPE_DEF">
-		properties = <
-			["type_anchor"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"type_anchor">
-				type = <"Time">
-				is_mandatory = <True>
-			>
-		>
-	>
-
-	["TYPE_DEF_DURATION"] = <
-		name = <"TYPE_DEF_DURATION">
-		ancestors = <"EXPR_TYPE_DEF">
-		properties = <
-			["type_anchor"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"type_anchor">
-				type = <"Duration">
-				is_mandatory = <True>
-			>
-		>
-	>
-
-	["TYPE_DEF_STRING"] = <
-		name = <"TYPE_DEF_STRING">
-		ancestors = <"EXPR_TYPE_DEF">
-		properties = <
-			["type_anchor"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"type_anchor">
-				type = <"String">
-				is_mandatory = <True>
-			>
-		>
-	>
-
-	["TYPE_DEF_URI"] = <
-		name = <"TYPE_DEF_URI">
-		ancestors = <"EXPR_TYPE_DEF">
-		properties = <
-			["type_anchor"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"type_anchor">
-				type = <"Uri">
-				is_mandatory = <True>
-			>
-		>
-	>
-
-	["TYPE_DEF_TERMINOLOGY_CODE"] = <
-		name = <"TYPE_DEF_TERMINOLOGY_CODE">
-		ancestors = <"EXPR_TYPE_DEF">
-		properties = <
-			["type_anchor"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"type_anchor">
-				type = <"Terminology_code">
 				is_mandatory = <True>
 			>
 		>

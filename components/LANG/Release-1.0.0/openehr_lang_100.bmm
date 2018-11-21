@@ -60,7 +60,9 @@ packages = <
 			>
 		>
 	>
+>
 
+class_definitions = <
 	--
 	--------------------- lang.elom.types ------------------
 	--
@@ -125,7 +127,7 @@ packages = <
 		properties = <
 			["type_anchor"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"type_anchor">
-				type = <"Date">
+				type = <"Iso8601_date">
 				is_mandatory = <True>
 			>
 		>
@@ -137,7 +139,7 @@ packages = <
 		properties = <
 			["type_anchor"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"type_anchor">
-				type = <"Date_time">
+				type = <"Iso8601_date_time">
 				is_mandatory = <True>
 			>
 		>
@@ -149,7 +151,7 @@ packages = <
 		properties = <
 			["type_anchor"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"type_anchor">
-				type = <"Time">
+				type = <"Iso8601_time">
 				is_mandatory = <True>
 			>
 		>
@@ -161,7 +163,7 @@ packages = <
 		properties = <
 			["type_anchor"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"type_anchor">
-				type = <"Duration">
+				type = <"Iso8601_duration">
 				is_mandatory = <True>
 			>
 		>
