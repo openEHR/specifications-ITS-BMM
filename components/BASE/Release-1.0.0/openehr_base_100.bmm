@@ -138,7 +138,7 @@ primitive_types = <
 	>
 	["String"] = <
 		name = <"String">
-		ancestors = <"Any">
+		ancestors = <"Ordered">
 	>
 	["Uri"] = <
 		name = <"Uri">
@@ -218,12 +218,12 @@ primitive_types = <
 		documentation = <"Type defining Hash table / hash map structure, whose type parameters V and K represent a value type and an Ordered key type respectively.">
 		ancestors = <"Any">
 		generic_parameter_defs = <
-			["V"] = <
-				name = <"V">
-			>
 			["K"] = <
 				name = <"K">
 				conforms_to_type = <"Ordered">
+			>
+			["V"] = <
+				name = <"V">
 			>
 		>
 	>
