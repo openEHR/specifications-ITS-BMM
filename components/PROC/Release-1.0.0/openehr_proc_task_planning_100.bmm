@@ -447,7 +447,7 @@ class_definitions = <
 				name = <"top_level_plans">
 				type_def = <
 					container_type = <"List">
-					type = <"TASK_PLAN">
+					type = <"UID_BASED_ID">
 				>
 				cardinality = <|>=1|>
 			>
