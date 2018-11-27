@@ -680,8 +680,8 @@ class_definitions = <
 			["T"] = <
 				name = <"T">
 				conforms_to_type = <"TASK_ACTION">
-				is_mandatory = <True>
 			>
+			is_mandatory = <True>
 		>
 		properties = <
 			["action"] = (P_BMM_SINGLE_PROPERTY_OPEN) <
@@ -698,15 +698,15 @@ class_definitions = <
 			["T"] = <
 				name = <"T">
 				conforms_to_type = <"DISPATCHABLE_ACTION">
-				is_mandatory = <True>
 			>
+			is_mandatory = <True>
 		>
 		properties = <
 			["wait"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"wait">
 				type = <"Boolean">
-				is_mandatory = <True>
 			>
+			is_mandatory = <True>
 			["callback"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"callback">
 				type = <"CALLBACK_WAIT">
@@ -721,8 +721,8 @@ class_definitions = <
 			["T"] = <
 				name = <"T">
 				conforms_to_type = <"PERFORMABLE_ACTION">
-				is_mandatory = <True>
 			>
+			is_mandatory = <True>
 		>
 		properties = <
 			["capture_dataset"] = (P_BMM_CONTAINER_PROPERTY) <
