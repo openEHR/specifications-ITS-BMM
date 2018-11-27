@@ -516,7 +516,7 @@ class_definitions = <
 		properties = <
 			["original_language"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"original_language">
-				type = <"CODE_PHRASE">
+				type = <"Terminology_code">
 				is_mandatory = <True>
 			>
 			["is_controlled"] = (P_BMM_SINGLE_PROPERTY) <
@@ -544,7 +544,7 @@ class_definitions = <
 		properties = <
 			["language"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"language">
-				type = <"CODE_PHRASE">
+				type = <"Terminology_code">
 				is_mandatory = <True>
 			>
 			["author"] = (P_BMM_GENERIC_PROPERTY) <
@@ -628,7 +628,7 @@ class_definitions = <
 		properties = <
 			["language"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"language">
-				type = <"CODE_PHRASE">
+				type = <"Terminology_code">
 				is_mandatory = <True>
 			>
 			["purpose"] = (P_BMM_SINGLE_PROPERTY) <

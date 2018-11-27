@@ -395,13 +395,8 @@ class_definitions = <
 	--
 	["WORK_PLAN"] = <
 		name = <"WORK_PLAN">
-		ancestors = <"CONTENT_ITEM">
+		ancestors = <"CONTENT_ITEM", "AUTHORED_RESOURCE">
 		properties = <
-			["description"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"description">
-				type = <"DV_TEXT">
-				is_mandatory = <True>
-			>
 			["care_plan"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"care_plan">
 				type = <"LOCATABLE_REF">
