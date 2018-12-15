@@ -4,9 +4,10 @@
 --  				http://www.openehr.org/releases/BASE/latest/docs/bmm/bmm.html
 --				 This schema is an unofficial upgrade of the Release 1.0.2 schema, with various changes documented below.
 -- 	keywords:    reference model, meta-model, archetypes
--- 	author:      Thomas Beale
--- 	support:     Ocean Informatics <support@OceanInformatics.com>
--- 	copyright:   Apache 2.0 License <http://www.apache.org/licenses/LICENSE-2.0.html>
+-- 	author:      Thomas Beale <thomas.beale@openEHR.org>
+-- 	support:     https://openehr.atlassian.net/issues/?filter=11117
+-- 	copyright:   Copyright (c) 2009- openEHR Foundation <https://www.openEHR.org>
+-- 	license:     Apache 2.0 License <http://www.apache.org/licenses/LICENSE-2.0.html>
 -- 
 
 ------------------------------------------------------
