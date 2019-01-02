@@ -819,6 +819,7 @@ class_definitions = <
 				name = <"size">
 				type = <"Integer">
 				is_im_runtime = <True>
+				is_mandatory = <True>
 			>
 		>
 	>
