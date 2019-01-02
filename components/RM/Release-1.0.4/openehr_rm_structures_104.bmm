@@ -345,6 +345,7 @@ class_definitions = <
 					type = <"REVISION_HISTORY_ITEM">
 				>
 				cardinality = <|>=0|>
+				is_mandatory = <True>
 			>
 		>
 	>
