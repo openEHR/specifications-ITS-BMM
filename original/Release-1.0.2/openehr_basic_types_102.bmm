@@ -550,6 +550,7 @@ class_definitions = <
 			["magnitude"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"magnitude">
 				type = <"Integer">
+				is_mandatory = <True>
 			>
 		>
 	>
