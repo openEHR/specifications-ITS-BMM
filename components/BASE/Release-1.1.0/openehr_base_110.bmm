@@ -541,15 +541,15 @@ class_definitions = <
 	--------------------- base.base_types.definitions ------------------
 	--
 
-	["VALIDITY_KIND"] = (P_BMM_ENUMERATION_INTEGER) <
+	["VALIDITY_KIND"] = (P_BMM_ENUMERATION_STRING) <
 		name = <"VALIDITY_KIND">
-		ancestors = <"Integer">
+		ancestors = <"String">
 		item_names = <"mandatory", "optional", "prohibited">
 	>
 
-	["VERSION_STATUS"] = (P_BMM_ENUMERATION_INTEGER) <
+	["VERSION_STATUS"] = (P_BMM_ENUMERATION_STRING) <
 		name = <"VERSION_STATUS">
-		ancestors = <"Integer">
+		ancestors = <"String">
 		item_names = <"alpha", "beta", "release_candidate", "released", "build">
 	>
 
