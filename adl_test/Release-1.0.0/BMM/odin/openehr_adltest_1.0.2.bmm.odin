@@ -1,45 +1,20 @@
 	rm_publisher = <"openehr">
-	rm_release = <"1.0.4">
+	rm_release = <"1.0.2">
 	packages = <
-		["ORG.OPENEHR.RM.EHR"] = <
-			name = <"org.openehr.rm.ehr">
-			classes = <"EHR", "EHR_ACCESS", "EHR_STATUS", "ACCESS_CONTROL_SETTINGS">
-		>
-		["ORG.OPENEHR.RM.COMPOSITION"] = <
-			packages = <
-				["CONTENT"] = <
-					packages = <
-						["NAVIGATION"] = <
-							name = <"navigation">
-							classes = <"SECTION", ...>
-						>
-						["ENTRY"] = <
-							name = <"entry">
-							classes = <"ENTRY", "CARE_ENTRY", "ADMIN_ENTRY", "OBSERVATION", "EVALUATION", "INSTRUCTION", "ACTION", "ACTIVITY", "ISM_TRANSITION", "INSTRUCTION_DETAILS">
-						>
-						["INTEGRATION"] = <
-							name = <"integration">
-							classes = <"GENERIC_ENTRY", ...>
-						>
-					>
-					name = <"content">
-					classes = <"CONTENT_ITEM", ...>
-				>
-			>
-			name = <"org.openehr.rm.composition">
-			classes = <"COMPOSITION", "EVENT_CONTEXT">
+		["ORG.OPENEHR.TEST_PKG"] = <
+			name = <"org.openehr.test_pkg">
+			classes = <"WHOLE", "SOME_TYPE", "BOOK", "CHAPTER", "ENTRY", "CAR", "CAR_BODY", "CAR_BODY_PART", "WHEEL", "RIM", "ENGINE_PART", "ENGINE_PART_ITEM", "ITEM", "CLUSTER", "ELEMENT", "MULTIPLICITY_OBJECT", "GENERIC_PARENT", "SUPPLIER", "SUPPLIER_A", "SUPPLIER_B", "GENERIC_CHILD_OPEN_T", "GENERIC_CHILD_OPEN_U", "GENERIC_CHILD_CLOSED">
 		>
 	>
-	schema_name = <"rm_ehr">
-	schema_revision = <"1.0.4.1">
+	schema_name = <"adltest">
+	schema_revision = <"21">
 	schema_lifecycle_state = <"stable">
-	schema_author = <"Thomas Beale <thomas.beale@openehr.org>">
-	schema_description = <"openEHR Release 1.0.4 EHR schema">
+	schema_description = <"openEHR schema to support test archetypes">
 	bmm_version = <"2.3">
-	model_name = <"EHR">
+	model_name = <"TEST_PKG">
 	includes = <
 		["1"] = <
-			id = <"openehr_rm_structures_1.0.4">
+			id = <"openehr_rm_data_types_1.0.4">
 		>
 	>
 	primitive_types = <
@@ -332,555 +307,12 @@
 		>
 	>
 	class_definitions = <
-		["EHR"] = <
-			name = <"EHR">
-			properties = <
-				["system_id"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"system_id">
-					type = <"HIER_OBJECT_ID">
-					is_mandatory = <True>
-				>
-				["ehr_id"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"ehr_id">
-					type = <"HIER_OBJECT_ID">
-					is_mandatory = <True>
-				>
-				["time_created"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"time_created">
-					type = <"DV_DATE_TIME">
-					is_mandatory = <True>
-				>
-				["ehr_access"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"ehr_access">
-					type = <"OBJECT_REF">
-					is_mandatory = <True>
-				>
-				["ehr_status"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"ehr_status">
-					type = <"OBJECT_REF">
-					is_mandatory = <True>
-				>
-				["directory"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"directory">
-					type = <"OBJECT_REF">
-				>
-				["compositions"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"compositions">
-					cardinality = <|>=0|>
-					type_def = <
-						type = <"OBJECT_REF">
-						container_type = <"List">
-					>
-				>
-				["contributions"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"contributions">
-					cardinality = <|>=0|>
-					type_def = <
-						type = <"OBJECT_REF">
-						container_type = <"List">
-					>
-					is_mandatory = <True>
-				>
-				["most_recent_composition"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"most_recent_composition">
-					type = <"COMPOSITION">
-					is_computed = <True>
-				>
-			>
-			source_schema_id = <"openehr_rm_ehr_1.0.4">
-			uid = <502>
-		>
-		["EHR_ACCESS"] = <
-			name = <"EHR_ACCESS">
-			ancestors = <"LOCATABLE", ...>
-			properties = <
-				["settings"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"settings">
-					type = <"ACCESS_CONTROL_SETTINGS">
-				>
-			>
-			source_schema_id = <"openehr_rm_ehr_1.0.4">
-			uid = <503>
-		>
-		["ACCESS_CONTROL_SETTINGS"] = <
-			name = <"ACCESS_CONTROL_SETTINGS">
-			ancestors = <"Any", ...>
-			source_schema_id = <"openehr_rm_ehr_1.0.4">
-			is_abstract = <True>
-			uid = <504>
-		>
-		["EHR_STATUS"] = <
-			name = <"EHR_STATUS">
-			ancestors = <"LOCATABLE", ...>
-			properties = <
-				["subject"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"subject">
-					type = <"PARTY_SELF">
-					is_mandatory = <True>
-				>
-				["is_queryable"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"is_queryable">
-					type = <"Boolean">
-					is_mandatory = <True>
-				>
-				["is_modifiable"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"is_modifiable">
-					type = <"Boolean">
-					is_mandatory = <True>
-				>
-				["other_details"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"other_details">
-					type = <"ITEM_STRUCTURE">
-				>
-			>
-			source_schema_id = <"openehr_rm_ehr_1.0.4">
-			uid = <505>
-		>
-		["COMPOSITION"] = <
-			name = <"COMPOSITION">
-			ancestors = <"LOCATABLE", ...>
-			properties = <
-				["language"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"language">
-					type = <"CODE_PHRASE">
-					is_mandatory = <True>
-				>
-				["territory"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"territory">
-					type = <"CODE_PHRASE">
-					is_mandatory = <True>
-				>
-				["category"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"category">
-					type = <"DV_CODED_TEXT">
-					is_mandatory = <True>
-				>
-				["composer"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"composer">
-					type = <"PARTY_PROXY">
-					is_mandatory = <True>
-				>
-				["context"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"context">
-					type = <"EVENT_CONTEXT">
-				>
-				["content"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"content">
-					cardinality = <|>=1|>
-					type_def = <
-						type = <"CONTENT_ITEM">
-						container_type = <"List">
-					>
-				>
-			>
-			source_schema_id = <"openehr_rm_ehr_1.0.4">
-			uid = <506>
-		>
-		["EVENT_CONTEXT"] = <
-			name = <"EVENT_CONTEXT">
-			ancestors = <"PATHABLE", ...>
-			properties = <
-				["health_care_facility"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"health_care_facility">
-					type = <"PARTY_IDENTIFIED">
-				>
-				["start_time"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"start_time">
-					type = <"DV_DATE_TIME">
-					is_mandatory = <True>
-				>
-				["end_time"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"end_time">
-					type = <"DV_DATE_TIME">
-				>
-				["participations"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"participations">
-					cardinality = <|>=1|>
-					type_def = <
-						type = <"PARTICIPATION">
-						container_type = <"List">
-					>
-				>
-				["location"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"location">
-					type = <"String">
-				>
-				["setting"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"setting">
-					type = <"DV_CODED_TEXT">
-					is_mandatory = <True>
-				>
-				["other_context"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"other_context">
-					type = <"ITEM_STRUCTURE">
-				>
-			>
-			source_schema_id = <"openehr_rm_ehr_1.0.4">
-			uid = <507>
-		>
-		["CONTENT_ITEM"] = <
-			name = <"CONTENT_ITEM">
-			ancestors = <"LOCATABLE", ...>
-			source_schema_id = <"openehr_rm_ehr_1.0.4">
-			is_abstract = <True>
-			uid = <508>
-		>
-		["SECTION"] = <
-			name = <"SECTION">
-			ancestors = <"CONTENT_ITEM", ...>
-			properties = <
-				["items"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"items">
-					cardinality = <|>=1|>
-					type_def = <
-						type = <"CONTENT_ITEM">
-						container_type = <"List">
-					>
-				>
-			>
-			source_schema_id = <"openehr_rm_ehr_1.0.4">
-			uid = <509>
-		>
-		["ENTRY"] = <
-			name = <"ENTRY">
-			ancestors = <"CONTENT_ITEM", ...>
-			properties = <
-				["language"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"language">
-					type = <"CODE_PHRASE">
-					is_mandatory = <True>
-					is_im_infrastructure = <True>
-				>
-				["encoding"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"encoding">
-					type = <"CODE_PHRASE">
-					is_mandatory = <True>
-					is_im_infrastructure = <True>
-				>
-				["subject"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"subject">
-					type = <"PARTY_PROXY">
-					is_mandatory = <True>
-				>
-				["provider"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"provider">
-					type = <"PARTY_PROXY">
-				>
-				["other_participations"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"other_participations">
-					cardinality = <|>=0|>
-					type_def = <
-						type = <"PARTICIPATION">
-						container_type = <"List">
-					>
-				>
-				["workflow_id"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"workflow_id">
-					type = <"OBJECT_REF">
-					is_im_runtime = <True>
-				>
-			>
-			source_schema_id = <"openehr_rm_ehr_1.0.4">
-			is_abstract = <True>
-			uid = <510>
-		>
-		["ADMIN_ENTRY"] = <
-			name = <"ADMIN_ENTRY">
-			ancestors = <"ENTRY", ...>
-			properties = <
-				["data"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"data">
-					type = <"ITEM_STRUCTURE">
-					is_mandatory = <True>
-				>
-			>
-			source_schema_id = <"openehr_rm_ehr_1.0.4">
-			uid = <511>
-		>
-		["CARE_ENTRY"] = <
-			documentation = <"Abstract ENTRY subtype corresponding to any type of ENTRY in the clinical care cycle.">
-			name = <"CARE_ENTRY">
-			ancestors = <"ENTRY", ...>
-			properties = <
-				["protocol"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"protocol">
-					type = <"ITEM_STRUCTURE">
-				>
-				["guideline_id"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"guideline_id">
-					type = <"OBJECT_REF">
-					is_im_runtime = <True>
-				>
-			>
-			source_schema_id = <"openehr_rm_ehr_1.0.4">
-			is_abstract = <True>
-			uid = <512>
-		>
-		["OBSERVATION"] = <
-			documentation = <"ENTRY subtype used to represent observation information in time, as either a single or multiple samples.">
-			name = <"OBSERVATION">
-			ancestors = <"CARE_ENTRY", ...>
-			properties = <
-				["data"] = (P_BMM_GENERIC_PROPERTY) <
-					documentation = <"Data of the observation, in the form of a HISTORY of EVENTs.">
-					name = <"data">
-					type_def = <
-						root_type = <"HISTORY">
-						generic_parameters = <"ITEM_STRUCTURE", ...>
-					>
-					is_mandatory = <True>
-				>
-				["state"] = (P_BMM_GENERIC_PROPERTY) <
-					name = <"state">
-					type_def = <
-						root_type = <"HISTORY">
-						generic_parameters = <"ITEM_STRUCTURE", ...>
-					>
-				>
-			>
-			source_schema_id = <"openehr_rm_ehr_1.0.4">
-			uid = <513>
-		>
-		["EVALUATION"] = <
-			name = <"EVALUATION">
-			ancestors = <"CARE_ENTRY", ...>
-			properties = <
-				["data"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"data">
-					type = <"ITEM_STRUCTURE">
-					is_mandatory = <True>
-				>
-			>
-			source_schema_id = <"openehr_rm_ehr_1.0.4">
-			uid = <514>
-		>
-		["INSTRUCTION"] = <
-			name = <"INSTRUCTION">
-			ancestors = <"CARE_ENTRY", ...>
-			properties = <
-				["narrative"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"narrative">
-					type = <"DV_TEXT">
-					is_mandatory = <True>
-				>
-				["expiry_time"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"expiry_time">
-					type = <"DV_DATE_TIME">
-				>
-				["wf_definition"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"wf_definition">
-					type = <"DV_PARSABLE">
-					is_im_runtime = <True>
-				>
-				["activities"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"activities">
-					cardinality = <|>=1|>
-					type_def = <
-						type = <"ACTIVITY">
-						container_type = <"List">
-					>
-				>
-			>
-			source_schema_id = <"openehr_rm_ehr_1.0.4">
-			uid = <515>
-		>
-		["ACTIVITY"] = <
-			name = <"ACTIVITY">
-			ancestors = <"LOCATABLE", ...>
-			properties = <
-				["description"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"description">
-					type = <"ITEM_STRUCTURE">
-					is_mandatory = <True>
-				>
-				["timing"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"timing">
-					type = <"DV_PARSABLE">
-				>
-				["action_archetype_id"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"action_archetype_id">
-					type = <"String">
-				>
-			>
-			source_schema_id = <"openehr_rm_ehr_1.0.4">
-			uid = <516>
-		>
-		["ACTION"] = <
-			name = <"ACTION">
-			ancestors = <"CARE_ENTRY", ...>
-			properties = <
-				["time"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"time">
-					type = <"DV_DATE_TIME">
-					is_mandatory = <True>
-					is_im_runtime = <True>
-				>
-				["description"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"description">
-					type = <"ITEM_STRUCTURE">
-					is_mandatory = <True>
-				>
-				["ism_transition"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"ism_transition">
-					type = <"ISM_TRANSITION">
-					is_mandatory = <True>
-				>
-				["instruction_details"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"instruction_details">
-					type = <"INSTRUCTION_DETAILS">
-				>
-			>
-			source_schema_id = <"openehr_rm_ehr_1.0.4">
-			uid = <517>
-		>
-		["INSTRUCTION_DETAILS"] = <
-			name = <"INSTRUCTION_DETAILS">
-			ancestors = <"PATHABLE", ...>
-			properties = <
-				["instruction_id"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"instruction_id">
-					type = <"LOCATABLE_REF">
-					is_mandatory = <True>
-					is_im_runtime = <True>
-				>
-				["wf_details"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"wf_details">
-					type = <"ITEM_STRUCTURE">
-					is_im_runtime = <True>
-				>
-				["activity_id"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"activity_id">
-					type = <"String">
-					is_mandatory = <True>
-					is_im_runtime = <True>
-				>
-			>
-			source_schema_id = <"openehr_rm_ehr_1.0.4">
-			uid = <518>
-		>
-		["ISM_TRANSITION"] = <
-			name = <"ISM_TRANSITION">
-			ancestors = <"PATHABLE", ...>
-			properties = <
-				["current_state"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"current_state">
-					type = <"DV_CODED_TEXT">
-					is_mandatory = <True>
-				>
-				["transition"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"transition">
-					type = <"DV_CODED_TEXT">
-				>
-				["careflow_step"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"careflow_step">
-					type = <"DV_CODED_TEXT">
-				>
-				["reason"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"reason">
-					cardinality = <|>=0|>
-					type_def = <
-						type = <"DV_TEXT">
-						container_type = <"List">
-					>
-				>
-			>
-			source_schema_id = <"openehr_rm_ehr_1.0.4">
-			uid = <519>
-		>
-		["GENERIC_ENTRY"] = <
-			name = <"GENERIC_ENTRY">
-			ancestors = <"CONTENT_ITEM", ...>
-			properties = <
-				["data"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"data">
-					type = <"ITEM_TREE">
-					is_mandatory = <True>
-				>
-			>
-			source_schema_id = <"openehr_rm_ehr_1.0.4">
-			uid = <520>
-		>
-		["DATA_STRUCTURE"] = <
-			name = <"DATA_STRUCTURE">
-			ancestors = <"LOCATABLE", ...>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			is_abstract = <True>
-			uid = <550>
-		>
-		["ITEM_STRUCTURE"] = <
-			name = <"ITEM_STRUCTURE">
-			ancestors = <"DATA_STRUCTURE", ...>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			is_abstract = <True>
-			uid = <551>
-		>
-		["ITEM_SINGLE"] = <
-			name = <"ITEM_SINGLE">
-			ancestors = <"ITEM_STRUCTURE", ...>
-			properties = <
-				["item"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"item">
-					type = <"ELEMENT">
-					is_mandatory = <True>
-				>
-			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <552>
-		>
-		["ITEM_LIST"] = <
-			name = <"ITEM_LIST">
-			ancestors = <"ITEM_STRUCTURE", ...>
-			properties = <
-				["items"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"items">
-					cardinality = <|>=0|>
-					type_def = <
-						type = <"ELEMENT">
-						container_type = <"List">
-					>
-				>
-			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <553>
-		>
-		["ITEM_TABLE"] = <
-			name = <"ITEM_TABLE">
-			ancestors = <"ITEM_STRUCTURE", ...>
-			properties = <
-				["rows"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"rows">
-					cardinality = <|>=0|>
-					type_def = <
-						type = <"CLUSTER">
-						container_type = <"List">
-					>
-				>
-			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <554>
-		>
-		["ITEM_TREE"] = <
-			name = <"ITEM_TREE">
-			ancestors = <"ITEM_STRUCTURE", ...>
-			properties = <
-				["items"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"items">
-					cardinality = <|>=0|>
-					type_def = <
-						type = <"ITEM">
-						container_type = <"List">
-					>
-				>
-			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <555>
-		>
 		["ITEM"] = <
 			name = <"ITEM">
-			ancestors = <"LOCATABLE", ...>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
+			ancestors = <"Any", ...>
+			source_schema_id = <"openehr_adltest_1.0.2">
 			is_abstract = <True>
-			uid = <556>
+			uid = <720>
 		>
 		["CLUSTER"] = <
 			name = <"CLUSTER">
@@ -896,8 +328,8 @@
 					is_mandatory = <True>
 				>
 			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <557>
+			source_schema_id = <"openehr_adltest_1.0.2">
+			uid = <721>
 		>
 		["ELEMENT"] = <
 			name = <"ELEMENT">
@@ -906,684 +338,937 @@
 				["null_flavour"] = (P_BMM_SINGLE_PROPERTY) <
 					name = <"null_flavour">
 					type = <"DV_CODED_TEXT">
+					is_mandatory = <True>
 				>
 				["value"] = (P_BMM_SINGLE_PROPERTY) <
 					name = <"value">
 					type = <"DATA_VALUE">
 				>
 			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <558>
+			source_schema_id = <"openehr_adltest_1.0.2">
+			uid = <722>
 		>
-		["HISTORY"] = <
-			name = <"HISTORY">
-			generic_parameter_defs = <
-				["T"] = <
-					name = <"T">
-					conforms_to_type = <"ITEM_STRUCTURE">
-				>
-			>
-			ancestors = <"DATA_STRUCTURE", ...>
-			properties = <
-				["origin"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"origin">
-					type = <"DV_DATE_TIME">
-					is_mandatory = <True>
-					is_im_runtime = <True>
-				>
-				["period"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"period">
-					type = <"DV_DURATION">
-				>
-				["duration"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"duration">
-					type = <"DV_DURATION">
-				>
-				["summary"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"summary">
-					type = <"ITEM_STRUCTURE">
-				>
-				["events"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"events">
-					cardinality = <|>=1|>
-					type_def = <
-						type = <"EVENT">
-						container_type = <"List">
-					>
-				>
-			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <559>
-		>
-		["EVENT"] = <
-			name = <"EVENT">
-			generic_parameter_defs = <
-				["T"] = <
-					name = <"T">
-					conforms_to_type = <"ITEM_STRUCTURE">
-				>
-			>
-			ancestors = <"LOCATABLE", ...>
-			properties = <
-				["time"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"time">
-					type = <"DV_DATE_TIME">
-					is_mandatory = <True>
-					is_im_runtime = <True>
-				>
-				["state"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"state">
-					type = <"ITEM_STRUCTURE">
-				>
-				["data"] = (P_BMM_SINGLE_PROPERTY_OPEN) <
-					name = <"data">
-					type = <"T">
-					is_mandatory = <True>
-				>
-				["offset"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"offset">
-					type = <"DV_DURATION">
-					is_computed = <True>
-				>
-			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			is_abstract = <True>
-			uid = <560>
-		>
-		["POINT_EVENT"] = <
-			name = <"POINT_EVENT">
-			generic_parameter_defs = <
-				["T"] = <
-					name = <"T">
-				>
-			>
-			ancestors = <"EVENT", ...>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <561>
-		>
-		["INTERVAL_EVENT"] = <
-			name = <"INTERVAL_EVENT">
-			generic_parameter_defs = <
-				["T"] = <
-					name = <"T">
-				>
-			>
-			ancestors = <"EVENT", ...>
-			properties = <
-				["width"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"width">
-					type = <"DV_DURATION">
-					is_mandatory = <True>
-				>
-				["sample_count"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"sample_count">
-					type = <"Integer">
-					is_im_runtime = <True>
-				>
-				["math_function"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"math_function">
-					type = <"DV_CODED_TEXT">
-					is_mandatory = <True>
-				>
-			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <562>
-		>
-		["REVISION_HISTORY"] = <
-			name = <"REVISION_HISTORY">
+		["ENTRY"] = <
+			name = <"ENTRY">
 			ancestors = <"Any", ...>
 			properties = <
-				["items"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"items">
+				["value"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"value">
+					type = <"CODE_PHRASE">
+				>
+				["coded_text_value"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"coded_text_value">
+					type = <"DV_CODED_TEXT">
+				>
+				["ordinal_attr_1"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"ordinal_attr_1">
+					type = <"DV_ORDINAL">
+				>
+				["element_attr"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"element_attr">
+					type = <"ELEMENT">
+				>
+				["element_attr_2"] = (P_BMM_CONTAINER_PROPERTY) <
+					name = <"element_attr_2">
 					cardinality = <|>=0|>
 					type_def = <
-						type = <"REVISION_HISTORY_ITEM">
+						type = <"ELEMENT">
 						container_type = <"List">
 					>
-					is_mandatory = <True>
+				>
+				["item"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"item">
+					type = <"DATA_VALUE">
 				>
 			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <563>
+			source_schema_id = <"openehr_adltest_1.0.2">
+			uid = <723>
 		>
-		["REVISION_HISTORY_ITEM"] = <
-			name = <"REVISION_HISTORY_ITEM">
+		["BOOK"] = <
+			name = <"BOOK">
 			ancestors = <"Any", ...>
 			properties = <
-				["version_id"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"version_id">
-					type = <"OBJECT_VERSION_ID">
-					is_mandatory = <True>
-				>
-				["audits"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"audits">
-					cardinality = <|>=1|>
-					type_def = <
-						type = <"AUDIT_DETAILS">
-						container_type = <"List">
-					>
-					is_mandatory = <True>
-				>
-			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <564>
-		>
-		["AUDIT_DETAILS"] = <
-			name = <"AUDIT_DETAILS">
-			ancestors = <"Any", ...>
-			properties = <
-				["system_id"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"system_id">
+				["author"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"author">
 					type = <"String">
 					is_mandatory = <True>
 				>
-				["time_committed"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"time_committed">
-					type = <"DV_DATE_TIME">
+				["title"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"title">
+					type = <"String">
 					is_mandatory = <True>
 				>
-				["change_type"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"change_type">
-					type = <"DV_CODED_TEXT">
+				["chapters"] = (P_BMM_CONTAINER_PROPERTY) <
+					name = <"chapters">
+					cardinality = <|>=0|>
+					type_def = <
+						type = <"CHAPTER">
+						container_type = <"List">
+					>
+				>
+			>
+			source_schema_id = <"openehr_adltest_1.0.2">
+			uid = <724>
+		>
+		["CHAPTER"] = <
+			name = <"CHAPTER">
+			ancestors = <"Any", ...>
+			properties = <
+				["title"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"title">
+					type = <"String">
 					is_mandatory = <True>
+				>
+			>
+			source_schema_id = <"openehr_adltest_1.0.2">
+			uid = <725>
+		>
+		["WHOLE"] = <
+			name = <"WHOLE">
+			ancestors = <"Any", ...>
+			properties = <
+				["string_attr1"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"string_attr1">
+					type = <"String">
+				>
+				["string_attr2"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"string_attr2">
+					type = <"String">
+				>
+				["string_attr3"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"string_attr3">
+					type = <"String">
+				>
+				["string_attr4"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"string_attr4">
+					type = <"String">
+				>
+				["string_attr5"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"string_attr5">
+					type = <"String">
+				>
+				["boolean_attr1"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"boolean_attr1">
+					type = <"Boolean">
+				>
+				["boolean_attr2"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"boolean_attr2">
+					type = <"Boolean">
+				>
+				["boolean_attr3"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"boolean_attr3">
+					type = <"Boolean">
+				>
+				["boolean_attr4"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"boolean_attr4">
+					type = <"Boolean">
+				>
+				["integer_attr1"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"integer_attr1">
+					type = <"Integer">
+				>
+				["integer_attr2"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"integer_attr2">
+					type = <"Integer">
+				>
+				["integer_attr3"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"integer_attr3">
+					type = <"Integer">
+				>
+				["integer_attr4"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"integer_attr4">
+					type = <"Integer">
+				>
+				["integer_attr5"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"integer_attr5">
+					type = <"Integer">
+				>
+				["integer_attr6"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"integer_attr6">
+					type = <"Integer">
+				>
+				["integer_attr7"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"integer_attr7">
+					type = <"Integer">
+				>
+				["integer_attr8"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"integer_attr8">
+					type = <"Integer">
+				>
+				["integer_attr9"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"integer_attr9">
+					type = <"Integer">
+				>
+				["integer_attr10"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"integer_attr10">
+					type = <"Integer">
+				>
+				["integer_attr11"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"integer_attr11">
+					type = <"Integer">
+				>
+				["integer_attr12"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"integer_attr12">
+					type = <"Integer">
+				>
+				["integer_attr13"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"integer_attr13">
+					type = <"Integer">
+				>
+				["real_attr1"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"real_attr1">
+					type = <"Real">
+				>
+				["real_attr2"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"real_attr2">
+					type = <"Real">
+				>
+				["real_attr3"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"real_attr3">
+					type = <"Real">
+				>
+				["real_attr4"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"real_attr4">
+					type = <"Real">
+				>
+				["real_attr5"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"real_attr5">
+					type = <"Real">
+				>
+				["real_attr6"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"real_attr6">
+					type = <"Real">
+				>
+				["real_attr7"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"real_attr7">
+					type = <"Real">
+				>
+				["real_attr8"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"real_attr8">
+					type = <"Real">
+				>
+				["real_attr9"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"real_attr9">
+					type = <"Real">
+				>
+				["real_attr10"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"real_attr10">
+					type = <"Real">
+				>
+				["real_attr11"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"real_attr11">
+					type = <"Real">
+				>
+				["real_attr12"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"real_attr12">
+					type = <"Real">
+				>
+				["real_attr13"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"real_attr13">
+					type = <"Real">
+				>
+				["date_attr1"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_attr1">
+					type = <"Iso8601_date">
+				>
+				["date_attr2"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_attr2">
+					type = <"Iso8601_date">
+				>
+				["date_attr3"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_attr3">
+					type = <"Iso8601_date">
+				>
+				["date_attr4"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_attr4">
+					type = <"Iso8601_date">
+				>
+				["date_attr5"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_attr5">
+					type = <"Iso8601_date">
+				>
+				["date_attr6"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_attr6">
+					type = <"Iso8601_date">
+				>
+				["date_attr7"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_attr7">
+					type = <"Iso8601_date">
+				>
+				["date_attr8"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_attr8">
+					type = <"Iso8601_date">
+				>
+				["date_attr9"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_attr9">
+					type = <"Iso8601_date">
+				>
+				["date_attr10"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_attr10">
+					type = <"Iso8601_date">
+				>
+				["date_attr11"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_attr11">
+					type = <"Iso8601_date">
+				>
+				["date_attr12"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_attr12">
+					type = <"Iso8601_date">
+				>
+				["time_attr1"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"time_attr1">
+					type = <"Iso8601_time">
+				>
+				["time_attr2"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"time_attr2">
+					type = <"Iso8601_time">
+				>
+				["time_attr3"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"time_attr3">
+					type = <"Iso8601_time">
+				>
+				["time_attr4"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"time_attr4">
+					type = <"Iso8601_time">
+				>
+				["time_attr5"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"time_attr5">
+					type = <"Iso8601_time">
+				>
+				["time_attr6"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"time_attr6">
+					type = <"Iso8601_time">
+				>
+				["time_attr7"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"time_attr7">
+					type = <"Iso8601_time">
+				>
+				["time_attr8"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"time_attr8">
+					type = <"Iso8601_time">
+				>
+				["time_attr9"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"time_attr9">
+					type = <"Iso8601_time">
+				>
+				["time_attr10"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"time_attr10">
+					type = <"Iso8601_time">
+				>
+				["time_attr11"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"time_attr11">
+					type = <"Iso8601_time">
+				>
+				["time_attr12"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"time_attr12">
+					type = <"Iso8601_time">
+				>
+				["time_attr13"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"time_attr13">
+					type = <"Iso8601_time">
+				>
+				["date_time_attr1"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_time_attr1">
+					type = <"Iso8601_date_time">
+				>
+				["date_time_attr2"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_time_attr2">
+					type = <"Iso8601_date_time">
+				>
+				["date_time_attr3"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_time_attr3">
+					type = <"Iso8601_date_time">
+				>
+				["date_time_attr4"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_time_attr4">
+					type = <"Iso8601_date_time">
+				>
+				["date_time_attr5"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_time_attr5">
+					type = <"Iso8601_date_time">
+				>
+				["date_time_attr6"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_time_attr6">
+					type = <"Iso8601_date_time">
+				>
+				["date_time_attr7"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_time_attr7">
+					type = <"Iso8601_date_time">
+				>
+				["date_time_attr8"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_time_attr8">
+					type = <"Iso8601_date_time">
+				>
+				["date_time_attr9"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_time_attr9">
+					type = <"Iso8601_date_time">
+				>
+				["date_time_attr10"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_time_attr10">
+					type = <"Iso8601_date_time">
+				>
+				["date_time_attr11"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_time_attr11">
+					type = <"Iso8601_date_time">
+				>
+				["date_time_attr12"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_time_attr12">
+					type = <"Iso8601_date_time">
+				>
+				["date_time_attr13"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_time_attr13">
+					type = <"Iso8601_date_time">
+				>
+				["date_time_attr14"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"date_time_attr14">
+					type = <"Iso8601_date_time">
+				>
+				["duration_attr1"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr1">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr2"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr2">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr3"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr3">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr4"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr4">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr5"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr5">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr6"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr6">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr7"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr7">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr8"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr8">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr9"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr9">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr10"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr10">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr11"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr11">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr12"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr12">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr13"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr13">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr14"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr14">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr15"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr15">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr16"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr16">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr17"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr17">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr18"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr18">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr19"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr19">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr20"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr20">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr21"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr21">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr22"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr22">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr23"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr23">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr24"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr24">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr25"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr25">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr26"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr26">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr27"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr27">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr28"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr28">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr29"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr29">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr30"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr30">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr31"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr31">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr32"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr32">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr33"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr33">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr34"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr34">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr35"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr35">
+					type = <"Iso8601_duration">
+				>
+				["duration_attr36"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"duration_attr36">
+					type = <"Iso8601_duration">
+				>
+				["any_attr_1"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"any_attr_1">
+					type = <"Any">
+				>
+				["any_attr_2"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"any_attr_2">
+					type = <"Any">
+				>
+				["any_attr_3"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"any_attr_3">
+					type = <"Any">
+				>
+				["any_attr_4"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"any_attr_4">
+					type = <"Any">
+				>
+				["any_attr_5"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"any_attr_5">
+					type = <"Any">
+				>
+			>
+			source_schema_id = <"openehr_adltest_1.0.2">
+			uid = <726>
+		>
+		["SOME_TYPE"] = <
+			name = <"SOME_TYPE">
+			ancestors = <"Any", ...>
+			properties = <
+				["standard_quantity_attr"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"standard_quantity_attr">
+					type = <"DV_QUANTITY">
+				>
+				["clinical_quantity_attr_1"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"clinical_quantity_attr_1">
+					type = <"DV_QUANTITY">
+				>
+				["clinical_quantity_attr_2"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"clinical_quantity_attr_2">
+					type = <"DV_QUANTITY">
+				>
+				["clinical_quantity_attr_3"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"clinical_quantity_attr_3">
+					type = <"DV_QUANTITY">
+				>
+				["clinical_quantity_attr_4"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"clinical_quantity_attr_4">
+					type = <"DATA_VALUE">
+				>
+				["clinical_quantity_attr_5"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"clinical_quantity_attr_5">
+					type = <"DATA_VALUE">
+				>
+				["clinical_quantity_attr_6"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"clinical_quantity_attr_6">
+					type = <"DATA_VALUE">
+				>
+				["standard_ordinal_attr"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"standard_ordinal_attr">
+					type = <"DV_ORDINAL">
+				>
+				["clinical_ordinal_attr_1"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"clinical_ordinal_attr_1">
+					type = <"DATA_VALUE">
+				>
+				["clinical_ordinal_attr_2"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"clinical_ordinal_attr_2">
+					type = <"DATA_VALUE">
+				>
+				["clinical_coded_attr_1"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"clinical_coded_attr_1">
+					type = <"CODE_PHRASE">
+				>
+				["clinical_coded_attr_2"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"clinical_coded_attr_2">
+					type = <"CODE_PHRASE">
+				>
+				["clinical_coded_attr_3"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"clinical_coded_attr_3">
+					type = <"CODE_PHRASE">
+				>
+				["clinical_coded_attr_4"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"clinical_coded_attr_4">
+					type = <"CODE_PHRASE">
+				>
+				["standard_coded_text_attr"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"standard_coded_text_attr">
+					type = <"DV_CODED_TEXT">
+				>
+				["standard_coded_text_attr_2"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"standard_coded_text_attr_2">
+					type = <"DV_CODED_TEXT">
+				>
+				["clinical_coded_text_attr_1"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"clinical_coded_text_attr_1">
+					type = <"DV_CODED_TEXT">
+				>
+				["clinical_coded_text_attr_2"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"clinical_coded_text_attr_2">
+					type = <"DV_CODED_TEXT">
+				>
+				["qty_interval_attr_1"] = (P_BMM_GENERIC_PROPERTY) <
+					name = <"qty_interval_attr_1">
+					type_def = <
+						root_type = <"DV_INTERVAL">
+						generic_parameters = <"DV_QUANTITY", ...>
+					>
+				>
+				["qty_interval_attr_2"] = (P_BMM_GENERIC_PROPERTY) <
+					name = <"qty_interval_attr_2">
+					type_def = <
+						root_type = <"DV_INTERVAL">
+						generic_parameters = <"DV_QUANTITY", ...>
+					>
+				>
+			>
+			source_schema_id = <"openehr_adltest_1.0.2">
+			uid = <727>
+		>
+		["CAR"] = <
+			name = <"CAR">
+			ancestors = <"Any", ...>
+			properties = <
+				["body"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"body">
+					type = <"CAR_BODY">
+				>
+				["engine_parts"] = (P_BMM_CONTAINER_PROPERTY) <
+					name = <"engine_parts">
+					cardinality = <|>=0|>
+					type_def = <
+						type = <"ENGINE_PART">
+						container_type = <"List">
+					>
+				>
+				["wheels"] = (P_BMM_CONTAINER_PROPERTY) <
+					name = <"wheels">
+					cardinality = <|>=0|>
+					type_def = <
+						type = <"WHEEL">
+						container_type = <"List">
+					>
+				>
+			>
+			source_schema_id = <"openehr_adltest_1.0.2">
+			uid = <728>
+		>
+		["CAR_BODY"] = <
+			name = <"CAR_BODY">
+			ancestors = <"Any", ...>
+			properties = <
+				["model"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"model">
+					type = <"String">
 				>
 				["description"] = (P_BMM_SINGLE_PROPERTY) <
 					name = <"description">
-					type = <"DV_TEXT">
-				>
-				["committer"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"committer">
-					type = <"PARTY_PROXY">
-					is_mandatory = <True>
-				>
-			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <565>
-		>
-		["ATTESTATION"] = <
-			name = <"ATTESTATION">
-			ancestors = <"AUDIT_DETAILS", ...>
-			properties = <
-				["attested_view"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"attested_view">
-					type = <"DV_MULTIMEDIA">
-				>
-				["proof"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"proof">
 					type = <"String">
 				>
+				["parts"] = (P_BMM_CONTAINER_PROPERTY) <
+					name = <"parts">
+					cardinality = <|>=0|>
+					type_def = <
+						type = <"CAR_BODY_PART">
+						container_type = <"List">
+					>
+				>
+			>
+			source_schema_id = <"openehr_adltest_1.0.2">
+			uid = <729>
+		>
+		["CAR_BODY_PART"] = <
+			name = <"CAR_BODY_PART">
+			ancestors = <"Any", ...>
+			source_schema_id = <"openehr_adltest_1.0.2">
+			uid = <730>
+		>
+		["ENGINE_PART"] = <
+			name = <"ENGINE_PART">
+			ancestors = <"Any", ...>
+			properties = <
 				["items"] = (P_BMM_CONTAINER_PROPERTY) <
 					name = <"items">
 					cardinality = <|>=0|>
 					type_def = <
-						type = <"DV_EHR_URI">
+						type = <"ENGINE_PART_ITEM">
 						container_type = <"List">
 					>
 				>
-				["reason"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"reason">
-					type = <"DV_TEXT">
-					is_mandatory = <True>
-				>
-				["is_pending"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"is_pending">
-					type = <"Boolean">
-					is_mandatory = <True>
-				>
 			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <566>
+			source_schema_id = <"openehr_adltest_1.0.2">
+			uid = <731>
 		>
-		["PARTICIPATION"] = <
-			name = <"PARTICIPATION">
+		["ENGINE_PART_ITEM"] = <
+			name = <"ENGINE_PART_ITEM">
 			ancestors = <"Any", ...>
 			properties = <
-				["function"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"function">
-					type = <"DV_TEXT">
-					is_mandatory = <True>
-				>
-				["time"] = (P_BMM_GENERIC_PROPERTY) <
-					name = <"time">
-					type_def = <
-						root_type = <"DV_INTERVAL">
-						generic_parameters = <"DV_DATE_TIME", ...>
-					>
-					is_im_runtime = <True>
-				>
-				["mode"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"mode">
-					type = <"DV_CODED_TEXT">
-				>
-				["performer"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"performer">
-					type = <"PARTY_PROXY">
-					is_mandatory = <True>
-				>
-			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <567>
-		>
-		["PARTY_PROXY"] = <
-			name = <"PARTY_PROXY">
-			ancestors = <"Any", ...>
-			properties = <
-				["external_ref"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"external_ref">
-					type = <"PARTY_REF">
-					is_im_infrastructure = <True>
-				>
-			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			is_abstract = <True>
-			uid = <568>
-		>
-		["PARTY_IDENTIFIED"] = <
-			name = <"PARTY_IDENTIFIED">
-			ancestors = <"PARTY_PROXY", ...>
-			properties = <
-				["name"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"name">
+				["model"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"model">
 					type = <"String">
-				>
-				["identifiers"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"identifiers">
-					cardinality = <|>=1|>
-					type_def = <
-						type = <"DV_IDENTIFIER">
-						container_type = <"List">
-					>
-					is_im_runtime = <True>
-				>
-			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <569>
-		>
-		["PARTY_RELATED"] = <
-			name = <"PARTY_RELATED">
-			ancestors = <"PARTY_IDENTIFIED", ...>
-			properties = <
-				["relationship"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"relationship">
-					type = <"DV_CODED_TEXT">
-					is_mandatory = <True>
-				>
-			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <570>
-		>
-		["PARTY_SELF"] = <
-			name = <"PARTY_SELF">
-			ancestors = <"PARTY_PROXY", ...>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <571>
-		>
-		["PATHABLE"] = <
-			name = <"PATHABLE">
-			ancestors = <"Any", ...>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			is_abstract = <True>
-			uid = <572>
-		>
-		["LOCATABLE"] = <
-			name = <"LOCATABLE">
-			ancestors = <"PATHABLE", ...>
-			properties = <
-				["uid"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"uid">
-					type = <"UID_BASED_ID">
-					is_im_infrastructure = <True>
-				>
-				["archetype_node_id"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"archetype_node_id">
-					type = <"String">
-					is_mandatory = <True>
-					is_im_infrastructure = <True>
-				>
-				["name"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"name">
-					type = <"DV_TEXT">
-					is_mandatory = <True>
-				>
-				["archetype_details"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"archetype_details">
-					type = <"ARCHETYPED">
-					is_im_infrastructure = <True>
-				>
-				["feeder_audit"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"feeder_audit">
-					type = <"FEEDER_AUDIT">
-					is_im_runtime = <True>
-				>
-				["links"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"links">
-					cardinality = <|>=1|>
-					type_def = <
-						type = <"LINK">
-						container_type = <"List">
-					>
-				>
-			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			is_abstract = <True>
-			uid = <573>
-		>
-		["LINK"] = <
-			name = <"LINK">
-			ancestors = <"Any", ...>
-			properties = <
-				["meaning"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"meaning">
-					type = <"DV_TEXT">
-					is_mandatory = <True>
 				>
 				["type"] = (P_BMM_SINGLE_PROPERTY) <
 					name = <"type">
-					type = <"DV_TEXT">
-					is_mandatory = <True>
-				>
-				["target"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"target">
-					type = <"DV_EHR_URI">
-					is_mandatory = <True>
-				>
-			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <574>
-		>
-		["ARCHETYPED"] = <
-			name = <"ARCHETYPED">
-			ancestors = <"Any", ...>
-			properties = <
-				["archetype_id"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"archetype_id">
-					type = <"ARCHETYPE_ID">
-					is_mandatory = <True>
-					is_im_infrastructure = <True>
-				>
-				["template_id"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"template_id">
-					type = <"TEMPLATE_ID">
-					is_im_infrastructure = <True>
-				>
-				["rm_version"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"rm_version">
 					type = <"String">
-					is_mandatory = <True>
-					is_im_infrastructure = <True>
 				>
 			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <575>
+			source_schema_id = <"openehr_adltest_1.0.2">
+			uid = <732>
 		>
-		["FEEDER_AUDIT"] = <
-			name = <"FEEDER_AUDIT">
+		["WHEEL"] = <
+			name = <"WHEEL">
 			ancestors = <"Any", ...>
 			properties = <
-				["originating_system_item_ids"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"originating_system_item_ids">
-					cardinality = <|>=0|>
-					type_def = <
-						type = <"DV_IDENTIFIER">
-						container_type = <"List">
-					>
-					is_im_runtime = <True>
-				>
-				["feeder_system_item_ids"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"feeder_system_item_ids">
-					cardinality = <|>=0|>
-					type_def = <
-						type = <"DV_IDENTIFIER">
-						container_type = <"List">
-					>
-					is_im_runtime = <True>
-				>
-				["original_content"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"original_content">
-					type = <"DV_ENCAPSULATED">
-					is_im_runtime = <True>
-				>
-				["originating_system_audit"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"originating_system_audit">
-					type = <"FEEDER_AUDIT_DETAILS">
-					is_mandatory = <True>
-					is_im_runtime = <True>
-				>
-				["feeder_system_audit"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"feeder_system_audit">
-					type = <"FEEDER_AUDIT_DETAILS">
-					is_im_runtime = <True>
-				>
-			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <576>
-		>
-		["FEEDER_AUDIT_DETAILS"] = <
-			name = <"FEEDER_AUDIT_DETAILS">
-			ancestors = <"Any", ...>
-			properties = <
-				["system_id"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"system_id">
+				["description"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"description">
 					type = <"String">
-					is_mandatory = <True>
-					is_im_runtime = <True>
 				>
-				["location"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"location">
-					type = <"PARTY_IDENTIFIED">
-					is_im_runtime = <True>
-				>
-				["provider"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"provider">
-					type = <"PARTY_IDENTIFIED">
-					is_im_runtime = <True>
-				>
-				["subject"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"subject">
-					type = <"PARTY_PROXY">
-					is_im_runtime = <True>
-				>
-				["time"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"time">
-					type = <"DV_DATE_TIME">
-					is_im_runtime = <True>
-				>
-				["version_id"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"version_id">
-					type = <"String">
-					is_im_runtime = <True>
-				>
-			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <577>
-		>
-		["FOLDER"] = <
-			name = <"FOLDER">
-			ancestors = <"LOCATABLE", ...>
-			properties = <
-				["folders"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"folders">
-					cardinality = <|>=1|>
-					type_def = <
-						type = <"FOLDER">
-						container_type = <"List">
-					>
-				>
-				["items"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"items">
+				["parts"] = (P_BMM_CONTAINER_PROPERTY) <
+					name = <"parts">
 					cardinality = <|>=0|>
 					type_def = <
-						type = <"OBJECT_REF">
+						type = <"RIM">
 						container_type = <"List">
 					>
 				>
 			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <578>
+			source_schema_id = <"openehr_adltest_1.0.2">
+			uid = <733>
 		>
-		["CONTRIBUTION"] = <
-			name = <"CONTRIBUTION">
+		["RIM"] = <
+			name = <"RIM">
 			ancestors = <"Any", ...>
 			properties = <
-				["uid"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"uid">
-					type = <"HIER_OBJECT_ID">
-					is_mandatory = <True>
-					is_im_infrastructure = <True>
+				["nuts"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"nuts">
+					type = <"Integer">
 				>
-				["audit"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"audit">
-					type = <"AUDIT_DETAILS">
-					is_mandatory = <True>
-					is_im_infrastructure = <True>
-				>
-				["versions"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"versions">
-					cardinality = <|>=0|>
-					type_def = <
-						type = <"OBJECT_REF">
-						container_type = <"List">
-					>
-					is_mandatory = <True>
-					is_im_infrastructure = <True>
+				["hubcap"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"hubcap">
+					type = <"String">
 				>
 			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <579>
+			source_schema_id = <"openehr_adltest_1.0.2">
+			uid = <734>
 		>
-		["VERSIONED_OBJECT"] = <
-			name = <"VERSIONED_OBJECT">
+		["MULTIPLICITY_OBJECT"] = <
+			name = <"MULTIPLICITY_OBJECT">
+			ancestors = <"Any", ...>
+			properties = <
+				["integer_list"] = (P_BMM_CONTAINER_PROPERTY) <
+					name = <"integer_list">
+					cardinality = <|>=0|>
+					type_def = <
+						type = <"Integer">
+						container_type = <"List">
+					>
+				>
+				["string_list"] = (P_BMM_CONTAINER_PROPERTY) <
+					name = <"string_list">
+					cardinality = <|>=0|>
+					type_def = <
+						type = <"String">
+						container_type = <"List">
+					>
+				>
+			>
+			source_schema_id = <"openehr_adltest_1.0.2">
+			uid = <735>
+		>
+		["GENERIC_PARENT"] = <
+			name = <"GENERIC_PARENT">
 			generic_parameter_defs = <
 				["T"] = <
 					name = <"T">
+					conforms_to_type = <"SUPPLIER">
+				>
+				["U"] = <
+					name = <"U">
+					conforms_to_type = <"SUPPLIER">
 				>
 			>
-			ancestors = <"Any", ...>
 			properties = <
-				["uid"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"uid">
-					type = <"HIER_OBJECT_ID">
-					is_mandatory = <True>
-					is_im_infrastructure = <True>
-				>
-				["owner_id"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"owner_id">
-					type = <"OBJECT_REF">
-					is_mandatory = <True>
-					is_im_infrastructure = <True>
-				>
-				["time_created"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"time_created">
-					type = <"DV_DATE_TIME">
-					is_mandatory = <True>
-					is_im_infrastructure = <True>
-				>
-			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <580>
-		>
-		["VERSION"] = <
-			name = <"VERSION">
-			generic_parameter_defs = <
-				["T"] = <
-					name = <"T">
-				>
-			>
-			ancestors = <"Any", ...>
-			properties = <
-				["contribution"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"contribution">
-					type = <"OBJECT_REF">
-					is_mandatory = <True>
-					is_im_infrastructure = <True>
-				>
-				["commit_audit"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"commit_audit">
-					type = <"AUDIT_DETAILS">
-					is_mandatory = <True>
-					is_im_infrastructure = <True>
-				>
-				["signature"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"signature">
-					type = <"String">
-					is_im_infrastructure = <True>
-				>
-			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			is_abstract = <True>
-			uid = <581>
-		>
-		["ORIGINAL_VERSION"] = <
-			name = <"ORIGINAL_VERSION">
-			generic_parameter_defs = <
-				["T"] = <
-					name = <"T">
-				>
-			>
-			ancestors = <"VERSION", ...>
-			properties = <
-				["uid"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"uid">
-					type = <"OBJECT_VERSION_ID">
-					is_mandatory = <True>
-					is_im_infrastructure = <True>
-				>
-				["preceding_version_uid"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"preceding_version_uid">
-					type = <"OBJECT_VERSION_ID">
-					is_im_infrastructure = <True>
-				>
-				["other_input_version_uids"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"other_input_version_uids">
-					cardinality = <|>=1|>
-					type_def = <
-						type = <"OBJECT_VERSION_ID">
-						container_type = <"List">
-					>
-					is_im_infrastructure = <True>
-				>
-				["attestations"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"attestations">
-					cardinality = <|>=1|>
-					type_def = <
-						type = <"ATTESTATION">
-						container_type = <"List">
-					>
-				>
-				["lifecycle_state"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"lifecycle_state">
-					type = <"DV_CODED_TEXT">
-					is_mandatory = <True>
-				>
-				["data"] = (P_BMM_SINGLE_PROPERTY_OPEN) <
-					name = <"data">
+				["property_a"] = (P_BMM_SINGLE_PROPERTY_OPEN) <
+					name = <"property_a">
 					type = <"T">
 				>
+				["property_b"] = (P_BMM_SINGLE_PROPERTY_OPEN) <
+					name = <"property_b">
+					type = <"U">
+				>
 			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <582>
+			source_schema_id = <"openehr_adltest_1.0.2">
+			uid = <736>
 		>
-		["IMPORTED_VERSION"] = <
-			name = <"IMPORTED_VERSION">
+		["SUPPLIER"] = <
+			name = <"SUPPLIER">
+			properties = <
+				["abstract_prop"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"abstract_prop">
+					type = <"String">
+				>
+			>
+			source_schema_id = <"openehr_adltest_1.0.2">
+			is_abstract = <True>
+			uid = <737>
+		>
+		["SUPPLIER_A"] = <
+			name = <"SUPPLIER_A">
+			ancestors = <"SUPPLIER", ...>
+			properties = <
+				["magnitude"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"magnitude">
+					type = <"Double">
+					is_mandatory = <True>
+				>
+				["units"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"units">
+					type = <"String">
+					is_mandatory = <True>
+				>
+			>
+			source_schema_id = <"openehr_adltest_1.0.2">
+			uid = <738>
+		>
+		["SUPPLIER_B"] = <
+			name = <"SUPPLIER_B">
+			ancestors = <"SUPPLIER", ...>
+			properties = <
+				["property"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"property">
+					type = <"CODE_PHRASE">
+					is_mandatory = <True>
+				>
+				["precision"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"precision">
+					type = <"Integer">
+				>
+			>
+			source_schema_id = <"openehr_adltest_1.0.2">
+			uid = <739>
+		>
+		["GENERIC_CHILD_OPEN_T"] = <
+			name = <"GENERIC_CHILD_OPEN_T">
 			generic_parameter_defs = <
 				["T"] = <
 					name = <"T">
+					conforms_to_type = <"SUPPLIER">
 				>
 			>
-			ancestors = <"VERSION", ...>
+			ancestor_defs = <
+				["1"] = <
+					root_type = <"GENERIC_PARENT">
+					generic_parameters = <"T", "SUPPLIER_B">
+				>
+			>
 			properties = <
-				["item"] = (P_BMM_GENERIC_PROPERTY) <
-					name = <"item">
-					type_def = <
-						root_type = <"ORIGINAL_VERSION">
-						generic_parameters = <"T", ...>
-					>
-					is_mandatory = <True>
-					is_im_infrastructure = <True>
+				["gen_child_open_t_prop"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"gen_child_open_t_prop">
+					type = <"String">
 				>
 			>
-			source_schema_id = <"openehr_rm_structures_1.0.4">
-			uid = <583>
+			source_schema_id = <"openehr_adltest_1.0.2">
+			uid = <740>
+		>
+		["GENERIC_CHILD_OPEN_U"] = <
+			name = <"GENERIC_CHILD_OPEN_U">
+			generic_parameter_defs = <
+				["U"] = <
+					name = <"U">
+					conforms_to_type = <"SUPPLIER">
+				>
+			>
+			ancestor_defs = <
+				["1"] = <
+					root_type = <"GENERIC_PARENT">
+					generic_parameters = <"SUPPLIER_A", "U">
+				>
+			>
+			properties = <
+				["gen_child_open_u_prop"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"gen_child_open_u_prop">
+					type = <"String">
+				>
+			>
+			source_schema_id = <"openehr_adltest_1.0.2">
+			uid = <741>
+		>
+		["GENERIC_CHILD_CLOSED"] = <
+			name = <"GENERIC_CHILD_CLOSED">
+			ancestor_defs = <
+				["1"] = <
+					root_type = <"GENERIC_PARENT">
+					generic_parameters = <"SUPPLIER_A", "SUPPLIER_B">
+				>
+			>
+			properties = <
+				["gen_child_closed_prop"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"gen_child_closed_prop">
+					type = <"String">
+				>
+			>
+			source_schema_id = <"openehr_adltest_1.0.2">
+			uid = <742>
 		>
 		["DATA_VALUE"] = <
 			name = <"DATA_VALUE">

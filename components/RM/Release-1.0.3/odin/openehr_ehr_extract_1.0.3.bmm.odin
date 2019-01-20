@@ -47,7 +47,7 @@
 			name = <"Any">
 			source_schema_id = <"openehr_primitive_types_1.0.3">
 			is_abstract = <True>
-			uid = <2842>
+			uid = <396>
 		>
 		["Ordered"] = <
 			documentation = <"Ancestor of types with total order relation defined, i.e. '<' and '='.">
@@ -55,7 +55,7 @@
 			ancestors = <"Any", ...>
 			source_schema_id = <"openehr_primitive_types_1.0.3">
 			is_abstract = <True>
-			uid = <2843>
+			uid = <397>
 		>
 		["Numeric"] = <
 			documentation = <"Ancestor of numeric types.">
@@ -63,7 +63,7 @@
 			ancestors = <"Any", ...>
 			source_schema_id = <"openehr_primitive_types_1.0.3">
 			is_abstract = <True>
-			uid = <2844>
+			uid = <398>
 		>
 		["Ordered_Numeric"] = <
 			documentation = <"Ancestor of ordered numeric types.">
@@ -71,61 +71,61 @@
 			ancestors = <"Numeric", "Ordered">
 			source_schema_id = <"openehr_primitive_types_1.0.3">
 			is_abstract = <True>
-			uid = <2845>
+			uid = <399>
 		>
 		["Byte"] = <
 			name = <"Byte">
 			ancestors = <"Any", ...>
 			source_schema_id = <"openehr_primitive_types_1.0.3">
-			uid = <2846>
+			uid = <400>
 		>
 		["Octet"] = <
 			name = <"Octet">
 			ancestors = <"Ordered", ...>
 			source_schema_id = <"openehr_primitive_types_1.0.3">
-			uid = <2847>
+			uid = <401>
 		>
 		["Boolean"] = <
 			name = <"Boolean">
 			ancestors = <"Any", ...>
 			source_schema_id = <"openehr_primitive_types_1.0.3">
-			uid = <2848>
+			uid = <402>
 		>
 		["Integer"] = <
 			name = <"Integer">
 			ancestors = <"Ordered_Numeric", ...>
 			source_schema_id = <"openehr_primitive_types_1.0.3">
-			uid = <2849>
+			uid = <403>
 		>
 		["Integer64"] = <
 			name = <"Integer64">
 			ancestors = <"Ordered_Numeric", ...>
 			source_schema_id = <"openehr_primitive_types_1.0.3">
-			uid = <2850>
+			uid = <404>
 		>
 		["Real"] = <
 			name = <"Real">
 			ancestors = <"Ordered_Numeric", ...>
 			source_schema_id = <"openehr_primitive_types_1.0.3">
-			uid = <2851>
+			uid = <405>
 		>
 		["Double"] = <
 			name = <"Double">
 			ancestors = <"Ordered_Numeric", ...>
 			source_schema_id = <"openehr_primitive_types_1.0.3">
-			uid = <2852>
+			uid = <406>
 		>
 		["Character"] = <
 			name = <"Character">
 			ancestors = <"Ordered", ...>
 			source_schema_id = <"openehr_primitive_types_1.0.3">
-			uid = <2853>
+			uid = <407>
 		>
 		["String"] = <
 			name = <"String">
 			ancestors = <"Ordered", ...>
 			source_schema_id = <"openehr_primitive_types_1.0.3">
-			uid = <2854>
+			uid = <408>
 		>
 		["List"] = <
 			name = <"List">
@@ -136,7 +136,7 @@
 			>
 			ancestors = <"Any", ...>
 			source_schema_id = <"openehr_primitive_types_1.0.3">
-			uid = <2855>
+			uid = <409>
 		>
 		["Array"] = <
 			name = <"Array">
@@ -147,7 +147,7 @@
 			>
 			ancestors = <"Any", ...>
 			source_schema_id = <"openehr_primitive_types_1.0.3">
-			uid = <2856>
+			uid = <410>
 		>
 		["Set"] = <
 			name = <"Set">
@@ -158,7 +158,7 @@
 			>
 			ancestors = <"Any", ...>
 			source_schema_id = <"openehr_primitive_types_1.0.3">
-			uid = <2857>
+			uid = <411>
 		>
 		["Interval"] = <
 			documentation = <"Type defining an interval of any ordered type.">
@@ -201,7 +201,7 @@
 				>
 			>
 			source_schema_id = <"openehr_primitive_types_1.0.3">
-			uid = <2858>
+			uid = <412>
 		>
 		["Hash"] = <
 			documentation = <"Type defining Hash table / hash map structure, whose type parameters V and K represent a value type and an Ordered key type respectively.">
@@ -217,41 +217,41 @@
 			>
 			ancestors = <"Any", ...>
 			source_schema_id = <"openehr_primitive_types_1.0.3">
-			uid = <2859>
+			uid = <413>
 		>
 		["ISO8601_TYPE"] = <
 			name = <"ISO8601_TYPE">
 			ancestors = <"Ordered", ...>
 			source_schema_id = <"openehr_primitive_types_1.0.3">
-			uid = <2860>
+			uid = <414>
 		>
 		["ISO8601_DATE"] = <
 			documentation = <"Date type based on IS8601 representation.">
 			name = <"ISO8601_DATE">
 			ancestors = <"ISO8601_TYPE", ...>
 			source_schema_id = <"openehr_primitive_types_1.0.3">
-			uid = <2861>
+			uid = <415>
 		>
 		["ISO8601_TIME"] = <
 			documentation = <"Time type based on IS8601 representation.">
 			name = <"ISO8601_TIME">
 			ancestors = <"ISO8601_TYPE", ...>
 			source_schema_id = <"openehr_primitive_types_1.0.3">
-			uid = <2862>
+			uid = <416>
 		>
 		["ISO8601_DATE_TIME"] = <
 			documentation = <"Date Time type based on IS8601 representation.">
 			name = <"ISO8601_DATE_TIME">
 			ancestors = <"ISO8601_TYPE", ...>
 			source_schema_id = <"openehr_primitive_types_1.0.3">
-			uid = <2863>
+			uid = <417>
 		>
 		["ISO8601_DURATION"] = <
 			documentation = <"Duration type based on IS8601 representation.">
 			name = <"ISO8601_DURATION">
 			ancestors = <"ISO8601_TYPE", ...>
 			source_schema_id = <"openehr_primitive_types_1.0.3">
-			uid = <2864>
+			uid = <418>
 		>
 	>
 	class_definitions = <
@@ -304,7 +304,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2813>
+			uid = <367>
 		>
 		["EXTRACT_SPEC"] = <
 			name = <"EXTRACT_SPEC">
@@ -353,7 +353,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2814>
+			uid = <368>
 		>
 		["EXTRACT_MANIFEST"] = <
 			name = <"EXTRACT_MANIFEST">
@@ -369,7 +369,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2815>
+			uid = <369>
 		>
 		["EXTRACT_ENTITY_MANIFEST"] = <
 			name = <"EXTRACT_ENTITY_MANIFEST">
@@ -409,7 +409,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2816>
+			uid = <370>
 		>
 		["EXTRACT_VERSION_SPEC"] = <
 			name = <"EXTRACT_VERSION_SPEC">
@@ -439,7 +439,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2817>
+			uid = <371>
 		>
 		["EXTRACT_CHAPTER"] = <
 			name = <"EXTRACT_CHAPTER">
@@ -455,7 +455,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2818>
+			uid = <372>
 		>
 		["EXTRACT_ENTITY_CHAPTER"] = <
 			name = <"EXTRACT_ENTITY_CHAPTER">
@@ -468,14 +468,14 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2819>
+			uid = <373>
 		>
 		["EXTRACT_ITEM"] = <
 			name = <"EXTRACT_ITEM">
 			ancestors = <"LOCATABLE", ...>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
 			is_abstract = <True>
-			uid = <2820>
+			uid = <374>
 		>
 		["EXTRACT_FOLDER"] = <
 			name = <"EXTRACT_FOLDER">
@@ -491,7 +491,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2821>
+			uid = <375>
 		>
 		["EXTRACT_CONTENT_ITEM"] = <
 			name = <"EXTRACT_CONTENT_ITEM">
@@ -518,7 +518,7 @@
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
 			is_abstract = <True>
-			uid = <2822>
+			uid = <376>
 		>
 		["EXTRACT_REQUEST"] = <
 			name = <"EXTRACT_REQUEST">
@@ -540,7 +540,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2823>
+			uid = <377>
 		>
 		["EXTRACT_UPDATE_SPEC"] = <
 			name = <"EXTRACT_UPDATE_SPEC">
@@ -570,7 +570,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2824>
+			uid = <378>
 		>
 		["EXTRACT_ACTION_REQUEST"] = <
 			name = <"EXTRACT_ACTION_REQUEST">
@@ -596,7 +596,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2825>
+			uid = <379>
 		>
 		["GENERIC_CONTENT_ITEM"] = <
 			name = <"GENERIC_CONTENT_ITEM">
@@ -660,7 +660,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2826>
+			uid = <380>
 		>
 		["OPENEHR_CONTENT_ITEM"] = <
 			name = <"OPENEHR_CONTENT_ITEM">
@@ -675,7 +675,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2827>
+			uid = <381>
 		>
 		["X_VERSIONED_OBJECT"] = <
 			name = <"X_VERSIONED_OBJECT">
@@ -732,7 +732,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2828>
+			uid = <382>
 		>
 		["EXTRACT_PARTICIPATION"] = <
 			name = <"EXTRACT_PARTICIPATION">
@@ -762,7 +762,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2829>
+			uid = <383>
 		>
 		["X_VERSIONED_EHR_ACCESS"] = <
 			name = <"X_VERSIONED_EHR_ACCESS">
@@ -773,7 +773,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2830>
+			uid = <384>
 		>
 		["X_VERSIONED_EHR_STATUS"] = <
 			name = <"X_VERSIONED_EHR_STATUS">
@@ -784,7 +784,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2831>
+			uid = <385>
 		>
 		["X_VERSIONED_COMPOSITION"] = <
 			name = <"X_VERSIONED_COMPOSITION">
@@ -795,7 +795,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2832>
+			uid = <386>
 		>
 		["X_VERSIONED_FOLDER"] = <
 			name = <"X_VERSIONED_FOLDER">
@@ -806,7 +806,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2833>
+			uid = <387>
 		>
 		["X_VERSIONED_PARTY"] = <
 			name = <"X_VERSIONED_PARTY">
@@ -817,7 +817,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2834>
+			uid = <388>
 		>
 		["SYNC_EXTRACT_REQUEST"] = <
 			name = <"SYNC_EXTRACT_REQUEST">
@@ -830,7 +830,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2835>
+			uid = <389>
 		>
 		["SYNC_EXTRACT"] = <
 			name = <"SYNC_EXTRACT">
@@ -851,7 +851,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2836>
+			uid = <390>
 		>
 		["SYNC_EXTRACT_SPEC"] = <
 			name = <"SYNC_EXTRACT_SPEC">
@@ -880,7 +880,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2837>
+			uid = <391>
 		>
 		["X_CONTRIBUTION"] = <
 			name = <"X_CONTRIBUTION">
@@ -909,7 +909,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2838>
+			uid = <392>
 		>
 		["ADDRESSED_MESSAGE"] = <
 			name = <"ADDRESSED_MESSAGE">
@@ -943,7 +943,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2839>
+			uid = <393>
 		>
 		["MESSAGE"] = <
 			name = <"MESSAGE">
@@ -970,14 +970,14 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
-			uid = <2840>
+			uid = <394>
 		>
 		["MESSAGE_CONTENT"] = <
 			name = <"MESSAGE_CONTENT">
 			ancestors = <"LOCATABLE", ...>
 			source_schema_id = <"openehr_ehr_extract_1.0.3">
 			is_abstract = <True>
-			uid = <2841>
+			uid = <395>
 		>
 		["EHR"] = <
 			name = <"EHR">
@@ -1034,7 +1034,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_1.0.3">
-			uid = <2794>
+			uid = <348>
 		>
 		["EHR_ACCESS"] = <
 			name = <"EHR_ACCESS">
@@ -1046,14 +1046,14 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_1.0.3">
-			uid = <2795>
+			uid = <349>
 		>
 		["ACCESS_CONTROL_SETTINGS"] = <
 			name = <"ACCESS_CONTROL_SETTINGS">
 			ancestors = <"Any", ...>
 			source_schema_id = <"openehr_ehr_1.0.3">
 			is_abstract = <True>
-			uid = <2796>
+			uid = <350>
 		>
 		["EHR_STATUS"] = <
 			name = <"EHR_STATUS">
@@ -1080,7 +1080,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_1.0.3">
-			uid = <2797>
+			uid = <351>
 		>
 		["COMPOSITION"] = <
 			name = <"COMPOSITION">
@@ -1120,7 +1120,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_1.0.3">
-			uid = <2798>
+			uid = <352>
 		>
 		["EVENT_CONTEXT"] = <
 			name = <"EVENT_CONTEXT">
@@ -1162,14 +1162,14 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_1.0.3">
-			uid = <2799>
+			uid = <353>
 		>
 		["CONTENT_ITEM"] = <
 			name = <"CONTENT_ITEM">
 			ancestors = <"LOCATABLE", ...>
 			source_schema_id = <"openehr_ehr_1.0.3">
 			is_abstract = <True>
-			uid = <2800>
+			uid = <354>
 		>
 		["SECTION"] = <
 			name = <"SECTION">
@@ -1185,7 +1185,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_1.0.3">
-			uid = <2801>
+			uid = <355>
 		>
 		["ENTRY"] = <
 			name = <"ENTRY">
@@ -1228,7 +1228,7 @@
 			>
 			source_schema_id = <"openehr_ehr_1.0.3">
 			is_abstract = <True>
-			uid = <2802>
+			uid = <356>
 		>
 		["ADMIN_ENTRY"] = <
 			name = <"ADMIN_ENTRY">
@@ -1241,7 +1241,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_1.0.3">
-			uid = <2803>
+			uid = <357>
 		>
 		["CARE_ENTRY"] = <
 			documentation = <"Abstract ENTRY subtype corresponding to any type of ENTRY in the clinical care cycle.">
@@ -1260,7 +1260,7 @@
 			>
 			source_schema_id = <"openehr_ehr_1.0.3">
 			is_abstract = <True>
-			uid = <2804>
+			uid = <358>
 		>
 		["OBSERVATION"] = <
 			documentation = <"ENTRY subtype used to represent observation information in time, as either a single or multiple samples.">
@@ -1285,7 +1285,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_1.0.3">
-			uid = <2805>
+			uid = <359>
 		>
 		["EVALUATION"] = <
 			name = <"EVALUATION">
@@ -1298,7 +1298,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_1.0.3">
-			uid = <2806>
+			uid = <360>
 		>
 		["INSTRUCTION"] = <
 			name = <"INSTRUCTION">
@@ -1328,7 +1328,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_1.0.3">
-			uid = <2807>
+			uid = <361>
 		>
 		["ACTIVITY"] = <
 			name = <"ACTIVITY">
@@ -1350,7 +1350,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_1.0.3">
-			uid = <2808>
+			uid = <362>
 		>
 		["ACTION"] = <
 			name = <"ACTION">
@@ -1378,7 +1378,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_1.0.3">
-			uid = <2809>
+			uid = <363>
 		>
 		["INSTRUCTION_DETAILS"] = <
 			name = <"INSTRUCTION_DETAILS">
@@ -1403,7 +1403,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_1.0.3">
-			uid = <2810>
+			uid = <364>
 		>
 		["ISM_TRANSITION"] = <
 			name = <"ISM_TRANSITION">
@@ -1432,7 +1432,7 @@
 				>
 			>
 			source_schema_id = <"openehr_ehr_1.0.3">
-			uid = <2811>
+			uid = <365>
 		>
 		["GENERIC_ENTRY"] = <
 			name = <"GENERIC_ENTRY">
@@ -1441,24 +1441,25 @@
 				["data"] = (P_BMM_SINGLE_PROPERTY) <
 					name = <"data">
 					type = <"ITEM_TREE">
+					is_mandatory = <True>
 				>
 			>
 			source_schema_id = <"openehr_ehr_1.0.3">
-			uid = <2812>
+			uid = <366>
 		>
 		["DATA_STRUCTURE"] = <
 			name = <"DATA_STRUCTURE">
 			ancestors = <"LOCATABLE", ...>
 			source_schema_id = <"openehr_structures_1.0.3">
 			is_abstract = <True>
-			uid = <2865>
+			uid = <419>
 		>
 		["ITEM_STRUCTURE"] = <
 			name = <"ITEM_STRUCTURE">
 			ancestors = <"DATA_STRUCTURE", ...>
 			source_schema_id = <"openehr_structures_1.0.3">
 			is_abstract = <True>
-			uid = <2866>
+			uid = <420>
 		>
 		["ITEM_SINGLE"] = <
 			name = <"ITEM_SINGLE">
@@ -1471,7 +1472,7 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2867>
+			uid = <421>
 		>
 		["ITEM_LIST"] = <
 			name = <"ITEM_LIST">
@@ -1487,7 +1488,7 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2868>
+			uid = <422>
 		>
 		["ITEM_TABLE"] = <
 			name = <"ITEM_TABLE">
@@ -1503,7 +1504,7 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2869>
+			uid = <423>
 		>
 		["ITEM_TREE"] = <
 			name = <"ITEM_TREE">
@@ -1519,14 +1520,14 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2870>
+			uid = <424>
 		>
 		["ITEM"] = <
 			name = <"ITEM">
 			ancestors = <"LOCATABLE", ...>
 			source_schema_id = <"openehr_structures_1.0.3">
 			is_abstract = <True>
-			uid = <2871>
+			uid = <425>
 		>
 		["CLUSTER"] = <
 			name = <"CLUSTER">
@@ -1543,7 +1544,7 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2872>
+			uid = <426>
 		>
 		["ELEMENT"] = <
 			name = <"ELEMENT">
@@ -1559,7 +1560,7 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2873>
+			uid = <427>
 		>
 		["HISTORY"] = <
 			name = <"HISTORY">
@@ -1599,7 +1600,7 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2874>
+			uid = <428>
 		>
 		["EVENT"] = <
 			name = <"EVENT">
@@ -1634,7 +1635,7 @@
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
 			is_abstract = <True>
-			uid = <2875>
+			uid = <429>
 		>
 		["POINT_EVENT"] = <
 			name = <"POINT_EVENT">
@@ -1645,7 +1646,7 @@
 			>
 			ancestors = <"EVENT", ...>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2876>
+			uid = <430>
 		>
 		["INTERVAL_EVENT"] = <
 			name = <"INTERVAL_EVENT">
@@ -1673,7 +1674,7 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2877>
+			uid = <431>
 		>
 		["REVISION_HISTORY"] = <
 			name = <"REVISION_HISTORY">
@@ -1686,10 +1687,11 @@
 						type = <"REVISION_HISTORY_ITEM">
 						container_type = <"List">
 					>
+					is_mandatory = <True>
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2878>
+			uid = <432>
 		>
 		["REVISION_HISTORY_ITEM"] = <
 			name = <"REVISION_HISTORY_ITEM">
@@ -1711,7 +1713,7 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2879>
+			uid = <433>
 		>
 		["AUDIT_DETAILS"] = <
 			name = <"AUDIT_DETAILS">
@@ -1743,7 +1745,7 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2880>
+			uid = <434>
 		>
 		["ATTESTATION"] = <
 			name = <"ATTESTATION">
@@ -1777,7 +1779,7 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2881>
+			uid = <435>
 		>
 		["PARTICIPATION"] = <
 			name = <"PARTICIPATION">
@@ -1807,7 +1809,7 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2882>
+			uid = <436>
 		>
 		["PARTY_PROXY"] = <
 			name = <"PARTY_PROXY">
@@ -1821,7 +1823,7 @@
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
 			is_abstract = <True>
-			uid = <2883>
+			uid = <437>
 		>
 		["PARTY_IDENTIFIED"] = <
 			name = <"PARTY_IDENTIFIED">
@@ -1842,7 +1844,7 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2884>
+			uid = <438>
 		>
 		["PARTY_RELATED"] = <
 			name = <"PARTY_RELATED">
@@ -1855,20 +1857,20 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2885>
+			uid = <439>
 		>
 		["PARTY_SELF"] = <
 			name = <"PARTY_SELF">
 			ancestors = <"PARTY_PROXY", ...>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2886>
+			uid = <440>
 		>
 		["PATHABLE"] = <
 			name = <"PATHABLE">
 			ancestors = <"Any", ...>
 			source_schema_id = <"openehr_structures_1.0.3">
 			is_abstract = <True>
-			uid = <2887>
+			uid = <441>
 		>
 		["LOCATABLE"] = <
 			name = <"LOCATABLE">
@@ -1911,7 +1913,7 @@
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
 			is_abstract = <True>
-			uid = <2888>
+			uid = <442>
 		>
 		["LINK"] = <
 			name = <"LINK">
@@ -1934,7 +1936,7 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2889>
+			uid = <443>
 		>
 		["ARCHETYPED"] = <
 			name = <"ARCHETYPED">
@@ -1959,14 +1961,14 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2890>
+			uid = <444>
 		>
 		["FEEDER_AUDIT"] = <
 			name = <"FEEDER_AUDIT">
 			ancestors = <"Any", ...>
 			properties = <
-				["originating_system_ids"] = (P_BMM_CONTAINER_PROPERTY) <
-					name = <"originating_system_ids">
+				["originating_system_item_ids"] = (P_BMM_CONTAINER_PROPERTY) <
+					name = <"originating_system_item_ids">
 					cardinality = <|>=0|>
 					type_def = <
 						type = <"DV_IDENTIFIER">
@@ -2001,7 +2003,7 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2891>
+			uid = <445>
 		>
 		["FEEDER_AUDIT_DETAILS"] = <
 			name = <"FEEDER_AUDIT_DETAILS">
@@ -2040,7 +2042,7 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2892>
+			uid = <446>
 		>
 		["FOLDER"] = <
 			name = <"FOLDER">
@@ -2064,7 +2066,7 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2893>
+			uid = <447>
 		>
 		["CONTRIBUTION"] = <
 			name = <"CONTRIBUTION">
@@ -2094,7 +2096,7 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2894>
+			uid = <448>
 		>
 		["VERSIONED_OBJECT"] = <
 			name = <"VERSIONED_OBJECT">
@@ -2125,7 +2127,7 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2895>
+			uid = <449>
 		>
 		["VERSION"] = <
 			name = <"VERSION">
@@ -2156,7 +2158,7 @@
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
 			is_abstract = <True>
-			uid = <2896>
+			uid = <450>
 		>
 		["ORIGINAL_VERSION"] = <
 			name = <"ORIGINAL_VERSION">
@@ -2206,7 +2208,7 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2897>
+			uid = <451>
 		>
 		["IMPORTED_VERSION"] = <
 			name = <"IMPORTED_VERSION">
@@ -2228,7 +2230,7 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2898>
+			uid = <452>
 		>
 		["AUTHORED_RESOURCE"] = <
 			name = <"AUTHORED_RESOURCE">
@@ -2262,7 +2264,7 @@
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
 			is_abstract = <True>
-			uid = <2899>
+			uid = <453>
 		>
 		["TRANSLATION_DETAILS"] = <
 			name = <"TRANSLATION_DETAILS">
@@ -2281,8 +2283,8 @@
 					>
 					is_mandatory = <True>
 				>
-				["accreditaton"] = (P_BMM_SINGLE_PROPERTY) <
-					name = <"accreditaton">
+				["accreditation"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"accreditation">
 					type = <"String">
 				>
 				["other_details"] = (P_BMM_GENERIC_PROPERTY) <
@@ -2294,7 +2296,7 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2900>
+			uid = <454>
 		>
 		["RESOURCE_DESCRIPTION"] = <
 			name = <"RESOURCE_DESCRIPTION">
@@ -2348,7 +2350,7 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2901>
+			uid = <455>
 		>
 		["RESOURCE_DESCRIPTION_ITEM"] = <
 			name = <"RESOURCE_DESCRIPTION_ITEM">
@@ -2405,7 +2407,7 @@
 				>
 			>
 			source_schema_id = <"openehr_structures_1.0.3">
-			uid = <2902>
+			uid = <456>
 		>
 		["OBJECT_REF"] = <
 			name = <"OBJECT_REF">
@@ -2428,7 +2430,7 @@
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2732>
+			uid = <286>
 		>
 		["LOCATABLE_REF"] = <
 			name = <"LOCATABLE_REF">
@@ -2446,19 +2448,19 @@
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2733>
+			uid = <287>
 		>
 		["PARTY_REF"] = <
 			name = <"PARTY_REF">
 			ancestors = <"OBJECT_REF", ...>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2734>
+			uid = <288>
 		>
 		["ACCESS_GROUP_REF"] = <
 			name = <"ACCESS_GROUP_REF">
 			ancestors = <"OBJECT_REF", ...>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2735>
+			uid = <289>
 		>
 		["OBJECT_ID"] = <
 			name = <"OBJECT_ID">
@@ -2472,20 +2474,20 @@
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
 			is_abstract = <True>
-			uid = <2736>
+			uid = <290>
 		>
 		["TERMINOLOGY_ID"] = <
 			name = <"TERMINOLOGY_ID">
 			ancestors = <"OBJECT_ID", ...>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2737>
+			uid = <291>
 		>
 		["UID_BASED_ID"] = <
 			name = <"UID_BASED_ID">
 			ancestors = <"OBJECT_ID", ...>
 			source_schema_id = <"openehr_basic_types_1.0.3">
 			is_abstract = <True>
-			uid = <2738>
+			uid = <292>
 		>
 		["GENERIC_ID"] = <
 			name = <"GENERIC_ID">
@@ -2498,31 +2500,31 @@
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2739>
+			uid = <293>
 		>
 		["ARCHETYPE_ID"] = <
 			name = <"ARCHETYPE_ID">
 			ancestors = <"OBJECT_ID", ...>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2740>
+			uid = <294>
 		>
 		["TEMPLATE_ID"] = <
 			name = <"TEMPLATE_ID">
 			ancestors = <"OBJECT_ID", ...>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2741>
+			uid = <295>
 		>
 		["OBJECT_VERSION_ID"] = <
 			name = <"OBJECT_VERSION_ID">
 			ancestors = <"UID_BASED_ID", ...>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2742>
+			uid = <296>
 		>
 		["HIER_OBJECT_ID"] = <
 			name = <"HIER_OBJECT_ID">
 			ancestors = <"UID_BASED_ID", ...>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2743>
+			uid = <297>
 		>
 		["VERSION_TREE_ID"] = <
 			name = <"VERSION_TREE_ID">
@@ -2535,7 +2537,7 @@
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2744>
+			uid = <298>
 		>
 		["UID"] = <
 			name = <"UID">
@@ -2549,32 +2551,32 @@
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
 			is_abstract = <True>
-			uid = <2745>
+			uid = <299>
 		>
 		["INTERNET_ID"] = <
 			name = <"INTERNET_ID">
 			ancestors = <"UID", ...>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2746>
+			uid = <300>
 		>
 		["UUID"] = <
 			name = <"UUID">
 			ancestors = <"UID", ...>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2747>
+			uid = <301>
 		>
 		["ISO_OID"] = <
 			name = <"ISO_OID">
 			ancestors = <"UID", ...>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2748>
+			uid = <302>
 		>
 		["DATA_VALUE"] = <
 			name = <"DATA_VALUE">
 			ancestors = <"Any", ...>
 			source_schema_id = <"openehr_basic_types_1.0.3">
 			is_abstract = <True>
-			uid = <2749>
+			uid = <303>
 		>
 		["DV_BOOLEAN"] = <
 			name = <"DV_BOOLEAN">
@@ -2587,7 +2589,7 @@
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2750>
+			uid = <304>
 		>
 		["DV_IDENTIFIER"] = <
 			name = <"DV_IDENTIFIER">
@@ -2613,7 +2615,7 @@
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2751>
+			uid = <305>
 		>
 		["DV_STATE"] = <
 			name = <"DV_STATE">
@@ -2631,7 +2633,7 @@
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2752>
+			uid = <306>
 		>
 		["TERM_MAPPING"] = <
 			name = <"TERM_MAPPING">
@@ -2652,7 +2654,7 @@
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2753>
+			uid = <307>
 		>
 		["DV_TEXT"] = <
 			name = <"DV_TEXT">
@@ -2694,7 +2696,7 @@
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2754>
+			uid = <308>
 		>
 		["DV_CODED_TEXT"] = <
 			name = <"DV_CODED_TEXT">
@@ -2707,7 +2709,7 @@
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2755>
+			uid = <309>
 		>
 		["CODE_PHRASE"] = <
 			name = <"CODE_PHRASE">
@@ -2724,7 +2726,7 @@
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2756>
+			uid = <310>
 		>
 		["DV_PARAGRAPH"] = <
 			name = <"DV_PARAGRAPH">
@@ -2741,7 +2743,7 @@
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2757>
+			uid = <311>
 		>
 		["DV_INTERVAL"] = <
 			name = <"DV_INTERVAL">
@@ -2753,7 +2755,7 @@
 			>
 			ancestors = <"Interval", "DATA_VALUE">
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2758>
+			uid = <312>
 		>
 		["REFERENCE_RANGE"] = <
 			name = <"REFERENCE_RANGE">
@@ -2780,7 +2782,7 @@
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2759>
+			uid = <313>
 		>
 		["DV_ORDERED"] = <
 			name = <"DV_ORDERED">
@@ -2799,6 +2801,7 @@
 				>
 				["other_reference_ranges"] = (P_BMM_CONTAINER_PROPERTY) <
 					name = <"other_reference_ranges">
+					cardinality = <|>=1|>
 					type_def = <
 						type_def = (P_BMM_GENERIC_TYPE) <
 							root_type = <"REFERENCE_RANGE">
@@ -2810,7 +2813,7 @@
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
 			is_abstract = <True>
-			uid = <2760>
+			uid = <314>
 		>
 		["DV_QUANTIFIED"] = <
 			name = <"DV_QUANTIFIED">
@@ -2828,7 +2831,7 @@
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
 			is_abstract = <True>
-			uid = <2761>
+			uid = <315>
 		>
 		["DV_ORDINAL"] = <
 			name = <"DV_ORDINAL">
@@ -2846,7 +2849,7 @@
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2762>
+			uid = <316>
 		>
 		["DV_AMOUNT"] = <
 			name = <"DV_AMOUNT">
@@ -2865,7 +2868,7 @@
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
 			is_abstract = <True>
-			uid = <2763>
+			uid = <317>
 		>
 		["DV_ABSOLUTE_QUANTITY"] = <
 			name = <"DV_ABSOLUTE_QUANTITY">
@@ -2879,7 +2882,7 @@
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
 			is_abstract = <True>
-			uid = <2764>
+			uid = <318>
 		>
 		["DV_QUANTITY"] = <
 			name = <"DV_QUANTITY">
@@ -2923,7 +2926,7 @@
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2765>
+			uid = <319>
 		>
 		["DV_COUNT"] = <
 			name = <"DV_COUNT">
@@ -2932,6 +2935,7 @@
 				["magnitude"] = (P_BMM_SINGLE_PROPERTY) <
 					name = <"magnitude">
 					type = <"Integer64">
+					is_mandatory = <True>
 				>
 				["normal_range"] = (P_BMM_GENERIC_PROPERTY) <
 					name = <"normal_range">
@@ -2952,7 +2956,7 @@
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2766>
+			uid = <320>
 		>
 		["DV_PROPORTION"] = <
 			name = <"DV_PROPORTION">
@@ -2991,6 +2995,7 @@
 				>
 				["other_reference_ranges"] = (P_BMM_CONTAINER_PROPERTY) <
 					name = <"other_reference_ranges">
+					cardinality = <|>=1|>
 					type_def = <
 						type_def = (P_BMM_GENERIC_TYPE) <
 							root_type = <"REFERENCE_RANGE">
@@ -3001,14 +3006,14 @@
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2767>
+			uid = <321>
 		>
 		["PROPORTION_KIND"] = (P_BMM_ENUMERATION_INTEGER) <
 			name = <"PROPORTION_KIND">
 			ancestors = <"Integer", ...>
 			source_schema_id = <"openehr_basic_types_1.0.3">
 			item_names = <"pk_ratio", "pk_unitary", "pk_percent", "pk_fraction", "pk_integer_fraction">
-			uid = <2768>
+			uid = <322>
 		>
 		["DV_TEMPORAL"] = <
 			name = <"DV_TEMPORAL">
@@ -3021,7 +3026,7 @@
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
 			is_abstract = <True>
-			uid = <2769>
+			uid = <323>
 		>
 		["DV_DATE"] = <
 			name = <"DV_DATE">
@@ -3034,7 +3039,7 @@
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2770>
+			uid = <324>
 		>
 		["DV_TIME"] = <
 			name = <"DV_TIME">
@@ -3047,7 +3052,7 @@
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2771>
+			uid = <325>
 		>
 		["DV_DATE_TIME"] = <
 			name = <"DV_DATE_TIME">
@@ -3060,7 +3065,7 @@
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2772>
+			uid = <326>
 		>
 		["DV_DURATION"] = <
 			name = <"DV_DURATION">
@@ -3073,7 +3078,7 @@
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2773>
+			uid = <327>
 		>
 		["DV_ENCAPSULATED"] = <
 			name = <"DV_ENCAPSULATED">
@@ -3092,7 +3097,7 @@
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
 			is_abstract = <True>
-			uid = <2774>
+			uid = <328>
 		>
 		["DV_MULTIMEDIA"] = <
 			name = <"DV_MULTIMEDIA">
@@ -3142,11 +3147,12 @@
 				["size"] = (P_BMM_SINGLE_PROPERTY) <
 					name = <"size">
 					type = <"Integer">
+					is_mandatory = <True>
 					is_im_runtime = <True>
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2775>
+			uid = <329>
 		>
 		["DV_PARSABLE"] = <
 			name = <"DV_PARSABLE">
@@ -3164,7 +3170,7 @@
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2776>
+			uid = <330>
 		>
 		["DV_URI"] = <
 			name = <"DV_URI">
@@ -3177,13 +3183,13 @@
 				>
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2777>
+			uid = <331>
 		>
 		["DV_EHR_URI"] = <
 			name = <"DV_EHR_URI">
 			ancestors = <"DV_URI", ...>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2778>
+			uid = <332>
 		>
 		["DV_TIME_SPECIFICATION"] = <
 			name = <"DV_TIME_SPECIFICATION">
@@ -3197,19 +3203,19 @@
 			>
 			source_schema_id = <"openehr_basic_types_1.0.3">
 			is_abstract = <True>
-			uid = <2779>
+			uid = <333>
 		>
 		["DV_PERIODIC_TIME_SPECIFICATION"] = <
 			name = <"DV_PERIODIC_TIME_SPECIFICATION">
 			ancestors = <"DV_TIME_SPECIFICATION", ...>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2780>
+			uid = <334>
 		>
 		["DV_GENERAL_TIME_SPECIFICATION"] = <
 			name = <"DV_GENERAL_TIME_SPECIFICATION">
 			ancestors = <"DV_TIME_SPECIFICATION", ...>
 			source_schema_id = <"openehr_basic_types_1.0.3">
-			uid = <2781>
+			uid = <335>
 		>
 		["PARTY"] = <
 			name = <"PARTY">
@@ -3267,7 +3273,7 @@
 			>
 			source_schema_id = <"openehr_demographic_1.0.3">
 			is_abstract = <True>
-			uid = <2782>
+			uid = <336>
 		>
 		["PARTY_IDENTITY"] = <
 			name = <"PARTY_IDENTITY">
@@ -3285,7 +3291,7 @@
 				>
 			>
 			source_schema_id = <"openehr_demographic_1.0.3">
-			uid = <2783>
+			uid = <337>
 		>
 		["CONTACT"] = <
 			name = <"CONTACT">
@@ -3314,7 +3320,7 @@
 				>
 			>
 			source_schema_id = <"openehr_demographic_1.0.3">
-			uid = <2784>
+			uid = <338>
 		>
 		["ADDRESS"] = <
 			name = <"ADDRESS">
@@ -3332,7 +3338,7 @@
 				>
 			>
 			source_schema_id = <"openehr_demographic_1.0.3">
-			uid = <2785>
+			uid = <339>
 		>
 		["ACTOR"] = <
 			name = <"ACTOR">
@@ -3359,31 +3365,31 @@
 			>
 			source_schema_id = <"openehr_demographic_1.0.3">
 			is_abstract = <True>
-			uid = <2786>
+			uid = <340>
 		>
 		["PERSON"] = <
 			name = <"PERSON">
 			ancestors = <"ACTOR", ...>
 			source_schema_id = <"openehr_demographic_1.0.3">
-			uid = <2787>
+			uid = <341>
 		>
 		["ORGANISATION"] = <
 			name = <"ORGANISATION">
 			ancestors = <"ACTOR", ...>
 			source_schema_id = <"openehr_demographic_1.0.3">
-			uid = <2788>
+			uid = <342>
 		>
 		["GROUP"] = <
 			name = <"GROUP">
 			ancestors = <"ACTOR", ...>
 			source_schema_id = <"openehr_demographic_1.0.3">
-			uid = <2789>
+			uid = <343>
 		>
 		["AGENT"] = <
 			name = <"AGENT">
 			ancestors = <"ACTOR", ...>
 			source_schema_id = <"openehr_demographic_1.0.3">
-			uid = <2790>
+			uid = <344>
 		>
 		["ROLE"] = <
 			name = <"ROLE">
@@ -3412,7 +3418,7 @@
 				>
 			>
 			source_schema_id = <"openehr_demographic_1.0.3">
-			uid = <2791>
+			uid = <345>
 		>
 		["CAPABILITY"] = <
 			name = <"CAPABILITY">
@@ -3433,7 +3439,7 @@
 				>
 			>
 			source_schema_id = <"openehr_demographic_1.0.3">
-			uid = <2792>
+			uid = <346>
 		>
 		["PARTY_RELATIONSHIP"] = <
 			name = <"PARTY_RELATIONSHIP">
@@ -3463,7 +3469,7 @@
 				>
 			>
 			source_schema_id = <"openehr_demographic_1.0.3">
-			uid = <2793>
+			uid = <347>
 		>
 	>
 	passed = <True>

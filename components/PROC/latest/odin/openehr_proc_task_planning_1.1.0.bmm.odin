@@ -1,5 +1,5 @@
 	rm_publisher = <"openehr">
-	rm_release = <"1.0.0">
+	rm_release = <"1.1.0">
 	packages = <
 		["ORG.OPENEHR.PROC.TASK_PLANNING"] = <
 			packages = <
@@ -17,10 +17,10 @@
 		>
 	>
 	schema_name = <"proc_task_planning">
-	schema_revision = <"1.0.0.1">
+	schema_revision = <"1.1.0.1">
 	schema_lifecycle_state = <"development">
 	schema_author = <"Thomas Beale <thomas.beale@openehr.org>">
-	schema_description = <"openEHR Release 1.0.0 Task Management schema">
+	schema_description = <"openEHR Release 1.1.0 Task Management schema">
 	bmm_version = <"2.3">
 	model_name = <"TASK_PLANNING">
 	includes = <
@@ -327,23 +327,23 @@
 		["RESUME_TYPE"] = (P_BMM_ENUMERATION_INTEGER) <
 			name = <"RESUME_TYPE">
 			ancestors = <"Integer", ...>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
 			item_names = <"resume_specified", "retry_current_group", "new_thread">
-			uid = <187>
+			uid = <109>
 		>
 		["TEMPORAL_RELATION"] = (P_BMM_ENUMERATION_INTEGER) <
 			name = <"TEMPORAL_RELATION">
 			ancestors = <"Integer", ...>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
 			item_names = <"before", "with", "after">
-			uid = <188>
+			uid = <110>
 		>
 		["TASK_LIFECYCLE"] = (P_BMM_ENUMERATION_INTEGER) <
 			name = <"TASK_LIFECYCLE">
 			ancestors = <"Integer", ...>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
 			item_names = <"planned", "available", "cancelled", "aborted", "abandoned", "underway", "suspended", "resumed", "completed">
-			uid = <189>
+			uid = <111>
 		>
 		["SYSTEM_CALL"] = <
 			name = <"SYSTEM_CALL">
@@ -373,9 +373,9 @@
 					>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
 			is_abstract = <True>
-			uid = <190>
+			uid = <112>
 		>
 		["PARAMETER_DEF"] = <
 			name = <"PARAMETER_DEF">
@@ -396,8 +396,8 @@
 					is_mandatory = <True>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <191>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <113>
 		>
 		["PARAMETER_MAPPING"] = <
 			name = <"PARAMETER_MAPPING">
@@ -413,8 +413,8 @@
 					is_mandatory = <True>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <192>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <114>
 		>
 		["QUERY_CALL"] = <
 			name = <"QUERY_CALL">
@@ -429,14 +429,14 @@
 					type = <"String">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <193>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <115>
 		>
 		["API_CALL"] = <
 			name = <"API_CALL">
 			ancestors = <"SYSTEM_CALL", ...>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <194>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <116>
 		>
 		["PLAN_DATA_CONTEXT"] = <
 			name = <"PLAN_DATA_CONTEXT">
@@ -463,8 +463,8 @@
 					>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <195>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <117>
 		>
 		["CONTEXT_VALUE"] = <
 			name = <"CONTEXT_VALUE">
@@ -486,9 +486,9 @@
 					is_mandatory = <True>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
 			is_abstract = <True>
-			uid = <196>
+			uid = <118>
 		>
 		["CONTEXT_VARIABLE"] = <
 			name = <"CONTEXT_VARIABLE">
@@ -499,9 +499,9 @@
 				>
 			>
 			ancestors = <"CONTEXT_VALUE", ...>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
 			is_abstract = <True>
-			uid = <197>
+			uid = <119>
 		>
 		["CONTEXT_EXPRESSION"] = <
 			name = <"CONTEXT_EXPRESSION">
@@ -519,8 +519,8 @@
 					is_mandatory = <True>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <198>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <120>
 		>
 		["BOOLEAN_CONTEXT_EXPRESSION"] = <
 			name = <"BOOLEAN_CONTEXT_EXPRESSION">
@@ -530,8 +530,8 @@
 					generic_parameters = <"TYPE_DEF_BOOLEAN", ...>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <199>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <121>
 		>
 		["STATE_VARIABLE"] = <
 			name = <"STATE_VARIABLE">
@@ -548,8 +548,8 @@
 					type = <"Iso8601_duration">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <200>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <122>
 		>
 		["EXTERNAL_VARIABLE"] = <
 			name = <"EXTERNAL_VARIABLE">
@@ -566,9 +566,9 @@
 					type = <"SYSTEM_CALL">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
 			is_abstract = <True>
-			uid = <201>
+			uid = <123>
 		>
 		["EVENT_VARIABLE"] = <
 			name = <"EVENT_VARIABLE">
@@ -579,8 +579,8 @@
 				>
 			>
 			ancestors = <"EXTERNAL_VARIABLE", ...>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <202>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <124>
 		>
 		["LOCAL_VARIABLE"] = <
 			name = <"LOCAL_VARIABLE">
@@ -591,8 +591,8 @@
 				>
 			>
 			ancestors = <"CONTEXT_VARIABLE", ...>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <203>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <125>
 		>
 		["CONTINUOUS_EVENT_VARIABLE"] = <
 			name = <"CONTINUOUS_EVENT_VARIABLE">
@@ -609,8 +609,8 @@
 					type = <"Real">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <204>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <126>
 		>
 		["CONTEXT_CONSTANT"] = <
 			name = <"CONTEXT_CONSTANT">
@@ -621,8 +621,8 @@
 				>
 			>
 			ancestors = <"CONTEXT_VALUE", ...>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <205>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <127>
 		>
 		["WORK_PLAN"] = <
 			name = <"WORK_PLAN">
@@ -673,7 +673,7 @@
 					name = <"top_level_plans">
 					cardinality = <|>=1|>
 					type_def = <
-						type = <"UID_BASED_ID">
+						type = <"TASK_PLAN">
 						container_type = <"List">
 					>
 				>
@@ -690,8 +690,8 @@
 					type = <"PLAN_DATA_CONTEXT">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <206>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <128>
 		>
 		["TASK_PLAN"] = <
 			name = <"TASK_PLAN">
@@ -753,8 +753,8 @@
 					is_im_runtime = <True>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <207>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <129>
 		>
 		["PLAN_CALENDAR"] = <
 			name = <"PLAN_CALENDAR">
@@ -768,13 +768,13 @@
 					>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <208>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <130>
 		>
 		["CALENDAR_ENTRY"] = <
 			name = <"CALENDAR_ENTRY">
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <209>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <131>
 		>
 		["PLAN_TIMELINE"] = <
 			name = <"PLAN_TIMELINE">
@@ -796,8 +796,8 @@
 					>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <210>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <132>
 		>
 		["TASK_PARTICIPATION"] = <
 			name = <"TASK_PARTICIPATION">
@@ -827,8 +827,8 @@
 					type = <"VALIDITY_KIND">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <211>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <133>
 		>
 		["PLAN_ITEM"] = <
 			name = <"PLAN_ITEM">
@@ -860,9 +860,9 @@
 					>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
 			is_abstract = <True>
-			uid = <212>
+			uid = <134>
 		>
 		["TASK_REPEAT"] = <
 			name = <"TASK_REPEAT">
@@ -879,8 +879,8 @@
 					type = <"PLAN_EVENT">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <213>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <135>
 		>
 		["TASK_GROUP"] = <
 			name = <"TASK_GROUP">
@@ -903,15 +903,15 @@
 					type = <"Integer">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <214>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <136>
 		>
 		["EXECUTION_TYPE"] = (P_BMM_ENUMERATION_INTEGER) <
 			name = <"EXECUTION_TYPE">
 			ancestors = <"Integer", ...>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
 			item_names = <"sequential", "parallel">
-			uid = <215>
+			uid = <137>
 		>
 		["TASK"] = <
 			name = <"TASK">
@@ -929,9 +929,9 @@
 					is_mandatory = <True>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
 			is_abstract = <True>
-			uid = <216>
+			uid = <138>
 		>
 		["DISPATCHABLE_TASK"] = <
 			name = <"DISPATCHABLE_TASK">
@@ -953,8 +953,8 @@
 					type = <"CALLBACK_WAIT">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <217>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <139>
 		>
 		["PERFORMABLE_TASK"] = <
 			name = <"PERFORMABLE_TASK">
@@ -975,8 +975,8 @@
 					>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <218>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <140>
 		>
 		["TASK_ACTION"] = <
 			name = <"TASK_ACTION">
@@ -999,16 +999,16 @@
 					type = <"LOCATABLE_REF">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
 			is_abstract = <True>
-			uid = <219>
+			uid = <141>
 		>
 		["DISPATCHABLE_ACTION"] = <
 			name = <"DISPATCHABLE_ACTION">
 			ancestors = <"TASK_ACTION", ...>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
 			is_abstract = <True>
-			uid = <220>
+			uid = <142>
 		>
 		["PERFORMABLE_ACTION"] = <
 			name = <"PERFORMABLE_ACTION">
@@ -1031,9 +1031,9 @@
 					>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
 			is_abstract = <True>
-			uid = <221>
+			uid = <143>
 		>
 		["RESOURCE_PARTICIPATION"] = <
 			name = <"RESOURCE_PARTICIPATION">
@@ -1048,8 +1048,8 @@
 					type = <"OBJECT_REF">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <222>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <144>
 		>
 		["SUBJECT_PRECONDITION"] = <
 			name = <"SUBJECT_PRECONDITION">
@@ -1064,8 +1064,8 @@
 					type = <"BOOLEAN_CONTEXT_EXPRESSION">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <223>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <145>
 		>
 		["EXTERNAL_REQUEST"] = <
 			name = <"EXTERNAL_REQUEST">
@@ -1086,8 +1086,8 @@
 					type = <"ITEM_STRUCTURE">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <224>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <146>
 		>
 		["DEFINED_ACTION"] = <
 			name = <"DEFINED_ACTION">
@@ -1106,8 +1106,8 @@
 					type = <"VALIDITY_KIND">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <225>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <147>
 		>
 		["SYSTEM_REQUEST"] = <
 			name = <"SYSTEM_REQUEST">
@@ -1119,8 +1119,8 @@
 					is_mandatory = <True>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <226>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <148>
 		>
 		["DATASET_SPEC"] = <
 			name = <"DATASET_SPEC">
@@ -1139,8 +1139,8 @@
 					type = <"String">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <227>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <149>
 		>
 		["LINKED_PLAN"] = <
 			name = <"LINKED_PLAN">
@@ -1151,26 +1151,26 @@
 					is_mandatory = <True>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
 			is_abstract = <True>
-			uid = <228>
+			uid = <150>
 		>
 		["HAND_OFF"] = <
 			name = <"HAND_OFF">
 			ancestors = <"LINKED_PLAN", "DISPATCHABLE_ACTION">
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <229>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <151>
 		>
 		["SUB_PLAN"] = <
 			name = <"SUB_PLAN">
 			ancestors = <"LINKED_PLAN", "PERFORMABLE_ACTION">
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <230>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <152>
 		>
 		["TASK_COSTING"] = <
 			name = <"TASK_COSTING">
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <231>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <153>
 		>
 		["CHOICE_GROUP"] = <
 			name = <"CHOICE_GROUP">
@@ -1189,35 +1189,35 @@
 					>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
 			is_abstract = <True>
-			uid = <232>
+			uid = <154>
 		>
 		["OVERRIDE_TYPE"] = (P_BMM_ENUMERATION_INTEGER) <
 			name = <"OVERRIDE_TYPE">
 			ancestors = <"Integer", ...>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
 			item_names = <"allowed", "allowed_with_reason", "prohibited">
-			uid = <233>
+			uid = <155>
 		>
 		["CHOICE_BRANCH"] = <
 			name = <"CHOICE_BRANCH">
 			ancestors = <"TASK_GROUP", ...>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
 			is_abstract = <True>
-			uid = <234>
+			uid = <156>
 		>
 		["ADHOC_GROUP"] = <
 			name = <"ADHOC_GROUP">
 			ancestors = <"CHOICE_GROUP", ...>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <235>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <157>
 		>
 		["ADHOC_BRANCH"] = <
 			name = <"ADHOC_BRANCH">
 			ancestors = <"CHOICE_BRANCH", ...>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <236>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <158>
 		>
 		["CONDITION_GROUP"] = <
 			name = <"CONDITION_GROUP">
@@ -1232,8 +1232,8 @@
 					>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <237>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <159>
 		>
 		["CONDITION_BRANCH"] = <
 			name = <"CONDITION_BRANCH">
@@ -1245,8 +1245,8 @@
 					is_mandatory = <True>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <238>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <160>
 		>
 		["DECISION_GROUP"] = <
 			name = <"DECISION_GROUP">
@@ -1269,8 +1269,8 @@
 					>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <239>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <161>
 		>
 		["DECISION_BRANCH"] = <
 			name = <"DECISION_BRANCH">
@@ -1282,8 +1282,8 @@
 					is_mandatory = <True>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <240>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <162>
 		>
 		["EVENT_GROUP"] = <
 			name = <"EVENT_GROUP">
@@ -1302,14 +1302,14 @@
 					>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <241>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <163>
 		>
 		["EVENT_BRANCH"] = <
 			name = <"EVENT_BRANCH">
 			ancestors = <"CHOICE_BRANCH", ...>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <242>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <164>
 		>
 		["TASK_WAIT"] = <
 			name = <"TASK_WAIT">
@@ -1335,8 +1335,8 @@
 					type = <"TEMPORAL_RELATION">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <243>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <165>
 		>
 		["PLAN_EVENT"] = <
 			name = <"PLAN_EVENT">
@@ -1347,9 +1347,9 @@
 					type = <"ITEM_STRUCTURE">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
 			is_abstract = <True>
-			uid = <244>
+			uid = <166>
 		>
 		["TIMELINE_MOMENT"] = <
 			name = <"TIMELINE_MOMENT">
@@ -1364,8 +1364,8 @@
 					type = <"TIME_SPECIFIER">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <245>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <167>
 		>
 		["SYSTEM_NOTIFICATION"] = <
 			name = <"SYSTEM_NOTIFICATION">
@@ -1385,8 +1385,8 @@
 					type = <"String">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <246>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <168>
 		>
 		["CALLBACK_NOTIFICATION"] = <
 			name = <"CALLBACK_NOTIFICATION">
@@ -1402,8 +1402,8 @@
 					type = <"String">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <247>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <169>
 		>
 		["MANUAL_NOTIFICATION"] = <
 			name = <"MANUAL_NOTIFICATION">
@@ -1415,8 +1415,8 @@
 					is_mandatory = <True>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <248>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <170>
 		>
 		["TASK_TRANSITION"] = <
 			name = <"TASK_TRANSITION">
@@ -1436,8 +1436,8 @@
 					>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <249>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <171>
 		>
 		["EVENT_WAIT"] = <
 			name = <"EVENT_WAIT">
@@ -1462,8 +1462,8 @@
 					type = <"EVENT_ACTION">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <250>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <172>
 		>
 		["DELAY_EVENT"] = <
 			name = <"DELAY_EVENT">
@@ -1476,11 +1476,11 @@
 				>
 				["source"] = (P_BMM_SINGLE_PROPERTY) <
 					name = <"source">
-					type = <"UID_BASED_ID">
+					type = <"PLAN_EVENT">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <251>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <173>
 		>
 		["STATE_TRIGGER"] = <
 			name = <"STATE_TRIGGER">
@@ -1492,8 +1492,8 @@
 					is_mandatory = <True>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <252>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <174>
 		>
 		["TIMER_EVENT"] = <
 			name = <"TIMER_EVENT">
@@ -1509,14 +1509,14 @@
 					type = <"String">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <253>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <175>
 		>
 		["REMINDER"] = <
 			name = <"REMINDER">
 			ancestors = <"TIMER_WAIT", ...>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <254>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <176>
 		>
 		["TIMER_WAIT"] = <
 			name = <"TIMER_WAIT">
@@ -1526,8 +1526,8 @@
 					generic_parameters = <"TIMER_EVENT", ...>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <255>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <177>
 		>
 		["CALLBACK_WAIT"] = <
 			name = <"CALLBACK_WAIT">
@@ -1543,8 +1543,8 @@
 					type = <"EVENT_ACTION">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <256>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <178>
 		>
 		["EVENT_ACTION"] = <
 			name = <"EVENT_ACTION">
@@ -1565,9 +1565,13 @@
 					name = <"message">
 					type = <"DV_TEXT">
 				>
+				["receiver_thread_next_state"] = (P_BMM_SINGLE_PROPERTY) <
+					name = <"receiver_thread_next_state">
+					type = <"TASK_LIFECYCLE">
+				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <257>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <179>
 		>
 		["CALENDAR_EVENT"] = <
 			name = <"CALENDAR_EVENT">
@@ -1583,8 +1587,8 @@
 					is_mandatory = <True>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <258>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <180>
 		>
 		["RESUME_ACTION"] = <
 			name = <"RESUME_ACTION">
@@ -1599,14 +1603,14 @@
 					type = <"UID_BASED_ID">
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <259>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <181>
 		>
 		["TIME_SPECIFIER"] = <
 			name = <"TIME_SPECIFIER">
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
 			is_abstract = <True>
-			uid = <260>
+			uid = <182>
 		>
 		["CLOCK_TIME"] = <
 			name = <"CLOCK_TIME">
@@ -1618,8 +1622,8 @@
 					is_mandatory = <True>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <261>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <183>
 		>
 		["CALENDAR_TIME"] = <
 			name = <"CALENDAR_TIME">
@@ -1631,8 +1635,8 @@
 					is_mandatory = <True>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <262>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <184>
 		>
 		["CUSTOMARY_TIME"] = <
 			name = <"CUSTOMARY_TIME">
@@ -1644,13 +1648,13 @@
 					is_mandatory = <True>
 				>
 			>
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <263>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <185>
 		>
 		["TASK_PLAN_EXECUTION_HISTORY"] = <
 			name = <"TASK_PLAN_EXECUTION_HISTORY">
-			source_schema_id = <"openehr_proc_task_planning_1.0.0">
-			uid = <264>
+			source_schema_id = <"openehr_proc_task_planning_1.1.0">
+			uid = <186>
 		>
 		["EXPR_TYPE_DEF"] = <
 			name = <"EXPR_TYPE_DEF">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <UNKNOWN_DOCUMENT_TYPE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
  <rm_publisher>openehr</rm_publisher>
- <rm_release>1.0.0</rm_release>
+ <rm_release>1.1.0</rm_release>
  <packages id="ORG.OPENEHR.PROC.TASK_PLANNING">
   <packages id="DEFINITION">
    <name>definition</name>
@@ -90,10 +90,10 @@
   <classes>RESUME_TYPE</classes>
  </packages>
  <schema_name>proc_task_planning</schema_name>
- <schema_revision>1.0.0.1</schema_revision>
+ <schema_revision>1.1.0.1</schema_revision>
  <schema_lifecycle_state>development</schema_lifecycle_state>
  <schema_author>Thomas Beale &lt;thomas.beale@openehr.org&gt;</schema_author>
- <schema_description>openEHR Release 1.0.0 Task Management schema</schema_description>
+ <schema_description>openEHR Release 1.1.0 Task Management schema</schema_description>
  <bmm_version>2.3</bmm_version>
  <model_name>TASK_PLANNING</model_name>
  <includes>
@@ -376,25 +376,25 @@
  <class_definitions id="RESUME_TYPE">
   <name>RESUME_TYPE</name>
   <ancestors>Integer</ancestors>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
   <item_names>resume_specified</item_names>
   <item_names>retry_current_group</item_names>
   <item_names>new_thread</item_names>
-  <uid>187</uid>
+  <uid>109</uid>
  </class_definitions>
  <class_definitions id="TEMPORAL_RELATION">
   <name>TEMPORAL_RELATION</name>
   <ancestors>Integer</ancestors>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
   <item_names>before</item_names>
   <item_names>with</item_names>
   <item_names>after</item_names>
-  <uid>188</uid>
+  <uid>110</uid>
  </class_definitions>
  <class_definitions id="TASK_LIFECYCLE">
   <name>TASK_LIFECYCLE</name>
   <ancestors>Integer</ancestors>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
   <item_names>planned</item_names>
   <item_names>available</item_names>
   <item_names>cancelled</item_names>
@@ -404,7 +404,7 @@
   <item_names>suspended</item_names>
   <item_names>resumed</item_names>
   <item_names>completed</item_names>
-  <uid>189</uid>
+  <uid>111</uid>
  </class_definitions>
  <class_definitions id="SYSTEM_CALL">
   <name>SYSTEM_CALL</name>
@@ -432,9 +432,9 @@
     <container_type>List</container_type>
    </type_def>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>190</uid>
+  <uid>112</uid>
  </class_definitions>
  <class_definitions id="PARAMETER_DEF">
   <name>PARAMETER_DEF</name>
@@ -453,8 +453,8 @@
    <type>Any</type>
    <is_mandatory>true</is_mandatory>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>191</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>113</uid>
  </class_definitions>
  <class_definitions id="PARAMETER_MAPPING">
   <name>PARAMETER_MAPPING</name>
@@ -468,8 +468,8 @@
    <type>String</type>
    <is_mandatory>true</is_mandatory>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>192</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>114</uid>
  </class_definitions>
  <class_definitions id="QUERY_CALL">
   <name>QUERY_CALL</name>
@@ -482,14 +482,14 @@
    <name>query_text</name>
    <type>String</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>193</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>115</uid>
  </class_definitions>
  <class_definitions id="API_CALL">
   <name>API_CALL</name>
   <ancestors>SYSTEM_CALL</ancestors>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>194</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>116</uid>
  </class_definitions>
  <class_definitions id="PLAN_DATA_CONTEXT">
   <name>PLAN_DATA_CONTEXT</name>
@@ -514,8 +514,8 @@
     <container_type>List</container_type>
    </type_def>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>195</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>117</uid>
  </class_definitions>
  <class_definitions id="CONTEXT_VALUE">
   <name>CONTEXT_VALUE</name>
@@ -533,9 +533,9 @@
    <type>T</type>
    <is_mandatory>true</is_mandatory>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>196</uid>
+  <uid>118</uid>
  </class_definitions>
  <class_definitions id="CONTEXT_VARIABLE">
   <name>CONTEXT_VARIABLE</name>
@@ -544,9 +544,9 @@
    <conforms_to_type>EXPR_TYPE_DEF</conforms_to_type>
   </generic_parameter_defs>
   <ancestors>CONTEXT_VALUE</ancestors>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>197</uid>
+  <uid>119</uid>
  </class_definitions>
  <class_definitions id="CONTEXT_EXPRESSION">
   <name>CONTEXT_EXPRESSION</name>
@@ -560,8 +560,8 @@
    <type>String</type>
    <is_mandatory>true</is_mandatory>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>198</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>120</uid>
  </class_definitions>
  <class_definitions id="BOOLEAN_CONTEXT_EXPRESSION">
   <name>BOOLEAN_CONTEXT_EXPRESSION</name>
@@ -569,8 +569,8 @@
    <root_type>CONTEXT_EXPRESSION</root_type>
    <generic_parameters>TYPE_DEF_BOOLEAN</generic_parameters>
   </ancestor_defs>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>199</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>121</uid>
  </class_definitions>
  <class_definitions id="STATE_VARIABLE">
   <name>STATE_VARIABLE</name>
@@ -583,8 +583,8 @@
    <name>required_currency</name>
    <type>Iso8601_duration</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>200</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>122</uid>
  </class_definitions>
  <class_definitions id="EXTERNAL_VARIABLE">
   <name>EXTERNAL_VARIABLE</name>
@@ -597,9 +597,9 @@
    <name>populating_request</name>
    <type>SYSTEM_CALL</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>201</uid>
+  <uid>123</uid>
  </class_definitions>
  <class_definitions id="EVENT_VARIABLE">
   <name>EVENT_VARIABLE</name>
@@ -608,8 +608,8 @@
    <conforms_to_type>EXPR_TYPE_DEF</conforms_to_type>
   </generic_parameter_defs>
   <ancestors>EXTERNAL_VARIABLE</ancestors>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>202</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>124</uid>
  </class_definitions>
  <class_definitions id="LOCAL_VARIABLE">
   <name>LOCAL_VARIABLE</name>
@@ -618,8 +618,8 @@
    <conforms_to_type>EXPR_TYPE_DEF</conforms_to_type>
   </generic_parameter_defs>
   <ancestors>CONTEXT_VARIABLE</ancestors>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>203</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>125</uid>
  </class_definitions>
  <class_definitions id="CONTINUOUS_EVENT_VARIABLE">
   <name>CONTINUOUS_EVENT_VARIABLE</name>
@@ -632,8 +632,8 @@
    <name>update_variation</name>
    <type>Real</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>204</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>126</uid>
  </class_definitions>
  <class_definitions id="CONTEXT_CONSTANT">
   <name>CONTEXT_CONSTANT</name>
@@ -642,8 +642,8 @@
    <conforms_to_type>EXPR_TYPE_DEF</conforms_to_type>
   </generic_parameter_defs>
   <ancestors>CONTEXT_VALUE</ancestors>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>205</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>127</uid>
  </class_definitions>
  <class_definitions id="WORK_PLAN">
   <name>WORK_PLAN</name>
@@ -697,7 +697,7 @@
    <cardinality>
    </cardinality>
    <type_def>
-    <type>UID_BASED_ID</type>
+    <type>TASK_PLAN</type>
     <container_type>List</container_type>
    </type_def>
   </properties>
@@ -714,8 +714,8 @@
    <name>context</name>
    <type>PLAN_DATA_CONTEXT</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>206</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>128</uid>
  </class_definitions>
  <class_definitions id="TASK_PLAN">
   <name>TASK_PLAN</name>
@@ -776,8 +776,8 @@
    <type>TASK_PLAN_EXECUTION_HISTORY</type>
    <is_im_runtime>true</is_im_runtime>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>207</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>129</uid>
  </class_definitions>
  <class_definitions id="PLAN_CALENDAR">
   <name>PLAN_CALENDAR</name>
@@ -790,13 +790,13 @@
     <container_type>List</container_type>
    </type_def>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>208</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>130</uid>
  </class_definitions>
  <class_definitions id="CALENDAR_ENTRY">
   <name>CALENDAR_ENTRY</name>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>209</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>131</uid>
  </class_definitions>
  <class_definitions id="PLAN_TIMELINE">
   <name>PLAN_TIMELINE</name>
@@ -818,8 +818,8 @@
     <container_type>List</container_type>
    </type_def>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>210</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>132</uid>
  </class_definitions>
  <class_definitions id="TASK_PARTICIPATION">
   <name>TASK_PARTICIPATION</name>
@@ -848,8 +848,8 @@
    <name>optionality</name>
    <type>VALIDITY_KIND</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>211</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>133</uid>
  </class_definitions>
  <class_definitions id="PLAN_ITEM">
   <name>PLAN_ITEM</name>
@@ -880,9 +880,9 @@
     <container_type>List</container_type>
    </type_def>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>212</uid>
+  <uid>134</uid>
  </class_definitions>
  <class_definitions id="TASK_REPEAT">
   <name>TASK_REPEAT</name>
@@ -897,8 +897,8 @@
    <name>terminate_condition</name>
    <type>PLAN_EVENT</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>213</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>135</uid>
  </class_definitions>
  <class_definitions id="TASK_GROUP">
   <name>TASK_GROUP</name>
@@ -920,16 +920,16 @@
    <name>training_level</name>
    <type>Integer</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>214</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>136</uid>
  </class_definitions>
  <class_definitions id="EXECUTION_TYPE">
   <name>EXECUTION_TYPE</name>
   <ancestors>Integer</ancestors>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
   <item_names>sequential</item_names>
   <item_names>parallel</item_names>
-  <uid>215</uid>
+  <uid>137</uid>
  </class_definitions>
  <class_definitions id="TASK">
   <name>TASK</name>
@@ -943,9 +943,9 @@
    <type>T</type>
    <is_mandatory>true</is_mandatory>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>216</uid>
+  <uid>138</uid>
  </class_definitions>
  <class_definitions id="DISPATCHABLE_TASK">
   <name>DISPATCHABLE_TASK</name>
@@ -963,8 +963,8 @@
    <name>callback</name>
    <type>CALLBACK_WAIT</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>217</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>139</uid>
  </class_definitions>
  <class_definitions id="PERFORMABLE_TASK">
   <name>PERFORMABLE_TASK</name>
@@ -982,8 +982,8 @@
     <container_type>List</container_type>
    </type_def>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>218</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>140</uid>
  </class_definitions>
  <class_definitions id="TASK_ACTION">
   <name>TASK_ACTION</name>
@@ -1005,16 +1005,16 @@
    <name>instruction_activity</name>
    <type>LOCATABLE_REF</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>219</uid>
+  <uid>141</uid>
  </class_definitions>
  <class_definitions id="DISPATCHABLE_ACTION">
   <name>DISPATCHABLE_ACTION</name>
   <ancestors>TASK_ACTION</ancestors>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>220</uid>
+  <uid>142</uid>
  </class_definitions>
  <class_definitions id="PERFORMABLE_ACTION">
   <name>PERFORMABLE_ACTION</name>
@@ -1037,9 +1037,9 @@
     <container_type>List</container_type>
    </type_def>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>221</uid>
+  <uid>143</uid>
  </class_definitions>
  <class_definitions id="RESOURCE_PARTICIPATION">
   <name>RESOURCE_PARTICIPATION</name>
@@ -1052,8 +1052,8 @@
    <name>external_ref</name>
    <type>OBJECT_REF</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>222</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>144</uid>
  </class_definitions>
  <class_definitions id="SUBJECT_PRECONDITION">
   <name>SUBJECT_PRECONDITION</name>
@@ -1066,8 +1066,8 @@
    <name>expression</name>
    <type>BOOLEAN_CONTEXT_EXPRESSION</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>223</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>145</uid>
  </class_definitions>
  <class_definitions id="EXTERNAL_REQUEST">
   <name>EXTERNAL_REQUEST</name>
@@ -1086,8 +1086,8 @@
    <name>other_details</name>
    <type>ITEM_STRUCTURE</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>224</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>146</uid>
  </class_definitions>
  <class_definitions id="DEFINED_ACTION">
   <name>DEFINED_ACTION</name>
@@ -1105,8 +1105,8 @@
    <name>optionality</name>
    <type>VALIDITY_KIND</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>225</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>147</uid>
  </class_definitions>
  <class_definitions id="SYSTEM_REQUEST">
   <name>SYSTEM_REQUEST</name>
@@ -1116,8 +1116,8 @@
    <type>SYSTEM_CALL</type>
    <is_mandatory>true</is_mandatory>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>226</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>148</uid>
  </class_definitions>
  <class_definitions id="DATASET_SPEC">
   <name>DATASET_SPEC</name>
@@ -1134,8 +1134,8 @@
    <name>template_id</name>
    <type>String</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>227</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>149</uid>
  </class_definitions>
  <class_definitions id="LINKED_PLAN">
   <name>LINKED_PLAN</name>
@@ -1144,28 +1144,28 @@
    <type>TASK_PLAN</type>
    <is_mandatory>true</is_mandatory>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>228</uid>
+  <uid>150</uid>
  </class_definitions>
  <class_definitions id="HAND_OFF">
   <name>HAND_OFF</name>
   <ancestors>LINKED_PLAN</ancestors>
   <ancestors>DISPATCHABLE_ACTION</ancestors>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>229</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>151</uid>
  </class_definitions>
  <class_definitions id="SUB_PLAN">
   <name>SUB_PLAN</name>
   <ancestors>LINKED_PLAN</ancestors>
   <ancestors>PERFORMABLE_ACTION</ancestors>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>230</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>152</uid>
  </class_definitions>
  <class_definitions id="TASK_COSTING">
   <name>TASK_COSTING</name>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>231</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>153</uid>
  </class_definitions>
  <class_definitions id="CHOICE_GROUP">
   <name>CHOICE_GROUP</name>
@@ -1183,37 +1183,37 @@
     <container_type>List</container_type>
    </type_def>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>232</uid>
+  <uid>154</uid>
  </class_definitions>
  <class_definitions id="OVERRIDE_TYPE">
   <name>OVERRIDE_TYPE</name>
   <ancestors>Integer</ancestors>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
   <item_names>allowed</item_names>
   <item_names>allowed_with_reason</item_names>
   <item_names>prohibited</item_names>
-  <uid>233</uid>
+  <uid>155</uid>
  </class_definitions>
  <class_definitions id="CHOICE_BRANCH">
   <name>CHOICE_BRANCH</name>
   <ancestors>TASK_GROUP</ancestors>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>234</uid>
+  <uid>156</uid>
  </class_definitions>
  <class_definitions id="ADHOC_GROUP">
   <name>ADHOC_GROUP</name>
   <ancestors>CHOICE_GROUP</ancestors>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>235</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>157</uid>
  </class_definitions>
  <class_definitions id="ADHOC_BRANCH">
   <name>ADHOC_BRANCH</name>
   <ancestors>CHOICE_BRANCH</ancestors>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>236</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>158</uid>
  </class_definitions>
  <class_definitions id="CONDITION_GROUP">
   <name>CONDITION_GROUP</name>
@@ -1227,8 +1227,8 @@
     <container_type>List</container_type>
    </type_def>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>237</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>159</uid>
  </class_definitions>
  <class_definitions id="CONDITION_BRANCH">
   <name>CONDITION_BRANCH</name>
@@ -1238,8 +1238,8 @@
    <type>BOOLEAN_CONTEXT_EXPRESSION</type>
    <is_mandatory>true</is_mandatory>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>238</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>160</uid>
  </class_definitions>
  <class_definitions id="DECISION_GROUP">
   <name>DECISION_GROUP</name>
@@ -1261,8 +1261,8 @@
     <container_type>List</container_type>
    </type_def>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>239</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>161</uid>
  </class_definitions>
  <class_definitions id="DECISION_BRANCH">
   <name>DECISION_BRANCH</name>
@@ -1272,8 +1272,8 @@
    <type>BOOLEAN_CONTEXT_EXPRESSION</type>
    <is_mandatory>true</is_mandatory>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>240</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>162</uid>
  </class_definitions>
  <class_definitions id="EVENT_GROUP">
   <name>EVENT_GROUP</name>
@@ -1291,14 +1291,14 @@
     <container_type>List</container_type>
    </type_def>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>241</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>163</uid>
  </class_definitions>
  <class_definitions id="EVENT_BRANCH">
   <name>EVENT_BRANCH</name>
   <ancestors>CHOICE_BRANCH</ancestors>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>242</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>164</uid>
  </class_definitions>
  <class_definitions id="TASK_WAIT">
   <name>TASK_WAIT</name>
@@ -1323,8 +1323,8 @@
    <name>event_relation</name>
    <type>TEMPORAL_RELATION</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>243</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>165</uid>
  </class_definitions>
  <class_definitions id="PLAN_EVENT">
   <name>PLAN_EVENT</name>
@@ -1333,9 +1333,9 @@
    <name>other_details</name>
    <type>ITEM_STRUCTURE</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>244</uid>
+  <uid>166</uid>
  </class_definitions>
  <class_definitions id="TIMELINE_MOMENT">
   <name>TIMELINE_MOMENT</name>
@@ -1348,8 +1348,8 @@
    <name>fixed_time</name>
    <type>TIME_SPECIFIER</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>245</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>167</uid>
  </class_definitions>
  <class_definitions id="SYSTEM_NOTIFICATION">
   <name>SYSTEM_NOTIFICATION</name>
@@ -1367,8 +1367,8 @@
    <name>reference_id</name>
    <type>String</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>246</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>168</uid>
  </class_definitions>
  <class_definitions id="CALLBACK_NOTIFICATION">
   <name>CALLBACK_NOTIFICATION</name>
@@ -1382,8 +1382,8 @@
    <name>request_id</name>
    <type>String</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>247</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>169</uid>
  </class_definitions>
  <class_definitions id="MANUAL_NOTIFICATION">
   <name>MANUAL_NOTIFICATION</name>
@@ -1393,8 +1393,8 @@
    <type>String</type>
    <is_mandatory>true</is_mandatory>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>248</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>170</uid>
  </class_definitions>
  <class_definitions id="TASK_TRANSITION">
   <name>TASK_TRANSITION</name>
@@ -1413,8 +1413,8 @@
     <container_type>List</container_type>
    </type_def>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>249</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>171</uid>
  </class_definitions>
  <class_definitions id="EVENT_WAIT">
   <name>EVENT_WAIT</name>
@@ -1435,8 +1435,8 @@
    <name>success_action</name>
    <type>EVENT_ACTION</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>250</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>172</uid>
  </class_definitions>
  <class_definitions id="DELAY_EVENT">
   <name>DELAY_EVENT</name>
@@ -1448,10 +1448,10 @@
   </properties>
   <properties id="source">
    <name>source</name>
-   <type>UID_BASED_ID</type>
+   <type>PLAN_EVENT</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>251</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>173</uid>
  </class_definitions>
  <class_definitions id="STATE_TRIGGER">
   <name>STATE_TRIGGER</name>
@@ -1461,8 +1461,8 @@
    <type>BOOLEAN_CONTEXT_EXPRESSION</type>
    <is_mandatory>true</is_mandatory>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>252</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>174</uid>
  </class_definitions>
  <class_definitions id="TIMER_EVENT">
   <name>TIMER_EVENT</name>
@@ -1476,14 +1476,14 @@
    <name>purpose</name>
    <type>String</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>253</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>175</uid>
  </class_definitions>
  <class_definitions id="REMINDER">
   <name>REMINDER</name>
   <ancestors>TIMER_WAIT</ancestors>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>254</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>176</uid>
  </class_definitions>
  <class_definitions id="TIMER_WAIT">
   <name>TIMER_WAIT</name>
@@ -1491,8 +1491,8 @@
    <root_type>EVENT_WAIT</root_type>
    <generic_parameters>TIMER_EVENT</generic_parameters>
   </ancestor_defs>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>255</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>177</uid>
  </class_definitions>
  <class_definitions id="CALLBACK_WAIT">
   <name>CALLBACK_WAIT</name>
@@ -1504,8 +1504,8 @@
    <name>fail_action</name>
    <type>EVENT_ACTION</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>256</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>178</uid>
  </class_definitions>
  <class_definitions id="EVENT_ACTION">
   <name>EVENT_ACTION</name>
@@ -1526,8 +1526,12 @@
    <name>message</name>
    <type>DV_TEXT</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>257</uid>
+  <properties id="receiver_thread_next_state">
+   <name>receiver_thread_next_state</name>
+   <type>TASK_LIFECYCLE</type>
+  </properties>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>179</uid>
  </class_definitions>
  <class_definitions id="CALENDAR_EVENT">
   <name>CALENDAR_EVENT</name>
@@ -1541,8 +1545,8 @@
    <type>Iso8601_date_time</type>
    <is_mandatory>true</is_mandatory>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>258</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>180</uid>
  </class_definitions>
  <class_definitions id="RESUME_ACTION">
   <name>RESUME_ACTION</name>
@@ -1555,14 +1559,14 @@
    <name>resume_location</name>
    <type>UID_BASED_ID</type>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>259</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>181</uid>
  </class_definitions>
  <class_definitions id="TIME_SPECIFIER">
   <name>TIME_SPECIFIER</name>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>260</uid>
+  <uid>182</uid>
  </class_definitions>
  <class_definitions id="CLOCK_TIME">
   <name>CLOCK_TIME</name>
@@ -1572,8 +1576,8 @@
    <type>Iso8601_time</type>
    <is_mandatory>true</is_mandatory>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>261</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>183</uid>
  </class_definitions>
  <class_definitions id="CALENDAR_TIME">
   <name>CALENDAR_TIME</name>
@@ -1583,8 +1587,8 @@
    <type>Iso8601_date_time</type>
    <is_mandatory>true</is_mandatory>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>262</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>184</uid>
  </class_definitions>
  <class_definitions id="CUSTOMARY_TIME">
   <name>CUSTOMARY_TIME</name>
@@ -1594,13 +1598,13 @@
    <type>DV_CODED_TEXT</type>
    <is_mandatory>true</is_mandatory>
   </properties>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>263</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>185</uid>
  </class_definitions>
  <class_definitions id="TASK_PLAN_EXECUTION_HISTORY">
   <name>TASK_PLAN_EXECUTION_HISTORY</name>
-  <source_schema_id>openehr_proc_task_planning_1.0.0</source_schema_id>
-  <uid>264</uid>
+  <source_schema_id>openehr_proc_task_planning_1.1.0</source_schema_id>
+  <uid>186</uid>
  </class_definitions>
  <class_definitions id="EXPR_TYPE_DEF">
   <name>EXPR_TYPE_DEF</name>
