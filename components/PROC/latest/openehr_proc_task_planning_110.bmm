@@ -73,7 +73,7 @@ packages = <
 
 					"TASK_ACTION", "PERFORMABLE_ACTION", "DISPATCHABLE_ACTION", 
 					"DEFINED_ACTION", "SYSTEM_REQUEST", "EXTERNAL_REQUEST", "LINKED_PLAN", "HAND_OFF", "SUB_PLAN", 
-					"DATASET_SPEC", "RESOURCE_PARTICIPATION",
+					"DATASET_SPEC", "CAPTURE_DATASET_SPEC", "REVIEW_DATASET_SPEC", "RESOURCE_PARTICIPATION",
 
 					"CHOICE_GROUP", "CHOICE_BRANCH", "ADHOC_GROUP", "ADHOC_BRANCH", "OVERRIDE_TYPE",
 					"CONDITION_GROUP", "CONDITION_BRANCH", "DECISION_GROUP", "DECISION_BRANCH", "EVENT_GROUP", "EVENT_BRANCH", 
@@ -619,7 +619,7 @@ class_definitions = <
 				name = <"review_dataset">
 				type_def = <
 					container_type = <"List">
-					type = <"DATASET_SPEC">
+					type = <"REVIEW_DATASET_SPEC">
 				>
 				cardinality = <|>=0|>
 			>
@@ -668,7 +668,7 @@ class_definitions = <
 
 	["EXECUTION_TYPE"] = (P_BMM_ENUMERATION_INTEGER) <
 		name = <"EXECUTION_TYPE">
-		ancestors = <"Integer", ...>
+		ancestors = <"Integer">
 		item_names = <"sequential", "parallel">
 	>
 
@@ -727,7 +727,7 @@ class_definitions = <
 				name = <"capture_dataset">
 				type_def = <
 					container_type = <"List">
-					type = <"DATASET_SPEC">
+					type = <"CAPTURE_DATASET_SPEC">
 				>
 				cardinality = <|>=0|>
 			>
@@ -889,6 +889,30 @@ class_definitions = <
 			["template_id"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"template_id">
 				type = <"String">
+			>
+		>
+	>
+
+	["CAPTURE_DATASET_SPEC"] = <
+		name = <"CAPTURE_DATASET_SPEC">
+		ancestors = <"DATASET_SPEC">
+	>
+
+	["REVIEW_DATASET_SPEC"] = <
+		name = <"REVIEW_DATASET_SPEC">
+		ancestors = <"DATASET_SPEC">
+		properties = <
+			["populating_call"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"populating_call">
+				type = <"SYSTEM_CALL">
+			>
+			["capture_datasets"] = (P_BMM_CONTAINER_PROPERTY) <
+				name = <"capture_datasets">
+				type_def = <
+					container_type = <"List">
+					type = <"CAPTURE_DATASET_SPEC">
+				>
+				cardinality = <|>=0|>
 			>
 		>
 	>
