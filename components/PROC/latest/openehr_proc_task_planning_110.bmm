@@ -890,6 +890,10 @@ class_definitions = <
 				name = <"template_id">
 				type = <"String">
 			>
+			["populating_call"] = (P_BMM_SINGLE_PROPERTY) <
+            				name = <"populating_call">
+            				type = <"SYSTEM_CALL">
+            >
 		>
 	>
 
@@ -902,10 +906,6 @@ class_definitions = <
 		name = <"REVIEW_DATASET_SPEC">
 		ancestors = <"DATASET_SPEC">
 		properties = <
-			["populating_call"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"populating_call">
-				type = <"SYSTEM_CALL">
-			>
 			["capture_datasets"] = (P_BMM_CONTAINER_PROPERTY) <
 				name = <"capture_datasets">
 				type_def = <
