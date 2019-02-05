@@ -527,7 +527,7 @@ class_definitions = <
 
 	["PROPORTION_KIND"] = (P_BMM_ENUMERATION_INTEGER) <
 		name = <"PROPORTION_KIND">
-		ancestors = <"Integer", ...>
+		ancestors = <"Integer">
 		item_names = <"pk_ratio", "pk_unitary", "pk_percent", "pk_fraction", "pk_integer_fraction">
 	>
 
