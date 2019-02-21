@@ -590,7 +590,10 @@ class_definitions = <
 		properties = <
 			["original_language"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"original_language">
-				type = <"Terminology_code">
+				type_ref = <
+					type = <"Terminology_code">
+					value_constraint = <"openEHR::languages">
+				>
 				is_mandatory = <True>
 			>
 			["is_controlled"] = (P_BMM_SINGLE_PROPERTY) <
@@ -618,7 +621,10 @@ class_definitions = <
 		properties = <
 			["language"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"language">
-				type = <"Terminology_code">
+				type_ref = <
+					type = <"Terminology_code">
+					value_constraint = <"openEHR::languages">
+				>
 				is_mandatory = <True>
 			>
 			["author"] = (P_BMM_GENERIC_PROPERTY) <
@@ -702,7 +708,10 @@ class_definitions = <
 		properties = <
 			["language"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"language">
-				type = <"Terminology_code">
+				type_ref = <
+					type = <"Terminology_code">
+					value_constraint = <"openEHR::languages">
+				>
 				is_mandatory = <True>
 			>
 			["purpose"] = (P_BMM_SINGLE_PROPERTY) <
