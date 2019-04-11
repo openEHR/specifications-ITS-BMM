@@ -435,7 +435,10 @@ class_definitions = <
 				name = <"event_wait_states">
 				type_def = <
 					container_type = <"List">
-					type = <"EVENT_WAIT">
+					type_def = (P_BMM_GENERIC_TYPE) <
+						root_type = <"EVENT_WAIT">
+						generic_parameters = <"PLAN_EVENT">
+					>
 				>
 			>
 			["top_level_plans"] = (P_BMM_CONTAINER_PROPERTY) <
@@ -890,6 +893,10 @@ class_definitions = <
 				name = <"template_id">
 				type = <"String">
 			>
+			["populating_call"] = (P_BMM_SINGLE_PROPERTY) <
+            				name = <"populating_call">
+            				type = <"SYSTEM_CALL">
+            >
 		>
 	>
 
@@ -902,10 +909,6 @@ class_definitions = <
 		name = <"REVIEW_DATASET_SPEC">
 		ancestors = <"DATASET_SPEC">
 		properties = <
-			["populating_call"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"populating_call">
-				type = <"SYSTEM_CALL">
-			>
 			["capture_datasets"] = (P_BMM_CONTAINER_PROPERTY) <
 				name = <"capture_datasets">
 				type_def = <
