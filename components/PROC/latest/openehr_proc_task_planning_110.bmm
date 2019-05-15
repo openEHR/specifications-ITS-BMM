@@ -577,7 +577,7 @@ class_definitions = <
 
 	["ORDER_REF"] = <
 		name = <"ORDER_REF">
-		ancestors = <"Any">
+		ancestors = <"LOCATABLE">
 		properties = <
 			["order_tag"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"order_tag">
