@@ -666,6 +666,10 @@ class_definitions = <
 				name = <"terminate_condition">
 				type = <"PLAN_EVENT">
 			>
+            ["period"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"period">
+				type = <"Iso8601_duration">
+			>
 		>
 	>
 
