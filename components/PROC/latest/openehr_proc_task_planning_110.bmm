@@ -69,7 +69,7 @@ packages = <
 					"BOOLEAN_CONTEXT_EXPRESSION", "CONTEXT_CONSTANT", "EXTERNAL_VARIABLE", "LOCAL_VARIABLE",
 					"EVENT_VARIABLE", "STATE_VARIABLE", "CONTINUOUS_EVENT_VARIABLE",
 
-					"PLAN_CALENDAR", "PLAN_TIMELINE", "CALENDAR_ENTRY", "TASK_REPEAT",
+					"PLAN_CALENDAR", "PLAN_TIMELINE", "CALENDAR_ENTRY", "TASK_REPEAT", "ORDER_REF",
 
 					"TASK_ACTION", "PERFORMABLE_ACTION", "DISPATCHABLE_ACTION", 
 					"DEFINED_ACTION", "SYSTEM_REQUEST", "EXTERNAL_REQUEST", "LINKED_PLAN", "HAND_OFF", "SUB_PLAN", 
@@ -418,7 +418,7 @@ class_definitions = <
 				name = <"order_list">
 				type_def = <
 					container_type = <"List">
-					type = <"LOCATABLE_REF">
+					type = <"ORDER_REF">
 				>
 				cardinality = <|>=0|>
 			>
@@ -575,6 +575,29 @@ class_definitions = <
 		>
 	>
 
+	["ORDER_REF"] = <
+		name = <"ORDER_REF">
+		ancestors = <"LOCATABLE">
+		properties = <
+			["order_tag"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"order_tag">
+				type = <"String">
+			>
+			["order_ref"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"order_ref">
+				type = <"LOCATABLE_REF">
+			>
+			["instruction_archetype_id"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"instruction_archetype_id">
+				type = <"String">
+			>
+			["action_archetype_id"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"action_archetype_id">
+				type = <"String">
+			>
+		>
+	>
+
 	["TASK_PARTICIPATION"] = <
 		name = <"TASK_PARTICIPATION">
 		properties = <
@@ -635,6 +658,14 @@ class_definitions = <
 				>
 				cardinality = <|>=0|>
 			>
+			["order_tags"] = (P_BMM_CONTAINER_PROPERTY) <
+				name = <"order_tags">
+				type_def = <
+					container_type = <"List">
+					type = <"String">
+				>
+				cardinality = <|>=0|>
+			>
 		>
 	>
 
@@ -651,6 +682,10 @@ class_definitions = <
 			["terminate_condition"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"terminate_condition">
 				type = <"PLAN_EVENT">
+			>
+            ["period"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"period">
+				type = <"Iso8601_duration">
 			>
 		>
 	>
