@@ -69,7 +69,7 @@ packages = <
 					"BOOLEAN_CONTEXT_EXPRESSION", "CONTEXT_CONSTANT", "EXTERNAL_VARIABLE", "LOCAL_VARIABLE",
 					"EVENT_VARIABLE", "STATE_VARIABLE", "CONTINUOUS_EVENT_VARIABLE",
 
-					"PLAN_CALENDAR", "PLAN_TIMELINE", "CALENDAR_ENTRY", "TASK_REPEAT",
+					"PLAN_CALENDAR", "PLAN_TIMELINE", "CALENDAR_ENTRY", "TASK_REPEAT", "ORDER_REF",
 
 					"TASK_ACTION", "PERFORMABLE_ACTION", "DISPATCHABLE_ACTION", 
 					"DEFINED_ACTION", "SYSTEM_REQUEST", "EXTERNAL_REQUEST", "LINKED_PLAN", "HAND_OFF", "SUB_PLAN", 
@@ -409,7 +409,7 @@ class_definitions = <
 				name = <"order_list">
 				type_def = <
 					container_type = <"List">
-					type = <"LOCATABLE_REF">
+					type = <"ORDER_REF">
 				>
 				cardinality = <|>=0|>
 			>
@@ -562,6 +562,29 @@ class_definitions = <
 					type = <"TIMER_WAIT">
 				>
 				cardinality = <|>=0|>
+			>
+		>
+	>
+
+	["ORDER_REF"] = <
+		name = <"ORDER_REF">
+		ancestors = <"Any">
+		properties = <
+			["plan_ref"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"plan_ref">
+				type = <"String">
+			>
+			["order_ref"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"order_ref">
+				type = <"LOCATABLE_REF">
+			>
+			["instruction_archetype_id"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"instruction_archetype_id">
+				type = <"String">
+			>
+			["action_archetype_id"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"action_archetype_id">
+				type = <"String">
 			>
 		>
 	>
