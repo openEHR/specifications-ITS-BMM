@@ -658,9 +658,13 @@ class_definitions = <
 				>
 				cardinality = <|>=0|>
 			>
-			["order_tag"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"order_tag">
-				type = <"String">
+			["order_tags"] = (P_BMM_CONTAINER_PROPERTY) <
+				name = <"order_tags">
+				type_def = <
+					container_type = <"List">
+					type = <"String">
+				>
+				cardinality = <|>=0|>
 			>
 		>
 	>
