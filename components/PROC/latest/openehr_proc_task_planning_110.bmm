@@ -658,14 +658,6 @@ class_definitions = <
 				>
 				cardinality = <|>=0|>
 			>
-			["order_tags"] = (P_BMM_CONTAINER_PROPERTY) <
-				name = <"order_tags">
-				type_def = <
-					container_type = <"List">
-					type = <"String">
-				>
-				cardinality = <|>=0|>
-			>
 		>
 	>
 
@@ -734,6 +726,14 @@ class_definitions = <
 				name = <"action">
 				type = <"T">
 				is_mandatory = <True>
+			>
+			["order_tags"] = (P_BMM_CONTAINER_PROPERTY) <
+				name = <"order_tags">
+				type_def = <
+					container_type = <"List">
+					type = <"String">
+				>
+				cardinality = <|>=0|>
 			>
 		>
 	>
