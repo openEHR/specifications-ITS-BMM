@@ -925,10 +925,6 @@ class_definitions = <
 		name = <"DATASET_SPEC">
 		ancestors = <"LOCATABLE">
 		properties = <
-			["other_details"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"other_details">
-				type = <"ITEM_STRUCTURE">
-			>
 			["form_id"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"form_id">
 				type = <"String">
@@ -938,9 +934,17 @@ class_definitions = <
 				type = <"String">
 			>
 			["populating_call"] = (P_BMM_SINGLE_PROPERTY) <
-            				name = <"populating_call">
-            				type = <"SYSTEM_CALL">
+				name = <"populating_call">
+				type = <"SYSTEM_CALL">
             >
+			["form_section_path"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"form_section_path">
+				type = <"String">
+            >
+			["other_details"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"other_details">
+				type = <"ITEM_STRUCTURE">
+			>
 		>
 	>
 
