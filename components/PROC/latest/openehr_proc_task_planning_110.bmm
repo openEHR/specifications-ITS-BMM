@@ -642,10 +642,6 @@ class_definitions = <
 				name = <"repeat_spec">
 				type = <"TASK_REPEAT">
 			>
-			["other_details"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"other_details">
-				type = <"ITEM_STRUCTURE">
-			>
 			["wait_spec"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"wait_spec">
 				type = <"TASK_WAIT">
@@ -657,6 +653,14 @@ class_definitions = <
 					type = <"REVIEW_DATASET_SPEC">
 				>
 				cardinality = <|>=0|>
+			>
+			["classification"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"classification">
+				type = <"ITEM_STRUCTURE">
+			>
+			["other_details"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"other_details">
+				type = <"ITEM_STRUCTURE">
 			>
 		>
 	>
