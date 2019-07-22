@@ -466,6 +466,10 @@ class_definitions = <
 				>
 				cardinality = <|>=0|>
 			>
+			["classification"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"classification">
+				type = <"ITEM_STRUCTURE">
+			>
 			["context"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"context">
 				type = <"PLAN_DATA_CONTEXT">
