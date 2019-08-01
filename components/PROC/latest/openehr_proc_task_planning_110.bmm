@@ -1361,6 +1361,14 @@ class_definitions = <
 				name = <"fail_action">
 				type = <"EVENT_ACTION">
 			>
+			["custom_actions"] = (P_BMM_CONTAINER_PROPERTY) <
+				name = <"custom_actions">
+				type_def = <
+					container_type = <"List">
+					type = <"EVENT_ACTION">
+				>
+				cardinality = <|>=0|>
+			>
 		>
 	>
 
