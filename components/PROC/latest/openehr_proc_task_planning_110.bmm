@@ -412,7 +412,7 @@ class_definitions = <
 			>
 			["care_pathway"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"care_pathway">
-				type = <"DV_IDENTIFIER">
+				type = <"ITEM_STRUCTURE">
 			>
 			["order_list"] = (P_BMM_CONTAINER_PROPERTY) <
 				name = <"order_list">
@@ -492,7 +492,7 @@ class_definitions = <
 			>
 			["guideline"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"guideline">
-				type = <"DV_IDENTIFIER">
+				type = <"ITEM_STRUCTURE">
 			>
 			["best_practice_ref"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"best_practice_ref">
@@ -661,6 +661,10 @@ class_definitions = <
 			["classification"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"classification">
 				type = <"ITEM_STRUCTURE">
+			>
+			["guideline_step"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"guideline_step">
+				type = <"String">
 			>
 			["other_details"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"other_details">
