@@ -56,7 +56,7 @@ packages = <
 		name = <"org.openehr.proc.task_planning">
 		classes = <"SYSTEM_CALL", "PARAMETER_MAPPING", "PARAMETER_DEF", "QUERY_CALL", "API_CALL",
 			"TASK_LIFECYCLE", "TIME_SPECIFIER", "CLOCK_TIME", "CALENDAR_TIME", "CUSTOMARY_TIME",  
-			"TEMPORAL_RELATION", "RESUME_TYPE"
+			"TEMPORAL_RELATION", "RESUME_TYPE", "PLAN_TIME_ORIGIN"
 		>
 		packages = <
 			["definition"] = <
@@ -121,6 +121,12 @@ class_definitions = <
 		name = <"TASK_LIFECYCLE">
 		ancestors = <"Integer">
 		item_names = <"planned", "available", "cancelled", "aborted", "abandoned", "underway", "suspended", "resumed", "completed">
+	>
+
+	["PLAN_TIME_ORIGIN"] = (P_BMM_ENUMERATION_INTEGER) <
+		name = <"PLAN_TIME_ORIGIN">
+		ancestors = <"Integer">
+		item_names = <"current_work_plan", "current_task_plan", "inner_repeat_section", "outer_repeat_section">
 	>
 
 	["SYSTEM_CALL"] = <
@@ -1213,6 +1219,10 @@ class_definitions = <
 			["fixed_time"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"fixed_time">
 				type = <"TIME_SPECIFIER">
+			>
+			["timeline_origin"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"timeline_origin">
+				type = <"PLAN_TIME_ORIGIN">
 			>
 		>
 	>
