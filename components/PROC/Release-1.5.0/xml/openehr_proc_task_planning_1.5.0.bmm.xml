@@ -64,7 +64,6 @@
    <classes>PLAN_EVENT</classes>
    <classes>TIMER_EVENT</classes>
    <classes>CALENDAR_EVENT</classes>
-   <classes>DELAY_EVENT</classes>
    <classes>STATE_TRIGGER</classes>
    <classes>REMINDER</classes>
    <classes>TIMER_WAIT</classes>
@@ -112,7 +111,7 @@
   <name>Any</name>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>3716</uid>
+  <uid>4965</uid>
  </primitive_types>
  <primitive_types id="Ordered">
   <documentation>Ancestor of types with total order relation defined, i.e. &apos;&lt;&apos; and &apos;=&apos;.</documentation>
@@ -120,7 +119,7 @@
   <ancestors>Any</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>3717</uid>
+  <uid>4966</uid>
  </primitive_types>
  <primitive_types id="Numeric">
   <documentation>Ancestor of numeric types.</documentation>
@@ -128,7 +127,7 @@
   <ancestors>Any</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>3718</uid>
+  <uid>4967</uid>
  </primitive_types>
  <primitive_types id="Ordered_Numeric">
   <documentation>Ancestor of ordered numeric types.</documentation>
@@ -137,74 +136,74 @@
   <ancestors>Ordered</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>3719</uid>
+  <uid>4968</uid>
  </primitive_types>
  <primitive_types id="Byte">
   <name>Byte</name>
   <ancestors>Ordered</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3720</uid>
+  <uid>4969</uid>
  </primitive_types>
  <primitive_types id="Octet">
   <name>Octet</name>
   <ancestors>Ordered</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3721</uid>
+  <uid>4970</uid>
  </primitive_types>
  <primitive_types id="Boolean">
   <name>Boolean</name>
   <ancestors>Any</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3722</uid>
+  <uid>4971</uid>
  </primitive_types>
  <primitive_types id="Integer">
   <name>Integer</name>
   <ancestors>Ordered_Numeric</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3723</uid>
+  <uid>4972</uid>
  </primitive_types>
  <primitive_types id="Integer64">
   <name>Integer64</name>
   <ancestors>Ordered_Numeric</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3724</uid>
+  <uid>4973</uid>
  </primitive_types>
  <primitive_types id="Real">
   <name>Real</name>
   <ancestors>Ordered_Numeric</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3725</uid>
+  <uid>4974</uid>
  </primitive_types>
  <primitive_types id="Double">
   <name>Double</name>
   <ancestors>Ordered_Numeric</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3726</uid>
+  <uid>4975</uid>
  </primitive_types>
  <primitive_types id="Character">
   <name>Character</name>
   <ancestors>Ordered</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3727</uid>
+  <uid>4976</uid>
  </primitive_types>
  <primitive_types id="String">
   <name>String</name>
   <ancestors>Ordered</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3728</uid>
+  <uid>4977</uid>
  </primitive_types>
  <primitive_types id="Uri">
   <name>Uri</name>
   <ancestors>String</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3729</uid>
+  <uid>4978</uid>
  </primitive_types>
  <primitive_types id="Temporal">
   <name>Temporal</name>
   <ancestors>Ordered</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>3730</uid>
+  <uid>4979</uid>
  </primitive_types>
  <primitive_types id="Iso8601_type">
   <documentation>Parent of ISO8601 types.</documentation>
@@ -215,63 +214,63 @@
    <type>String</type>
   </properties>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3731</uid>
+  <uid>4980</uid>
  </primitive_types>
  <primitive_types id="Date">
   <documentation>Date type based on IS8601 representation.</documentation>
   <name>Date</name>
   <ancestors>Iso8601_type</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3732</uid>
+  <uid>4981</uid>
  </primitive_types>
  <primitive_types id="Time">
   <documentation>Time type based on IS8601 representation.</documentation>
   <name>Time</name>
   <ancestors>Iso8601_type</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3733</uid>
+  <uid>4982</uid>
  </primitive_types>
  <primitive_types id="Date_time">
   <documentation>Date Time type based on IS8601 representation.</documentation>
   <name>Date_time</name>
   <ancestors>Iso8601_type</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3734</uid>
+  <uid>4983</uid>
  </primitive_types>
  <primitive_types id="Duration">
   <documentation>Duration type based on IS8601 representation.</documentation>
   <name>Duration</name>
   <ancestors>Iso8601_type</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3735</uid>
+  <uid>4984</uid>
  </primitive_types>
  <primitive_types id="Iso8601_date">
   <documentation>Date type based on IS8601 representation.</documentation>
   <name>Iso8601_date</name>
   <ancestors>Iso8601_type</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3736</uid>
+  <uid>4985</uid>
  </primitive_types>
  <primitive_types id="Iso8601_time">
   <documentation>Time type based on IS8601 representation.</documentation>
   <name>Iso8601_time</name>
   <ancestors>Iso8601_type</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3737</uid>
+  <uid>4986</uid>
  </primitive_types>
  <primitive_types id="Iso8601_date_time">
   <documentation>Date Time type based on IS8601 representation.</documentation>
   <name>Iso8601_date_time</name>
   <ancestors>Iso8601_type</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3738</uid>
+  <uid>4987</uid>
  </primitive_types>
  <primitive_types id="Iso8601_duration">
   <documentation>Duration type based on IS8601 representation.</documentation>
   <name>Iso8601_duration</name>
   <ancestors>Iso8601_type</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3739</uid>
+  <uid>4988</uid>
  </primitive_types>
  <primitive_types id="Terminology_term">
   <name>Terminology_term</name>
@@ -287,7 +286,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3740</uid>
+  <uid>4989</uid>
  </primitive_types>
  <primitive_types id="Terminology_code">
   <name>Terminology_code</name>
@@ -312,7 +311,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3741</uid>
+  <uid>4990</uid>
  </primitive_types>
  <primitive_types id="Container">
   <name>Container</name>
@@ -322,7 +321,7 @@
   <ancestors>Any</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>3742</uid>
+  <uid>4991</uid>
  </primitive_types>
  <primitive_types id="List">
   <name>List</name>
@@ -331,7 +330,7 @@
   </generic_parameter_defs>
   <ancestors>Container</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3743</uid>
+  <uid>4992</uid>
  </primitive_types>
  <primitive_types id="Array">
   <name>Array</name>
@@ -340,7 +339,7 @@
   </generic_parameter_defs>
   <ancestors>Container</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3744</uid>
+  <uid>4993</uid>
  </primitive_types>
  <primitive_types id="Set">
   <name>Set</name>
@@ -349,7 +348,7 @@
   </generic_parameter_defs>
   <ancestors>Container</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3745</uid>
+  <uid>4994</uid>
  </primitive_types>
  <primitive_types id="Interval">
   <documentation>Type defining an interval of any ordered type.</documentation>
@@ -388,7 +387,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3746</uid>
+  <uid>4995</uid>
  </primitive_types>
  <primitive_types id="Hash">
   <documentation>Type defining Hash table / hash map structure, whose type parameters V and K represent a value type and an Ordered key type respectively.</documentation>
@@ -402,7 +401,7 @@
   </generic_parameter_defs>
   <ancestors>Container</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3747</uid>
+  <uid>4996</uid>
  </primitive_types>
  <class_definitions id="RESUME_TYPE">
   <name>RESUME_TYPE</name>
@@ -411,7 +410,7 @@
   <item_names>resume_specified</item_names>
   <item_names>retry_current_group</item_names>
   <item_names>new_thread</item_names>
-  <uid>3942</uid>
+  <uid>5191</uid>
  </class_definitions>
  <class_definitions id="TEMPORAL_RELATION">
   <name>TEMPORAL_RELATION</name>
@@ -420,7 +419,7 @@
   <item_names>before</item_names>
   <item_names>with</item_names>
   <item_names>after</item_names>
-  <uid>3943</uid>
+  <uid>5192</uid>
  </class_definitions>
  <class_definitions id="TASK_LIFECYCLE">
   <name>TASK_LIFECYCLE</name>
@@ -435,7 +434,7 @@
   <item_names>suspended</item_names>
   <item_names>resumed</item_names>
   <item_names>completed</item_names>
-  <uid>3944</uid>
+  <uid>5193</uid>
  </class_definitions>
  <class_definitions id="SYSTEM_CALL">
   <name>SYSTEM_CALL</name>
@@ -465,7 +464,7 @@
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>3945</uid>
+  <uid>5194</uid>
  </class_definitions>
  <class_definitions id="PARAMETER_DEF">
   <name>PARAMETER_DEF</name>
@@ -485,7 +484,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3946</uid>
+  <uid>5195</uid>
  </class_definitions>
  <class_definitions id="PARAMETER_MAPPING">
   <name>PARAMETER_MAPPING</name>
@@ -500,7 +499,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3947</uid>
+  <uid>5196</uid>
  </class_definitions>
  <class_definitions id="QUERY_CALL">
   <name>QUERY_CALL</name>
@@ -514,13 +513,13 @@
    <type>String</type>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3948</uid>
+  <uid>5197</uid>
  </class_definitions>
  <class_definitions id="API_CALL">
   <name>API_CALL</name>
   <ancestors>SYSTEM_CALL</ancestors>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3949</uid>
+  <uid>5198</uid>
  </class_definitions>
  <class_definitions id="PLAN_DATA_CONTEXT">
   <name>PLAN_DATA_CONTEXT</name>
@@ -555,7 +554,7 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3950</uid>
+  <uid>5199</uid>
  </class_definitions>
  <class_definitions id="CONTEXT_VALUE">
   <name>CONTEXT_VALUE</name>
@@ -575,7 +574,7 @@
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>3951</uid>
+  <uid>5200</uid>
  </class_definitions>
  <class_definitions id="CONTEXT_VARIABLE">
   <name>CONTEXT_VARIABLE</name>
@@ -586,7 +585,7 @@
   <ancestors>CONTEXT_VALUE</ancestors>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>3952</uid>
+  <uid>5201</uid>
  </class_definitions>
  <class_definitions id="CONTEXT_EXPRESSION">
   <name>CONTEXT_EXPRESSION</name>
@@ -601,7 +600,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3953</uid>
+  <uid>5202</uid>
  </class_definitions>
  <class_definitions id="BOOLEAN_CONTEXT_EXPRESSION">
   <name>BOOLEAN_CONTEXT_EXPRESSION</name>
@@ -610,7 +609,7 @@
    <generic_parameters>TYPE_DEF_BOOLEAN</generic_parameters>
   </ancestor_defs>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3954</uid>
+  <uid>5203</uid>
  </class_definitions>
  <class_definitions id="STATE_VARIABLE">
   <name>STATE_VARIABLE</name>
@@ -624,7 +623,7 @@
    <type>Iso8601_duration</type>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3955</uid>
+  <uid>5204</uid>
  </class_definitions>
  <class_definitions id="EXTERNAL_VARIABLE">
   <name>EXTERNAL_VARIABLE</name>
@@ -639,7 +638,7 @@
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>3956</uid>
+  <uid>5205</uid>
  </class_definitions>
  <class_definitions id="EVENT_VARIABLE">
   <name>EVENT_VARIABLE</name>
@@ -649,7 +648,7 @@
   </generic_parameter_defs>
   <ancestors>EXTERNAL_VARIABLE</ancestors>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3957</uid>
+  <uid>5206</uid>
  </class_definitions>
  <class_definitions id="LOCAL_VARIABLE">
   <name>LOCAL_VARIABLE</name>
@@ -659,7 +658,7 @@
   </generic_parameter_defs>
   <ancestors>CONTEXT_VARIABLE</ancestors>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3958</uid>
+  <uid>5207</uid>
  </class_definitions>
  <class_definitions id="CONTINUOUS_EVENT_VARIABLE">
   <name>CONTINUOUS_EVENT_VARIABLE</name>
@@ -673,7 +672,7 @@
    <type>Real</type>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3959</uid>
+  <uid>5208</uid>
  </class_definitions>
  <class_definitions id="CONTEXT_CONSTANT">
   <name>CONTEXT_CONSTANT</name>
@@ -683,7 +682,7 @@
   </generic_parameter_defs>
   <ancestors>CONTEXT_VALUE</ancestors>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3960</uid>
+  <uid>5209</uid>
  </class_definitions>
  <class_definitions id="WORK_PLAN">
   <name>WORK_PLAN</name>
@@ -762,7 +761,7 @@
    <type>PLAN_DATA_CONTEXT</type>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3961</uid>
+  <uid>5210</uid>
  </class_definitions>
  <class_definitions id="TASK_PLAN">
   <name>TASK_PLAN</name>
@@ -824,7 +823,7 @@
    <is_im_runtime>true</is_im_runtime>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3962</uid>
+  <uid>5211</uid>
  </class_definitions>
  <class_definitions id="PLAN_CALENDAR">
   <name>PLAN_CALENDAR</name>
@@ -838,12 +837,12 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3963</uid>
+  <uid>5212</uid>
  </class_definitions>
  <class_definitions id="CALENDAR_ENTRY">
   <name>CALENDAR_ENTRY</name>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3964</uid>
+  <uid>5213</uid>
  </class_definitions>
  <class_definitions id="PLAN_TIMELINE">
   <name>PLAN_TIMELINE</name>
@@ -866,7 +865,7 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3965</uid>
+  <uid>5214</uid>
  </class_definitions>
  <class_definitions id="ORDER_REF">
   <name>ORDER_REF</name>
@@ -888,7 +887,7 @@
    <type>String</type>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3966</uid>
+  <uid>5215</uid>
  </class_definitions>
  <class_definitions id="TASK_PARTICIPATION">
   <name>TASK_PARTICIPATION</name>
@@ -918,7 +917,7 @@
    <type>VALIDITY_KIND</type>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3967</uid>
+  <uid>5216</uid>
  </class_definitions>
  <class_definitions id="PLAN_ITEM">
   <name>PLAN_ITEM</name>
@@ -968,7 +967,7 @@
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>3968</uid>
+  <uid>5217</uid>
  </class_definitions>
  <class_definitions id="TASK_REPEAT">
   <name>TASK_REPEAT</name>
@@ -988,7 +987,7 @@
    <type>Iso8601_duration</type>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3969</uid>
+  <uid>5218</uid>
  </class_definitions>
  <class_definitions id="TASK_GROUP">
   <name>TASK_GROUP</name>
@@ -1011,7 +1010,7 @@
    <type>Integer</type>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3970</uid>
+  <uid>5219</uid>
  </class_definitions>
  <class_definitions id="EXECUTION_TYPE">
   <name>EXECUTION_TYPE</name>
@@ -1019,7 +1018,7 @@
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
   <item_names>sequential</item_names>
   <item_names>parallel</item_names>
-  <uid>3971</uid>
+  <uid>5220</uid>
  </class_definitions>
  <class_definitions id="TASK">
   <name>TASK</name>
@@ -1044,7 +1043,7 @@
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>3972</uid>
+  <uid>5221</uid>
  </class_definitions>
  <class_definitions id="DISPATCHABLE_TASK">
   <name>DISPATCHABLE_TASK</name>
@@ -1063,7 +1062,7 @@
    <type>CALLBACK_WAIT</type>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3973</uid>
+  <uid>5222</uid>
  </class_definitions>
  <class_definitions id="PERFORMABLE_TASK">
   <name>PERFORMABLE_TASK</name>
@@ -1082,7 +1081,7 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3974</uid>
+  <uid>5223</uid>
  </class_definitions>
  <class_definitions id="TASK_ACTION">
   <name>TASK_ACTION</name>
@@ -1106,14 +1105,14 @@
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>3975</uid>
+  <uid>5224</uid>
  </class_definitions>
  <class_definitions id="DISPATCHABLE_ACTION">
   <name>DISPATCHABLE_ACTION</name>
   <ancestors>TASK_ACTION</ancestors>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>3976</uid>
+  <uid>5225</uid>
  </class_definitions>
  <class_definitions id="PERFORMABLE_ACTION">
   <name>PERFORMABLE_ACTION</name>
@@ -1138,7 +1137,7 @@
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>3977</uid>
+  <uid>5226</uid>
  </class_definitions>
  <class_definitions id="RESOURCE_PARTICIPATION">
   <name>RESOURCE_PARTICIPATION</name>
@@ -1152,7 +1151,7 @@
    <type>OBJECT_REF</type>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3978</uid>
+  <uid>5227</uid>
  </class_definitions>
  <class_definitions id="SUBJECT_PRECONDITION">
   <name>SUBJECT_PRECONDITION</name>
@@ -1166,7 +1165,7 @@
    <type>BOOLEAN_CONTEXT_EXPRESSION</type>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3979</uid>
+  <uid>5228</uid>
  </class_definitions>
  <class_definitions id="EXTERNAL_REQUEST">
   <name>EXTERNAL_REQUEST</name>
@@ -1186,7 +1185,7 @@
    <type>ITEM_STRUCTURE</type>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3980</uid>
+  <uid>5229</uid>
  </class_definitions>
  <class_definitions id="DEFINED_ACTION">
   <name>DEFINED_ACTION</name>
@@ -1205,7 +1204,7 @@
    <type>VALIDITY_KIND</type>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3981</uid>
+  <uid>5230</uid>
  </class_definitions>
  <class_definitions id="SYSTEM_REQUEST">
   <name>SYSTEM_REQUEST</name>
@@ -1216,7 +1215,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3982</uid>
+  <uid>5231</uid>
  </class_definitions>
  <class_definitions id="DATASET_SPEC">
   <name>DATASET_SPEC</name>
@@ -1242,13 +1241,13 @@
    <type>ITEM_STRUCTURE</type>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3983</uid>
+  <uid>5232</uid>
  </class_definitions>
  <class_definitions id="CAPTURE_DATASET_SPEC">
   <name>CAPTURE_DATASET_SPEC</name>
   <ancestors>DATASET_SPEC</ancestors>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3984</uid>
+  <uid>5233</uid>
  </class_definitions>
  <class_definitions id="REVIEW_DATASET_SPEC">
   <name>REVIEW_DATASET_SPEC</name>
@@ -1263,7 +1262,7 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3985</uid>
+  <uid>5234</uid>
  </class_definitions>
  <class_definitions id="LINKED_PLAN">
   <name>LINKED_PLAN</name>
@@ -1274,26 +1273,26 @@
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>3986</uid>
+  <uid>5235</uid>
  </class_definitions>
  <class_definitions id="HAND_OFF">
   <name>HAND_OFF</name>
   <ancestors>LINKED_PLAN</ancestors>
   <ancestors>DISPATCHABLE_ACTION</ancestors>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3987</uid>
+  <uid>5236</uid>
  </class_definitions>
  <class_definitions id="SUB_PLAN">
   <name>SUB_PLAN</name>
   <ancestors>LINKED_PLAN</ancestors>
   <ancestors>PERFORMABLE_ACTION</ancestors>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3988</uid>
+  <uid>5237</uid>
  </class_definitions>
  <class_definitions id="TASK_COSTING">
   <name>TASK_COSTING</name>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3989</uid>
+  <uid>5238</uid>
  </class_definitions>
  <class_definitions id="CHOICE_GROUP">
   <name>CHOICE_GROUP</name>
@@ -1317,7 +1316,7 @@
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>3990</uid>
+  <uid>5239</uid>
  </class_definitions>
  <class_definitions id="OVERRIDE_TYPE">
   <name>OVERRIDE_TYPE</name>
@@ -1326,14 +1325,14 @@
   <item_names>allowed</item_names>
   <item_names>allowed_with_reason</item_names>
   <item_names>prohibited</item_names>
-  <uid>3991</uid>
+  <uid>5240</uid>
  </class_definitions>
  <class_definitions id="CHOICE_BRANCH">
   <name>CHOICE_BRANCH</name>
   <ancestors>TASK_GROUP</ancestors>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>3992</uid>
+  <uid>5241</uid>
  </class_definitions>
  <class_definitions id="ADHOC_GROUP">
   <name>ADHOC_GROUP</name>
@@ -1348,13 +1347,13 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3993</uid>
+  <uid>5242</uid>
  </class_definitions>
  <class_definitions id="ADHOC_BRANCH">
   <name>ADHOC_BRANCH</name>
   <ancestors>CHOICE_BRANCH</ancestors>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3994</uid>
+  <uid>5243</uid>
  </class_definitions>
  <class_definitions id="CONDITION_GROUP">
   <name>CONDITION_GROUP</name>
@@ -1369,7 +1368,7 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3995</uid>
+  <uid>5244</uid>
  </class_definitions>
  <class_definitions id="CONDITION_BRANCH">
   <name>CONDITION_BRANCH</name>
@@ -1380,7 +1379,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3996</uid>
+  <uid>5245</uid>
  </class_definitions>
  <class_definitions id="DECISION_GROUP">
   <name>DECISION_GROUP</name>
@@ -1403,7 +1402,7 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3997</uid>
+  <uid>5246</uid>
  </class_definitions>
  <class_definitions id="DECISION_BRANCH">
   <name>DECISION_BRANCH</name>
@@ -1414,7 +1413,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3998</uid>
+  <uid>5247</uid>
  </class_definitions>
  <class_definitions id="EVENT_GROUP">
   <name>EVENT_GROUP</name>
@@ -1429,13 +1428,13 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>3999</uid>
+  <uid>5248</uid>
  </class_definitions>
  <class_definitions id="EVENT_BRANCH">
   <name>EVENT_BRANCH</name>
   <ancestors>CHOICE_BRANCH</ancestors>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>4000</uid>
+  <uid>5249</uid>
  </class_definitions>
  <class_definitions id="TASK_WAIT">
   <name>TASK_WAIT</name>
@@ -1461,18 +1460,22 @@
    <type>TASK_LIFECYCLE</type>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>4001</uid>
+  <uid>5250</uid>
  </class_definitions>
  <class_definitions id="PLAN_EVENT">
   <name>PLAN_EVENT</name>
   <ancestors>LOCATABLE</ancestors>
+  <properties id="delay">
+   <name>delay</name>
+   <type>Iso8601_duration</type>
+  </properties>
   <properties id="other_details">
    <name>other_details</name>
    <type>ITEM_STRUCTURE</type>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4002</uid>
+  <uid>5251</uid>
  </class_definitions>
  <class_definitions id="TIMELINE_MOMENT">
   <name>TIMELINE_MOMENT</name>
@@ -1486,7 +1489,7 @@
    <type>TIME_SPECIFIER</type>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>4003</uid>
+  <uid>5252</uid>
  </class_definitions>
  <class_definitions id="SYSTEM_NOTIFICATION">
   <name>SYSTEM_NOTIFICATION</name>
@@ -1505,7 +1508,7 @@
    <type>String</type>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>4004</uid>
+  <uid>5253</uid>
  </class_definitions>
  <class_definitions id="CALLBACK_NOTIFICATION">
   <name>CALLBACK_NOTIFICATION</name>
@@ -1520,7 +1523,7 @@
    <type>String</type>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>4005</uid>
+  <uid>5254</uid>
  </class_definitions>
  <class_definitions id="MANUAL_NOTIFICATION">
   <name>MANUAL_NOTIFICATION</name>
@@ -1531,7 +1534,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>4006</uid>
+  <uid>5255</uid>
  </class_definitions>
  <class_definitions id="TASK_TRANSITION">
   <name>TASK_TRANSITION</name>
@@ -1551,7 +1554,7 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>4007</uid>
+  <uid>5256</uid>
  </class_definitions>
  <class_definitions id="EVENT_WAIT">
   <name>EVENT_WAIT</name>
@@ -1573,22 +1576,7 @@
    <type>EVENT_ACTION</type>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>4008</uid>
- </class_definitions>
- <class_definitions id="DELAY_EVENT">
-  <name>DELAY_EVENT</name>
-  <ancestors>PLAN_EVENT</ancestors>
-  <properties id="delay">
-   <name>delay</name>
-   <type>Iso8601_duration</type>
-   <is_mandatory>true</is_mandatory>
-  </properties>
-  <properties id="source">
-   <name>source</name>
-   <type>PLAN_EVENT</type>
-  </properties>
-  <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>4009</uid>
+  <uid>5257</uid>
  </class_definitions>
  <class_definitions id="STATE_TRIGGER">
   <name>STATE_TRIGGER</name>
@@ -1599,7 +1587,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>4010</uid>
+  <uid>5258</uid>
  </class_definitions>
  <class_definitions id="TIMER_EVENT">
   <name>TIMER_EVENT</name>
@@ -1614,13 +1602,13 @@
    <type>String</type>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>4011</uid>
+  <uid>5259</uid>
  </class_definitions>
  <class_definitions id="REMINDER">
   <name>REMINDER</name>
   <ancestors>EVENT_WAIT</ancestors>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>4012</uid>
+  <uid>5260</uid>
  </class_definitions>
  <class_definitions id="TIMER_WAIT">
   <name>TIMER_WAIT</name>
@@ -1629,7 +1617,7 @@
    <generic_parameters>TIMER_EVENT</generic_parameters>
   </ancestor_defs>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>4013</uid>
+  <uid>5261</uid>
  </class_definitions>
  <class_definitions id="CALLBACK_WAIT">
   <name>CALLBACK_WAIT</name>
@@ -1651,7 +1639,7 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>4014</uid>
+  <uid>5262</uid>
  </class_definitions>
  <class_definitions id="EVENT_ACTION">
   <name>EVENT_ACTION</name>
@@ -1677,7 +1665,7 @@
    <type>TASK_LIFECYCLE</type>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>4015</uid>
+  <uid>5263</uid>
  </class_definitions>
  <class_definitions id="CALENDAR_EVENT">
   <name>CALENDAR_EVENT</name>
@@ -1692,7 +1680,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>4016</uid>
+  <uid>5264</uid>
  </class_definitions>
  <class_definitions id="RESUME_ACTION">
   <name>RESUME_ACTION</name>
@@ -1706,13 +1694,13 @@
    <type>UID_BASED_ID</type>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>4017</uid>
+  <uid>5265</uid>
  </class_definitions>
  <class_definitions id="TIME_SPECIFIER">
   <name>TIME_SPECIFIER</name>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4018</uid>
+  <uid>5266</uid>
  </class_definitions>
  <class_definitions id="CLOCK_TIME">
   <name>CLOCK_TIME</name>
@@ -1723,7 +1711,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>4019</uid>
+  <uid>5267</uid>
  </class_definitions>
  <class_definitions id="CALENDAR_TIME">
   <name>CALENDAR_TIME</name>
@@ -1734,7 +1722,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>4020</uid>
+  <uid>5268</uid>
  </class_definitions>
  <class_definitions id="CUSTOMARY_TIME">
   <name>CUSTOMARY_TIME</name>
@@ -1745,12 +1733,12 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>4021</uid>
+  <uid>5269</uid>
  </class_definitions>
  <class_definitions id="TASK_PLAN_EXECUTION_HISTORY">
   <name>TASK_PLAN_EXECUTION_HISTORY</name>
   <source_schema_id>openehr_proc_task_planning_1.5.0</source_schema_id>
-  <uid>4022</uid>
+  <uid>5270</uid>
  </class_definitions>
  <class_definitions id="EXPR_TYPE_DEF">
   <name>EXPR_TYPE_DEF</name>
@@ -1767,7 +1755,7 @@
   </properties>
   <source_schema_id>openehr_lang_1.0.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>3772</uid>
+  <uid>5021</uid>
  </class_definitions>
  <class_definitions id="TYPE_DEF_BOOLEAN">
   <name>TYPE_DEF_BOOLEAN</name>
@@ -1778,7 +1766,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_lang_1.0.0</source_schema_id>
-  <uid>3773</uid>
+  <uid>5022</uid>
  </class_definitions>
  <class_definitions id="TYPE_DEF_INTEGER">
   <name>TYPE_DEF_INTEGER</name>
@@ -1789,7 +1777,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_lang_1.0.0</source_schema_id>
-  <uid>3774</uid>
+  <uid>5023</uid>
  </class_definitions>
  <class_definitions id="TYPE_DEF_REAL">
   <name>TYPE_DEF_REAL</name>
@@ -1800,7 +1788,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_lang_1.0.0</source_schema_id>
-  <uid>3775</uid>
+  <uid>5024</uid>
  </class_definitions>
  <class_definitions id="TYPE_DEF_DATE">
   <name>TYPE_DEF_DATE</name>
@@ -1811,7 +1799,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_lang_1.0.0</source_schema_id>
-  <uid>3776</uid>
+  <uid>5025</uid>
  </class_definitions>
  <class_definitions id="TYPE_DEF_DATE_TIME">
   <name>TYPE_DEF_DATE_TIME</name>
@@ -1822,7 +1810,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_lang_1.0.0</source_schema_id>
-  <uid>3777</uid>
+  <uid>5026</uid>
  </class_definitions>
  <class_definitions id="TYPE_DEF_TIME">
   <name>TYPE_DEF_TIME</name>
@@ -1833,7 +1821,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_lang_1.0.0</source_schema_id>
-  <uid>3778</uid>
+  <uid>5027</uid>
  </class_definitions>
  <class_definitions id="TYPE_DEF_DURATION">
   <name>TYPE_DEF_DURATION</name>
@@ -1844,7 +1832,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_lang_1.0.0</source_schema_id>
-  <uid>3779</uid>
+  <uid>5028</uid>
  </class_definitions>
  <class_definitions id="TYPE_DEF_STRING">
   <name>TYPE_DEF_STRING</name>
@@ -1855,7 +1843,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_lang_1.0.0</source_schema_id>
-  <uid>3780</uid>
+  <uid>5029</uid>
  </class_definitions>
  <class_definitions id="TYPE_DEF_URI">
   <name>TYPE_DEF_URI</name>
@@ -1866,7 +1854,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_lang_1.0.0</source_schema_id>
-  <uid>3781</uid>
+  <uid>5030</uid>
  </class_definitions>
  <class_definitions id="TYPE_DEF_TERMINOLOGY_CODE">
   <name>TYPE_DEF_TERMINOLOGY_CODE</name>
@@ -1877,7 +1865,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_lang_1.0.0</source_schema_id>
-  <uid>3782</uid>
+  <uid>5031</uid>
  </class_definitions>
  <class_definitions id="OBJECT_REF">
   <name>OBJECT_REF</name>
@@ -1898,7 +1886,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3748</uid>
+  <uid>4997</uid>
  </class_definitions>
  <class_definitions id="LOCATABLE_REF">
   <name>LOCATABLE_REF</name>
@@ -1914,19 +1902,19 @@
    <is_im_infrastructure>true</is_im_infrastructure>
   </properties>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3749</uid>
+  <uid>4998</uid>
  </class_definitions>
  <class_definitions id="PARTY_REF">
   <name>PARTY_REF</name>
   <ancestors>OBJECT_REF</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3750</uid>
+  <uid>4999</uid>
  </class_definitions>
  <class_definitions id="ACCESS_GROUP_REF">
   <name>ACCESS_GROUP_REF</name>
   <ancestors>OBJECT_REF</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3751</uid>
+  <uid>5000</uid>
  </class_definitions>
  <class_definitions id="OBJECT_ID">
   <name>OBJECT_ID</name>
@@ -1938,20 +1926,20 @@
   </properties>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>3752</uid>
+  <uid>5001</uid>
  </class_definitions>
  <class_definitions id="TERMINOLOGY_ID">
   <name>TERMINOLOGY_ID</name>
   <ancestors>OBJECT_ID</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3753</uid>
+  <uid>5002</uid>
  </class_definitions>
  <class_definitions id="UID_BASED_ID">
   <name>UID_BASED_ID</name>
   <ancestors>OBJECT_ID</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>3754</uid>
+  <uid>5003</uid>
  </class_definitions>
  <class_definitions id="GENERIC_ID">
   <name>GENERIC_ID</name>
@@ -1962,13 +1950,13 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3755</uid>
+  <uid>5004</uid>
  </class_definitions>
  <class_definitions id="ARCHETYPE_ID">
   <name>ARCHETYPE_ID</name>
   <ancestors>OBJECT_ID</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3756</uid>
+  <uid>5005</uid>
  </class_definitions>
  <class_definitions id="ARCHETYPE_HRID">
   <name>ARCHETYPE_HRID</name>
@@ -2014,25 +2002,25 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3757</uid>
+  <uid>5006</uid>
  </class_definitions>
  <class_definitions id="TEMPLATE_ID">
   <name>TEMPLATE_ID</name>
   <ancestors>OBJECT_ID</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3758</uid>
+  <uid>5007</uid>
  </class_definitions>
  <class_definitions id="OBJECT_VERSION_ID">
   <name>OBJECT_VERSION_ID</name>
   <ancestors>UID_BASED_ID</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3759</uid>
+  <uid>5008</uid>
  </class_definitions>
  <class_definitions id="HIER_OBJECT_ID">
   <name>HIER_OBJECT_ID</name>
   <ancestors>UID_BASED_ID</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3760</uid>
+  <uid>5009</uid>
  </class_definitions>
  <class_definitions id="VERSION_TREE_ID">
   <name>VERSION_TREE_ID</name>
@@ -2043,7 +2031,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3761</uid>
+  <uid>5010</uid>
  </class_definitions>
  <class_definitions id="UID">
   <name>UID</name>
@@ -2055,25 +2043,25 @@
   </properties>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>3762</uid>
+  <uid>5011</uid>
  </class_definitions>
  <class_definitions id="INTERNET_ID">
   <name>INTERNET_ID</name>
   <ancestors>UID</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3763</uid>
+  <uid>5012</uid>
  </class_definitions>
  <class_definitions id="UUID">
   <name>UUID</name>
   <ancestors>UID</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3764</uid>
+  <uid>5013</uid>
  </class_definitions>
  <class_definitions id="ISO_OID">
   <name>ISO_OID</name>
   <ancestors>UID</ancestors>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3765</uid>
+  <uid>5014</uid>
  </class_definitions>
  <class_definitions id="VALIDITY_KIND">
   <name>VALIDITY_KIND</name>
@@ -2082,7 +2070,7 @@
   <item_names>mandatory</item_names>
   <item_names>optional</item_names>
   <item_names>prohibited</item_names>
-  <uid>3766</uid>
+  <uid>5015</uid>
  </class_definitions>
  <class_definitions id="VERSION_STATUS">
   <name>VERSION_STATUS</name>
@@ -2093,7 +2081,7 @@
   <item_names>release_candidate</item_names>
   <item_names>released</item_names>
   <item_names>build</item_names>
-  <uid>3767</uid>
+  <uid>5016</uid>
  </class_definitions>
  <class_definitions id="AUTHORED_RESOURCE">
   <name>AUTHORED_RESOURCE</name>
@@ -2122,7 +2110,7 @@
   </properties>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>3768</uid>
+  <uid>5017</uid>
  </class_definitions>
  <class_definitions id="TRANSLATION_DETAILS">
   <name>TRANSLATION_DETAILS</name>
@@ -2154,7 +2142,7 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3769</uid>
+  <uid>5018</uid>
  </class_definitions>
  <class_definitions id="RESOURCE_DESCRIPTION">
   <name>RESOURCE_DESCRIPTION</name>
@@ -2210,7 +2198,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3770</uid>
+  <uid>5019</uid>
  </class_definitions>
  <class_definitions id="RESOURCE_DESCRIPTION_ITEM">
   <name>RESOURCE_DESCRIPTION_ITEM</name>
@@ -2269,7 +2257,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_base_1.1.0</source_schema_id>
-  <uid>3771</uid>
+  <uid>5020</uid>
  </class_definitions>
  <class_definitions id="EHR">
   <name>EHR</name>
@@ -2327,7 +2315,7 @@
    <is_computed>true</is_computed>
   </properties>
   <source_schema_id>openehr_rm_ehr_1.1.0</source_schema_id>
-  <uid>4068</uid>
+  <uid>5316</uid>
  </class_definitions>
  <class_definitions id="EHR_ACCESS">
   <name>EHR_ACCESS</name>
@@ -2337,14 +2325,14 @@
    <type>ACCESS_CONTROL_SETTINGS</type>
   </properties>
   <source_schema_id>openehr_rm_ehr_1.1.0</source_schema_id>
-  <uid>4069</uid>
+  <uid>5317</uid>
  </class_definitions>
  <class_definitions id="ACCESS_CONTROL_SETTINGS">
   <name>ACCESS_CONTROL_SETTINGS</name>
   <ancestors>Any</ancestors>
   <source_schema_id>openehr_rm_ehr_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4070</uid>
+  <uid>5318</uid>
  </class_definitions>
  <class_definitions id="EHR_STATUS">
   <name>EHR_STATUS</name>
@@ -2369,7 +2357,7 @@
    <type>ITEM_STRUCTURE</type>
   </properties>
   <source_schema_id>openehr_rm_ehr_1.1.0</source_schema_id>
-  <uid>4071</uid>
+  <uid>5319</uid>
  </class_definitions>
  <class_definitions id="COMPOSITION">
   <name>COMPOSITION</name>
@@ -2408,7 +2396,7 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_rm_ehr_1.1.0</source_schema_id>
-  <uid>4072</uid>
+  <uid>5320</uid>
  </class_definitions>
  <class_definitions id="EVENT_CONTEXT">
   <name>EVENT_CONTEXT</name>
@@ -2449,14 +2437,14 @@
    <type>ITEM_STRUCTURE</type>
   </properties>
   <source_schema_id>openehr_rm_ehr_1.1.0</source_schema_id>
-  <uid>4073</uid>
+  <uid>5321</uid>
  </class_definitions>
  <class_definitions id="CONTENT_ITEM">
   <name>CONTENT_ITEM</name>
   <ancestors>LOCATABLE</ancestors>
   <source_schema_id>openehr_rm_ehr_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4074</uid>
+  <uid>5322</uid>
  </class_definitions>
  <class_definitions id="SECTION">
   <name>SECTION</name>
@@ -2471,7 +2459,7 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_rm_ehr_1.1.0</source_schema_id>
-  <uid>4075</uid>
+  <uid>5323</uid>
  </class_definitions>
  <class_definitions id="ENTRY">
   <name>ENTRY</name>
@@ -2513,7 +2501,7 @@
   </properties>
   <source_schema_id>openehr_rm_ehr_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4076</uid>
+  <uid>5324</uid>
  </class_definitions>
  <class_definitions id="ADMIN_ENTRY">
   <name>ADMIN_ENTRY</name>
@@ -2524,7 +2512,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_ehr_1.1.0</source_schema_id>
-  <uid>4077</uid>
+  <uid>5325</uid>
  </class_definitions>
  <class_definitions id="CARE_ENTRY">
   <documentation>Abstract ENTRY subtype corresponding to any type of ENTRY in the clinical care cycle.</documentation>
@@ -2541,7 +2529,7 @@
   </properties>
   <source_schema_id>openehr_rm_ehr_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4078</uid>
+  <uid>5326</uid>
  </class_definitions>
  <class_definitions id="OBSERVATION">
   <documentation>ENTRY subtype used to represent observation information in time, as either a single or multiple samples.</documentation>
@@ -2564,7 +2552,7 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_rm_ehr_1.1.0</source_schema_id>
-  <uid>4079</uid>
+  <uid>5327</uid>
  </class_definitions>
  <class_definitions id="EVALUATION">
   <name>EVALUATION</name>
@@ -2575,7 +2563,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_ehr_1.1.0</source_schema_id>
-  <uid>4080</uid>
+  <uid>5328</uid>
  </class_definitions>
  <class_definitions id="INSTRUCTION">
   <name>INSTRUCTION</name>
@@ -2604,7 +2592,7 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_rm_ehr_1.1.0</source_schema_id>
-  <uid>4081</uid>
+  <uid>5329</uid>
  </class_definitions>
  <class_definitions id="ACTIVITY">
   <name>ACTIVITY</name>
@@ -2623,7 +2611,7 @@
    <type>String</type>
   </properties>
   <source_schema_id>openehr_rm_ehr_1.1.0</source_schema_id>
-  <uid>4082</uid>
+  <uid>5330</uid>
  </class_definitions>
  <class_definitions id="ACTION">
   <name>ACTION</name>
@@ -2649,7 +2637,7 @@
    <type>INSTRUCTION_DETAILS</type>
   </properties>
   <source_schema_id>openehr_rm_ehr_1.1.0</source_schema_id>
-  <uid>4083</uid>
+  <uid>5331</uid>
  </class_definitions>
  <class_definitions id="INSTRUCTION_DETAILS">
   <name>INSTRUCTION_DETAILS</name>
@@ -2672,7 +2660,7 @@
    <is_im_runtime>true</is_im_runtime>
   </properties>
   <source_schema_id>openehr_rm_ehr_1.1.0</source_schema_id>
-  <uid>4084</uid>
+  <uid>5332</uid>
  </class_definitions>
  <class_definitions id="ISM_TRANSITION">
   <name>ISM_TRANSITION</name>
@@ -2700,7 +2688,7 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_rm_ehr_1.1.0</source_schema_id>
-  <uid>4085</uid>
+  <uid>5333</uid>
  </class_definitions>
  <class_definitions id="GENERIC_ENTRY">
   <name>GENERIC_ENTRY</name>
@@ -2711,7 +2699,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_ehr_1.1.0</source_schema_id>
-  <uid>4086</uid>
+  <uid>5334</uid>
  </class_definitions>
  <class_definitions id="VIEW_ITEM">
   <name>VIEW_ITEM</name>
@@ -2721,7 +2709,7 @@
    <type>CLUSTER</type>
   </properties>
   <source_schema_id>openehr_rm_ehr_1.1.0</source_schema_id>
-  <uid>4087</uid>
+  <uid>5335</uid>
  </class_definitions>
  <class_definitions id="VIEW_SECTION">
   <name>VIEW_SECTION</name>
@@ -2736,13 +2724,13 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_rm_ehr_1.1.0</source_schema_id>
-  <uid>4088</uid>
+  <uid>5336</uid>
  </class_definitions>
  <class_definitions id="VIEW_ENTRY">
   <name>VIEW_ENTRY</name>
   <ancestors>VIEW_ITEM</ancestors>
   <source_schema_id>openehr_rm_ehr_1.1.0</source_schema_id>
-  <uid>4089</uid>
+  <uid>5337</uid>
  </class_definitions>
  <class_definitions id="CITATION">
   <name>CITATION</name>
@@ -2770,21 +2758,21 @@
    <type>T</type>
   </properties>
   <source_schema_id>openehr_rm_ehr_1.1.0</source_schema_id>
-  <uid>4090</uid>
+  <uid>5338</uid>
  </class_definitions>
  <class_definitions id="DATA_STRUCTURE">
   <name>DATA_STRUCTURE</name>
   <ancestors>LOCATABLE</ancestors>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4120</uid>
+  <uid>5368</uid>
  </class_definitions>
  <class_definitions id="ITEM_STRUCTURE">
   <name>ITEM_STRUCTURE</name>
   <ancestors>DATA_STRUCTURE</ancestors>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4121</uid>
+  <uid>5369</uid>
  </class_definitions>
  <class_definitions id="ITEM_SINGLE">
   <name>ITEM_SINGLE</name>
@@ -2795,7 +2783,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4122</uid>
+  <uid>5370</uid>
  </class_definitions>
  <class_definitions id="ITEM_LIST">
   <name>ITEM_LIST</name>
@@ -2810,7 +2798,7 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4123</uid>
+  <uid>5371</uid>
  </class_definitions>
  <class_definitions id="ITEM_TABLE">
   <name>ITEM_TABLE</name>
@@ -2825,7 +2813,7 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4124</uid>
+  <uid>5372</uid>
  </class_definitions>
  <class_definitions id="ITEM_TREE">
   <name>ITEM_TREE</name>
@@ -2840,14 +2828,14 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4125</uid>
+  <uid>5373</uid>
  </class_definitions>
  <class_definitions id="ITEM">
   <name>ITEM</name>
   <ancestors>LOCATABLE</ancestors>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4126</uid>
+  <uid>5374</uid>
  </class_definitions>
  <class_definitions id="CLUSTER">
   <name>CLUSTER</name>
@@ -2863,7 +2851,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4127</uid>
+  <uid>5375</uid>
  </class_definitions>
  <class_definitions id="ELEMENT">
   <name>ELEMENT</name>
@@ -2877,7 +2865,7 @@
    <type>DATA_VALUE</type>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4128</uid>
+  <uid>5376</uid>
  </class_definitions>
  <class_definitions id="HISTORY">
   <name>HISTORY</name>
@@ -2917,7 +2905,7 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4129</uid>
+  <uid>5377</uid>
  </class_definitions>
  <class_definitions id="EVENT">
   <name>EVENT</name>
@@ -2948,7 +2936,7 @@
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4130</uid>
+  <uid>5378</uid>
  </class_definitions>
  <class_definitions id="POINT_EVENT">
   <name>POINT_EVENT</name>
@@ -2957,7 +2945,7 @@
   </generic_parameter_defs>
   <ancestors>EVENT</ancestors>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4131</uid>
+  <uid>5379</uid>
  </class_definitions>
  <class_definitions id="INTERVAL_EVENT">
   <name>INTERVAL_EVENT</name>
@@ -2981,7 +2969,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4132</uid>
+  <uid>5380</uid>
  </class_definitions>
  <class_definitions id="REVISION_HISTORY">
   <name>REVISION_HISTORY</name>
@@ -2997,7 +2985,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4133</uid>
+  <uid>5381</uid>
  </class_definitions>
  <class_definitions id="REVISION_HISTORY_ITEM">
   <name>REVISION_HISTORY_ITEM</name>
@@ -3018,7 +3006,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4134</uid>
+  <uid>5382</uid>
  </class_definitions>
  <class_definitions id="AUDIT_DETAILS">
   <name>AUDIT_DETAILS</name>
@@ -3048,7 +3036,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4135</uid>
+  <uid>5383</uid>
  </class_definitions>
  <class_definitions id="ATTESTATION">
   <name>ATTESTATION</name>
@@ -3081,7 +3069,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4136</uid>
+  <uid>5384</uid>
  </class_definitions>
  <class_definitions id="PARTICIPATION">
   <name>PARTICIPATION</name>
@@ -3109,7 +3097,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4137</uid>
+  <uid>5385</uid>
  </class_definitions>
  <class_definitions id="PARTY_PROXY">
   <name>PARTY_PROXY</name>
@@ -3121,7 +3109,7 @@
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4138</uid>
+  <uid>5386</uid>
  </class_definitions>
  <class_definitions id="PARTY_IDENTIFIED">
   <name>PARTY_IDENTIFIED</name>
@@ -3141,7 +3129,7 @@
    <is_im_runtime>true</is_im_runtime>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4139</uid>
+  <uid>5387</uid>
  </class_definitions>
  <class_definitions id="PARTY_RELATED">
   <name>PARTY_RELATED</name>
@@ -3152,20 +3140,20 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4140</uid>
+  <uid>5388</uid>
  </class_definitions>
  <class_definitions id="PARTY_SELF">
   <name>PARTY_SELF</name>
   <ancestors>PARTY_PROXY</ancestors>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4141</uid>
+  <uid>5389</uid>
  </class_definitions>
  <class_definitions id="PATHABLE">
   <name>PATHABLE</name>
   <ancestors>Any</ancestors>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4142</uid>
+  <uid>5390</uid>
  </class_definitions>
  <class_definitions id="LOCATABLE">
   <name>LOCATABLE</name>
@@ -3207,7 +3195,7 @@
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4143</uid>
+  <uid>5391</uid>
  </class_definitions>
  <class_definitions id="LINK">
   <name>LINK</name>
@@ -3228,7 +3216,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4144</uid>
+  <uid>5392</uid>
  </class_definitions>
  <class_definitions id="ARCHETYPED">
   <name>ARCHETYPED</name>
@@ -3251,7 +3239,7 @@
    <is_im_infrastructure>true</is_im_infrastructure>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4145</uid>
+  <uid>5393</uid>
  </class_definitions>
  <class_definitions id="FEEDER_AUDIT">
   <name>FEEDER_AUDIT</name>
@@ -3293,7 +3281,7 @@
    <is_im_runtime>true</is_im_runtime>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4146</uid>
+  <uid>5394</uid>
  </class_definitions>
  <class_definitions id="FEEDER_AUDIT_DETAILS">
   <name>FEEDER_AUDIT_DETAILS</name>
@@ -3330,7 +3318,7 @@
    <is_im_runtime>true</is_im_runtime>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4147</uid>
+  <uid>5395</uid>
  </class_definitions>
  <class_definitions id="FOLDER">
   <name>FOLDER</name>
@@ -3358,7 +3346,7 @@
    <type>ITEM_STRUCTURE</type>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4148</uid>
+  <uid>5396</uid>
  </class_definitions>
  <class_definitions id="CONTRIBUTION">
   <name>CONTRIBUTION</name>
@@ -3387,7 +3375,7 @@
    <is_im_infrastructure>true</is_im_infrastructure>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4149</uid>
+  <uid>5397</uid>
  </class_definitions>
  <class_definitions id="VERSIONED_OBJECT">
   <name>VERSIONED_OBJECT</name>
@@ -3414,7 +3402,7 @@
    <is_im_infrastructure>true</is_im_infrastructure>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4150</uid>
+  <uid>5398</uid>
  </class_definitions>
  <class_definitions id="VERSION">
   <name>VERSION</name>
@@ -3441,7 +3429,7 @@
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4151</uid>
+  <uid>5399</uid>
  </class_definitions>
  <class_definitions id="ORIGINAL_VERSION">
   <name>ORIGINAL_VERSION</name>
@@ -3489,7 +3477,7 @@
    <type>T</type>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4152</uid>
+  <uid>5400</uid>
  </class_definitions>
  <class_definitions id="IMPORTED_VERSION">
   <name>IMPORTED_VERSION</name>
@@ -3507,14 +3495,14 @@
    <is_im_infrastructure>true</is_im_infrastructure>
   </properties>
   <source_schema_id>openehr_rm_structures_1.1.0</source_schema_id>
-  <uid>4153</uid>
+  <uid>5401</uid>
  </class_definitions>
  <class_definitions id="DATA_VALUE">
   <name>DATA_VALUE</name>
   <ancestors>Any</ancestors>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4023</uid>
+  <uid>5271</uid>
  </class_definitions>
  <class_definitions id="DV_BOOLEAN">
   <name>DV_BOOLEAN</name>
@@ -3525,7 +3513,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4024</uid>
+  <uid>5272</uid>
  </class_definitions>
  <class_definitions id="DV_IDENTIFIER">
   <name>DV_IDENTIFIER</name>
@@ -3549,7 +3537,7 @@
    <type>String</type>
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4025</uid>
+  <uid>5273</uid>
  </class_definitions>
  <class_definitions id="DV_STATE">
   <name>DV_STATE</name>
@@ -3565,7 +3553,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4026</uid>
+  <uid>5274</uid>
  </class_definitions>
  <class_definitions id="TERM_MAPPING">
   <name>TERM_MAPPING</name>
@@ -3584,7 +3572,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4027</uid>
+  <uid>5275</uid>
  </class_definitions>
  <class_definitions id="DV_TEXT">
   <name>DV_TEXT</name>
@@ -3625,7 +3613,7 @@
    <is_im_runtime>true</is_im_runtime>
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4028</uid>
+  <uid>5276</uid>
  </class_definitions>
  <class_definitions id="DV_CODED_TEXT">
   <name>DV_CODED_TEXT</name>
@@ -3636,7 +3624,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4029</uid>
+  <uid>5277</uid>
  </class_definitions>
  <class_definitions id="CODE_PHRASE">
   <name>CODE_PHRASE</name>
@@ -3651,7 +3639,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4030</uid>
+  <uid>5278</uid>
  </class_definitions>
  <class_definitions id="DV_PARAGRAPH">
   <name>DV_PARAGRAPH</name>
@@ -3667,7 +3655,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4031</uid>
+  <uid>5279</uid>
  </class_definitions>
  <class_definitions id="DV_INTERVAL">
   <name>DV_INTERVAL</name>
@@ -3678,7 +3666,7 @@
   <ancestors>Interval</ancestors>
   <ancestors>DATA_VALUE</ancestors>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4032</uid>
+  <uid>5280</uid>
  </class_definitions>
  <class_definitions id="REFERENCE_RANGE">
   <name>REFERENCE_RANGE</name>
@@ -3701,7 +3689,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4033</uid>
+  <uid>5281</uid>
  </class_definitions>
  <class_definitions id="DV_ORDERED">
   <name>DV_ORDERED</name>
@@ -3732,7 +3720,7 @@
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4034</uid>
+  <uid>5282</uid>
  </class_definitions>
  <class_definitions id="DV_QUANTIFIED">
   <name>DV_QUANTIFIED</name>
@@ -3748,7 +3736,7 @@
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4035</uid>
+  <uid>5283</uid>
  </class_definitions>
  <class_definitions id="DV_ORDINAL">
   <name>DV_ORDINAL</name>
@@ -3764,7 +3752,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4036</uid>
+  <uid>5284</uid>
  </class_definitions>
  <class_definitions id="DV_AMOUNT">
   <name>DV_AMOUNT</name>
@@ -3781,7 +3769,7 @@
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4037</uid>
+  <uid>5285</uid>
  </class_definitions>
  <class_definitions id="DV_ABSOLUTE_QUANTITY">
   <name>DV_ABSOLUTE_QUANTITY</name>
@@ -3793,7 +3781,7 @@
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4038</uid>
+  <uid>5286</uid>
  </class_definitions>
  <class_definitions id="DV_QUANTITY">
   <name>DV_QUANTITY</name>
@@ -3834,7 +3822,7 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4039</uid>
+  <uid>5287</uid>
  </class_definitions>
  <class_definitions id="DV_COUNT">
   <name>DV_COUNT</name>
@@ -3862,7 +3850,7 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4040</uid>
+  <uid>5288</uid>
  </class_definitions>
  <class_definitions id="DV_PROPORTION">
   <name>DV_PROPORTION</name>
@@ -3911,7 +3899,7 @@
    </type_def>
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4041</uid>
+  <uid>5289</uid>
  </class_definitions>
  <class_definitions id="PROPORTION_KIND">
   <name>PROPORTION_KIND</name>
@@ -3922,7 +3910,7 @@
   <item_names>pk_percent</item_names>
   <item_names>pk_fraction</item_names>
   <item_names>pk_integer_fraction</item_names>
-  <uid>4042</uid>
+  <uid>5290</uid>
  </class_definitions>
  <class_definitions id="DV_TEMPORAL">
   <name>DV_TEMPORAL</name>
@@ -3933,7 +3921,7 @@
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4043</uid>
+  <uid>5291</uid>
  </class_definitions>
  <class_definitions id="DV_DATE">
   <name>DV_DATE</name>
@@ -3945,7 +3933,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4044</uid>
+  <uid>5292</uid>
  </class_definitions>
  <class_definitions id="DV_TIME">
   <name>DV_TIME</name>
@@ -3957,7 +3945,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4045</uid>
+  <uid>5293</uid>
  </class_definitions>
  <class_definitions id="DV_DATE_TIME">
   <name>DV_DATE_TIME</name>
@@ -3969,7 +3957,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4046</uid>
+  <uid>5294</uid>
  </class_definitions>
  <class_definitions id="DV_DURATION">
   <name>DV_DURATION</name>
@@ -3981,7 +3969,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4047</uid>
+  <uid>5295</uid>
  </class_definitions>
  <class_definitions id="DV_ENCAPSULATED">
   <name>DV_ENCAPSULATED</name>
@@ -3998,7 +3986,7 @@
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4048</uid>
+  <uid>5296</uid>
  </class_definitions>
  <class_definitions id="DV_MULTIMEDIA">
   <name>DV_MULTIMEDIA</name>
@@ -4053,7 +4041,7 @@
    <is_im_runtime>true</is_im_runtime>
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4049</uid>
+  <uid>5297</uid>
  </class_definitions>
  <class_definitions id="DV_PARSABLE">
   <name>DV_PARSABLE</name>
@@ -4069,7 +4057,7 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4050</uid>
+  <uid>5298</uid>
  </class_definitions>
  <class_definitions id="DV_URI">
   <name>DV_URI</name>
@@ -4080,13 +4068,13 @@
    <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4051</uid>
+  <uid>5299</uid>
  </class_definitions>
  <class_definitions id="DV_EHR_URI">
   <name>DV_EHR_URI</name>
   <ancestors>DV_URI</ancestors>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4052</uid>
+  <uid>5300</uid>
  </class_definitions>
  <class_definitions id="DV_TIME_SPECIFICATION">
   <name>DV_TIME_SPECIFICATION</name>
@@ -4098,19 +4086,19 @@
   </properties>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4053</uid>
+  <uid>5301</uid>
  </class_definitions>
  <class_definitions id="DV_PERIODIC_TIME_SPECIFICATION">
   <name>DV_PERIODIC_TIME_SPECIFICATION</name>
   <ancestors>DV_TIME_SPECIFICATION</ancestors>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4054</uid>
+  <uid>5302</uid>
  </class_definitions>
  <class_definitions id="DV_GENERAL_TIME_SPECIFICATION">
   <name>DV_GENERAL_TIME_SPECIFICATION</name>
   <ancestors>DV_TIME_SPECIFICATION</ancestors>
   <source_schema_id>openehr_rm_data_types_1.1.0</source_schema_id>
-  <uid>4055</uid>
+  <uid>5303</uid>
  </class_definitions>
  <class_definitions id="PARTY">
   <name>PARTY</name>
@@ -4170,7 +4158,7 @@
   </properties>
   <source_schema_id>openehr_rm_demographic_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4056</uid>
+  <uid>5304</uid>
  </class_definitions>
  <class_definitions id="PARTY_IDENTITY">
   <name>PARTY_IDENTITY</name>
@@ -4186,7 +4174,7 @@
    <is_computed>true</is_computed>
   </properties>
   <source_schema_id>openehr_rm_demographic_1.1.0</source_schema_id>
-  <uid>4057</uid>
+  <uid>5305</uid>
  </class_definitions>
  <class_definitions id="CONTACT">
   <name>CONTACT</name>
@@ -4214,7 +4202,7 @@
    <is_computed>true</is_computed>
   </properties>
   <source_schema_id>openehr_rm_demographic_1.1.0</source_schema_id>
-  <uid>4058</uid>
+  <uid>5306</uid>
  </class_definitions>
  <class_definitions id="ADDRESS">
   <name>ADDRESS</name>
@@ -4230,7 +4218,7 @@
    <is_computed>true</is_computed>
   </properties>
   <source_schema_id>openehr_rm_demographic_1.1.0</source_schema_id>
-  <uid>4059</uid>
+  <uid>5307</uid>
  </class_definitions>
  <class_definitions id="ACTOR">
   <name>ACTOR</name>
@@ -4255,31 +4243,31 @@
   </properties>
   <source_schema_id>openehr_rm_demographic_1.1.0</source_schema_id>
   <is_abstract>true</is_abstract>
-  <uid>4060</uid>
+  <uid>5308</uid>
  </class_definitions>
  <class_definitions id="PERSON">
   <name>PERSON</name>
   <ancestors>ACTOR</ancestors>
   <source_schema_id>openehr_rm_demographic_1.1.0</source_schema_id>
-  <uid>4061</uid>
+  <uid>5309</uid>
  </class_definitions>
  <class_definitions id="ORGANISATION">
   <name>ORGANISATION</name>
   <ancestors>ACTOR</ancestors>
   <source_schema_id>openehr_rm_demographic_1.1.0</source_schema_id>
-  <uid>4062</uid>
+  <uid>5310</uid>
  </class_definitions>
  <class_definitions id="GROUP">
   <name>GROUP</name>
   <ancestors>ACTOR</ancestors>
   <source_schema_id>openehr_rm_demographic_1.1.0</source_schema_id>
-  <uid>4063</uid>
+  <uid>5311</uid>
  </class_definitions>
  <class_definitions id="AGENT">
   <name>AGENT</name>
   <ancestors>ACTOR</ancestors>
   <source_schema_id>openehr_rm_demographic_1.1.0</source_schema_id>
-  <uid>4064</uid>
+  <uid>5312</uid>
  </class_definitions>
  <class_definitions id="ROLE">
   <name>ROLE</name>
@@ -4307,7 +4295,7 @@
    <is_im_runtime>true</is_im_runtime>
   </properties>
   <source_schema_id>openehr_rm_demographic_1.1.0</source_schema_id>
-  <uid>4065</uid>
+  <uid>5313</uid>
  </class_definitions>
  <class_definitions id="CAPABILITY">
   <name>CAPABILITY</name>
@@ -4326,7 +4314,7 @@
    <is_im_runtime>true</is_im_runtime>
   </properties>
   <source_schema_id>openehr_rm_demographic_1.1.0</source_schema_id>
-  <uid>4066</uid>
+  <uid>5314</uid>
  </class_definitions>
  <class_definitions id="PARTY_RELATIONSHIP">
   <name>PARTY_RELATIONSHIP</name>
@@ -4354,7 +4342,7 @@
    <is_im_runtime>true</is_im_runtime>
   </properties>
   <source_schema_id>openehr_rm_demographic_1.1.0</source_schema_id>
-  <uid>4067</uid>
+  <uid>5315</uid>
  </class_definitions>
  <passed>true</passed>
  <missed_class_count>0</missed_class_count>

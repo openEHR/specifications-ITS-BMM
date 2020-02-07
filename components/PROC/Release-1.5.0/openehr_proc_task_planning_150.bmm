@@ -81,7 +81,7 @@ packages = <
 					"SUBJECT_PRECONDITION", "TASK_COSTING", "EXECUTION_TYPE",
 
 					"TASK_WAIT", "TIMELINE_MOMENT", "MANUAL_NOTIFICATION", "SYSTEM_NOTIFICATION", "TASK_TRANSITION",
-					"PLAN_EVENT", "TIMER_EVENT", "CALENDAR_EVENT", "DELAY_EVENT", "STATE_TRIGGER",
+					"PLAN_EVENT", "TIMER_EVENT", "CALENDAR_EVENT", "STATE_TRIGGER",
 					"REMINDER", "TIMER_WAIT", "EVENT_WAIT", "EVENT_ACTION", "RESUME_ACTION", "CALLBACK_WAIT", "CALLBACK_NOTIFICATION"
 				> 
 			>
@@ -1191,6 +1191,10 @@ class_definitions = <
 		ancestors = <"LOCATABLE">
 		is_abstract = <True>
 		properties = <
+			["delay"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"delay">
+				type = <"Iso8601_duration">
+			>
 			["other_details"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"other_details">
 				type = <"ITEM_STRUCTURE">
@@ -1302,22 +1306,6 @@ class_definitions = <
 			["success_action"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"success_action">
 				type = <"EVENT_ACTION">
-			>
-		>
-	>
-
-	["DELAY_EVENT"] = <
-		name = <"DELAY_EVENT">
-		ancestors = <"PLAN_EVENT">
-		properties = <
-			["delay"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"delay">
-				type = <"Iso8601_duration">
-				is_mandatory = <True>
-			>
-			["source"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"source">
-				type = <"PLAN_EVENT">
 			>
 		>
 	>
