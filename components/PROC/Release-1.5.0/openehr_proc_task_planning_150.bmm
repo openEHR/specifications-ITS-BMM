@@ -5,7 +5,7 @@
 -- 	keywords:    reference model, meta-model, archetypes
 -- 	author:      Thomas Beale <thomas.beale@openEHR.org>
 -- 	support:     https://openehr.atlassian.net/projects/SPECPR
--- 	copyright:   Copyright (c) 2016 openEHR Foundation <https://www.openEHR.org>
+-- 	copyright:   Copyright (c) 2018 openEHR Foundation <https://www.openEHR.org>
 -- 	license:     Apache 2.0 <http://www.apache.org/licenses/LICENSE-2.0.html>
 -- 
 
@@ -20,15 +20,15 @@ bmm_version = <"2.3">
 ------------------------------------------------------
 rm_publisher = <"openehr">
 schema_name = <"proc_task_planning">
-rm_release = <"1.1.0">
+rm_release = <"1.5.0">
 model_name = <"TASK_PLANNING">
 
 ------------------------------------------------------
 -- schema documentation
 ------------------------------------------------------
-schema_revision = <"1.1.0.1">
+schema_revision = <"1.5.0.1">
 schema_lifecycle_state = <"development">
-schema_description = <"openEHR Release 1.1.0 Task Management schema">
+schema_description = <"openEHR Release 1.5.0 Task Management schema">
 schema_author = <"Thomas Beale <thomas.beale@openehr.org>">
 
 ------------------------------------------------------
@@ -658,6 +658,14 @@ class_definitions = <
 				>
 				cardinality = <|>=0|>
 			>
+			["reminders"] = (P_BMM_CONTAINER_PROPERTY) <
+				name = <"reminders">
+				type_def = <
+					container_type = <"List">
+					type = <"REMINDER">
+				>
+				cardinality = <|>=0|>
+			>
 			["classification"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"classification">
 				type = <"ITEM_STRUCTURE">
@@ -1027,6 +1035,10 @@ class_definitions = <
 				>
 				cardinality = <|>=0|>
 			>
+			["timeout"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"timeout">
+				type = <"TIMER_WAIT">
+			>
 		>
 	>
 
@@ -1045,6 +1057,16 @@ class_definitions = <
 	["ADHOC_GROUP"] = <
 		name = <"ADHOC_GROUP">
 		ancestors = <"CHOICE_GROUP">
+		properties = <
+			["members"] = (P_BMM_CONTAINER_PROPERTY) <
+				name = <"members">
+				type_def = <
+					container_type = <"List">
+					type = <"ADHOC_BRANCH">
+				>
+				cardinality = <|>=0|>
+			>
+		>
 	>
 
 	["ADHOC_BRANCH"] = <
@@ -1118,10 +1140,6 @@ class_definitions = <
 		name = <"EVENT_GROUP">
 		ancestors = <"CHOICE_GROUP">
 		properties = <
-			["timeout"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"timeout">
-				type = <"TIMER_WAIT">
-			>
 			["members"] = (P_BMM_CONTAINER_PROPERTY) <
 				name = <"members">
 				type_def = <
@@ -1145,19 +1163,6 @@ class_definitions = <
 	["TASK_WAIT"] = <
 		name = <"TASK_WAIT">
 		properties = <
--- Not present in spec - removed
---			["wait_spec"] = (P_BMM_SINGLE_PROPERTY) <
---				name = <"wait_spec">
---				type = <"TEMPORAL_RELATION">
---			>
-			["timeout"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"timeout">
-				type = <"TIMER_WAIT">
-			>
-			["start_window"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"start_window">
-				type = <"REMINDER">
-			>
 			["events"] = (P_BMM_CONTAINER_PROPERTY) <
 				name = <"events">
 				type_def = <
@@ -1169,6 +1174,14 @@ class_definitions = <
 			["event_relation"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"event_relation">
 				type = <"TEMPORAL_RELATION">
+			>
+			["timeout"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"timeout">
+				type = <"TIMER_WAIT">
+			>
+			["next_state"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"next_state">
+				type = <"TASK_LIFECYCLE">
 			>
 		>
 	>
@@ -1339,7 +1352,7 @@ class_definitions = <
 
 	["REMINDER"] = <
 		name = <"REMINDER">
-		ancestors = <"TIMER_WAIT">
+		ancestors = <"EVENT_WAIT">
 	>
 
 	["TIMER_WAIT"] = <
