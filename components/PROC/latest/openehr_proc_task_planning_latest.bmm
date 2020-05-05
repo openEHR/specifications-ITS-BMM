@@ -73,7 +73,8 @@ packages = <
 
 					"TASK_ACTION", "PERFORMABLE_ACTION", "DISPATCHABLE_ACTION", 
 					"DEFINED_ACTION", "SYSTEM_REQUEST", "EXTERNAL_REQUEST", "LINKED_PLAN", "HAND_OFF", "SUB_PLAN", 
-					"DATASET_SPEC", "CAPTURE_DATASET_SPEC", "REVIEW_DATASET_SPEC", "RESOURCE_PARTICIPATION",
+					"DATASET_SPEC", "CAPTURE_DATASET_SPEC", "REVIEW_DATASET_SPEC", "DATASET_COMMIT_GROUP",
+					"RESOURCE_PARTICIPATION",
 
 					"CHOICE_GROUP", "CHOICE_BRANCH", "ADHOC_GROUP", "ADHOC_BRANCH", "OVERRIDE_TYPE",
 					"CONDITION_GROUP", "CONDITION_BRANCH", "DECISION_GROUP", "DECISION_BRANCH", "EVENT_GROUP", "EVENT_BRANCH", 
@@ -977,6 +978,26 @@ class_definitions = <
 	["CAPTURE_DATASET_SPEC"] = <
 		name = <"CAPTURE_DATASET_SPEC">
 		ancestors = <"DATASET_SPEC">
+		properties = <
+			["commit_group"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"commit_group">
+				type = <"CAPTURE_DATASET_SPEC">
+			>
+		>
+	>
+
+	["DATASET_COMMIT_GROUP"] = <
+		name = <"DATASET_COMMIT_GROUP">
+		properties = <
+			["group_id"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"group_id">
+				type = <"String">
+			>
+			["completion_step"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"completion_step">
+				type = <"Boolean">
+			>
+		>
 	>
 
 	["REVIEW_DATASET_SPEC"] = <
