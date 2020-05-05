@@ -56,7 +56,7 @@ packages = <
 		name = <"org.openehr.proc.task_planning">
 		classes = <"SYSTEM_CALL", "PARAMETER_MAPPING", "PARAMETER_DEF", "QUERY_CALL", "API_CALL",
 			"TASK_LIFECYCLE", "TIME_SPECIFIER", "CLOCK_TIME", "CALENDAR_TIME", "CUSTOMARY_TIME",  
-			"TEMPORAL_RELATION", "RESUME_TYPE"
+			"TEMPORAL_RELATION", "RESUME_TYPE", "PLAN_TIME_ORIGIN"
 		>
 		packages = <
 			["definition"] = <
@@ -81,7 +81,7 @@ packages = <
 					"SUBJECT_PRECONDITION", "TASK_COSTING", "EXECUTION_TYPE",
 
 					"TASK_WAIT", "TIMELINE_MOMENT", "MANUAL_NOTIFICATION", "SYSTEM_NOTIFICATION", "TASK_TRANSITION",
-					"PLAN_EVENT", "TIMER_EVENT", "CALENDAR_EVENT", "DELAY_EVENT", "STATE_TRIGGER",
+					"PLAN_EVENT", "TIMER_EVENT", "CALENDAR_EVENT", "STATE_TRIGGER",
 					"REMINDER", "TIMER_WAIT", "EVENT_WAIT", "EVENT_ACTION", "RESUME_ACTION", "CALLBACK_WAIT", "CALLBACK_NOTIFICATION"
 				> 
 			>
@@ -121,6 +121,12 @@ class_definitions = <
 		name = <"TASK_LIFECYCLE">
 		ancestors = <"Integer">
 		item_names = <"planned", "available", "cancelled", "aborted", "abandoned", "underway", "suspended", "resumed", "completed">
+	>
+
+	["PLAN_TIME_ORIGIN"] = (P_BMM_ENUMERATION_INTEGER) <
+		name = <"PLAN_TIME_ORIGIN">
+		ancestors = <"Integer">
+		item_names = <"current_work_plan", "current_task_plan", "inner_repeat_section", "outer_repeat_section">
 	>
 
 	["SYSTEM_CALL"] = <
@@ -1191,6 +1197,10 @@ class_definitions = <
 		ancestors = <"LOCATABLE">
 		is_abstract = <True>
 		properties = <
+			["delay"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"delay">
+				type = <"Iso8601_duration">
+			>
 			["other_details"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"other_details">
 				type = <"ITEM_STRUCTURE">
@@ -1209,6 +1219,10 @@ class_definitions = <
 			["fixed_time"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"fixed_time">
 				type = <"TIME_SPECIFIER">
+			>
+			["timeline_origin"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"timeline_origin">
+				type = <"PLAN_TIME_ORIGIN">
 			>
 		>
 	>
@@ -1302,22 +1316,6 @@ class_definitions = <
 			["success_action"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"success_action">
 				type = <"EVENT_ACTION">
-			>
-		>
-	>
-
-	["DELAY_EVENT"] = <
-		name = <"DELAY_EVENT">
-		ancestors = <"PLAN_EVENT">
-		properties = <
-			["delay"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"delay">
-				type = <"Iso8601_duration">
-				is_mandatory = <True>
-			>
-			["source"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"source">
-				type = <"PLAN_EVENT">
 			>
 		>
 	>
