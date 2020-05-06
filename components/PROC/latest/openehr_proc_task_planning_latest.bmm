@@ -981,7 +981,7 @@ class_definitions = <
 		properties = <
 			["commit_group"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"commit_group">
-				type = <"CAPTURE_DATASET_SPEC">
+				type = <"DATASET_COMMIT_GROUP">
 			>
 		>
 	>
