@@ -121,7 +121,7 @@ class_definitions = <
 	["TASK_LIFECYCLE"] = (P_BMM_ENUMERATION_INTEGER) <
 		name = <"TASK_LIFECYCLE">
 		ancestors = <"Integer">
-		item_names = <"planned", "available", "cancelled", "aborted", "abandoned", "underway", "suspended", "resumed", "completed">
+		item_names = <"planned", "available", "cancelled", "aborted", "abandoned", "underway", "suspended", "completed">
 	>
 
 	["PLAN_TIME_ORIGIN"] = (P_BMM_ENUMERATION_INTEGER) <
