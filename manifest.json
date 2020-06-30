@@ -1,0 +1,43 @@
+{
+    "id": "ITS-BMM",
+    "title": "BMM Schemas",
+    "description": "openEHR BMM Schemas",
+    "keywords": "openEHR, BMM",
+    "specifications": [
+        {
+            "id": "ITS-BMM",
+            "title": "BMM Schemas",
+            "title_short": "BMMs",
+            "description": "openEHR BMM Schemas",
+            "summary": "BMM schemas for use with openEHR systems and tools",
+            "micro_summary": "BMM schemas for Task Planning, RM, Expressions, BASE",
+            "link": "latest/components/",
+            "copyright_year": "2017",
+            "spec_status": "DEVELOPMENT",
+            "keywords": "bmm, schema, its, openehr"
+        }
+    ],
+    "expressions": [
+        {
+            "id": "ITS-BMM src",
+            "type": "url",
+            "title": "ITS-BMM on github",
+            "description": "openEHR BMM Schemas on github.",
+            "link": "https://github.com/openEHR/specifications-ITS-BMM/"
+        }
+    ],
+    "jira": {
+        "open_issues": "11161",
+        "roadmap": "SPECITS"
+    },
+    "releases": [
+        {
+            "id": "1.0.0",
+            "date": "",
+            "jira": {
+                "crs": "SPECITS/versions/12546",
+                "prs": "SPECPR/versions/12545"
+            }
+        }
+    ]
+}
