@@ -129,6 +129,7 @@ class_definitions = <
 		name = <"PLAN_TIME_ORIGIN">
 		ancestors = <"Integer">
 		item_names = <"current_work_plan", "current_task_plan", "inner_repeat_section", "outer_repeat_section">
+		item_values = <0, 1, 2, 3>
 	>
 
 	["SYSTEM_CALL"] = <
