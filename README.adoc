@@ -1,6 +1,6 @@
 # specifications-ITS-BMM
 
-BMM schemas for use with openEHR systems and tools. The repository is structured as follows:
+BMM schemas for use with openEHR systems, tools and applications. The repository is structured as follows:
 
 ----
 /original				# BMMs from original openEHR, prior to separated components
