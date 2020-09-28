@@ -1,14 +1,14 @@
--- 
+--
 -- 	component:   openEHR BMM Implementation Technology Specification
 -- 	description: openEHR Reference Model formal expression. This file is an ODIN serialisation of
---               the BMM object meta-model classes found at 
+--               the BMM object meta-model classes found at
 --               https://www.openehr.org/releases/LANG/latest/p_bmm.html
 -- 	keywords:    reference model, meta-model, archetypes
 -- 	author:      Thomas Beale <thomas.beale@openEHR.org>
 -- 	support:     https://openehr.atlassian.net/issues/?filter=11117
 -- 	copyright:   Copyright (c) 2009- openEHR Foundation <https://www.openEHR.org>
 -- 	license:     Apache 2.0 <http://www.apache.org/licenses/LICENSE-2.0.html>
--- 
+--
 
 ------------------------------------------------------
 -- BMM version on which these schemas are based.
@@ -50,21 +50,21 @@ includes = <
 packages = <
 	["org.openehr.rm.data_structures"] = <
 		name = <"org.openehr.rm.data_structures">
-		classes = <"DATA_STRUCTURE", ...> 
+		classes = <"DATA_STRUCTURE", ...>
 		packages = <
 			["item_structure"] = <
 				name = <"item_structure">
-				classes = <"ITEM_STRUCTURE", "ITEM_SINGLE", "ITEM_TABLE", "ITEM_TREE", "ITEM_LIST"> 
+				classes = <"ITEM_STRUCTURE", "ITEM_SINGLE", "ITEM_TABLE", "ITEM_TREE", "ITEM_LIST">
 				packages = <
 					["representation"] = <
 						name = <"representation">
-						classes = <"ITEM", "CLUSTER", "ELEMENT"> 
+						classes = <"ITEM", "CLUSTER", "ELEMENT">
 					>
 				>
 			>
 			["history"] = <
 				name = <"history">
-				classes = <"HISTORY", "EVENT", "POINT_EVENT", "INTERVAL_EVENT"> 
+				classes = <"HISTORY", "EVENT", "POINT_EVENT", "INTERVAL_EVENT">
 			>
 		>
 	>
@@ -73,19 +73,19 @@ packages = <
 		packages = <
 			["generic"] = <
 				name = <"generic">
-				classes = <"PARTICIPATION", "PARTY_PROXY", "PARTY_SELF", "PARTY_IDENTIFIED", "PARTY_RELATED", "AUDIT_DETAILS", "ATTESTATION", "REVISION_HISTORY", "REVISION_HISTORY_ITEM"> 
+				classes = <"PARTICIPATION", "PARTY_PROXY", "PARTY_SELF", "PARTY_IDENTIFIED", "PARTY_RELATED", "AUDIT_DETAILS", "ATTESTATION", "REVISION_HISTORY", "REVISION_HISTORY_ITEM">
 			>
 			["archetyped"] = <
 				name = <"archetyped">
-				classes = <"PATHABLE", "LOCATABLE", "LINK", "ARCHETYPED", "FEEDER_AUDIT", "FEEDER_AUDIT_DETAILS"> 
+				classes = <"PATHABLE", "LOCATABLE", "LINK", "ARCHETYPED", "FEEDER_AUDIT", "FEEDER_AUDIT_DETAILS">
 			>
 			["change_control"] = <
 				name = <"change_control">
-				classes = <"VERSIONED_OBJECT", "CONTRIBUTION", "VERSION", "ORIGINAL_VERSION", "IMPORTED_VERSION"> 
+				classes = <"VERSIONED_OBJECT", "CONTRIBUTION", "VERSION", "ORIGINAL_VERSION", "IMPORTED_VERSION">
 			>
 			["directory"] = <
 				name = <"directory">
-				classes = <"FOLDER"> 
+				classes = <"FOLDER">
 			>
 		>
 	>
@@ -212,6 +212,10 @@ class_definitions = <
 			["value"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"value">
 				type = <"DATA_VALUE">
+			>
+			["null_reason"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"null_reason">
+				type = <"DV_TEXT">
 			>
 		>
 	>
@@ -691,6 +695,10 @@ class_definitions = <
 				type = <"String">
 				is_im_runtime = <True>
 			>
+			["other_details"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"other_details">
+				type = <"ITEM_STRUCTURE">
+			>
 		>
 	>
 
@@ -889,4 +897,3 @@ class_definitions = <
 	>
 
 >
-

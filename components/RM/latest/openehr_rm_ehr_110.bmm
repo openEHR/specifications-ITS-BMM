@@ -1,4 +1,4 @@
--- 
+--
 -- 	component:   openEHR Reference Model (RM)
 -- 	description: openEHR Reference Model schema. This file format is based on the BMM specification
 --  				http://www.openehr.org/releases/BASE/latest/docs/bmm/bmm.html
@@ -7,7 +7,7 @@
 -- 	support:     https://openehr.atlassian.net/projects/SPECPR
 -- 	copyright:   Copyright (c) 2016 openEHR Foundation <https://www.openEHR.org>
 -- 	license:     Apache 2.0 <http://www.apache.org/licenses/LICENSE-2.0.html>
--- 
+--
 
 ------------------------------------------------------
 -- BMM version on which these schemas are based.
@@ -47,11 +47,11 @@ includes = <
 packages = <
 	["org.openehr.rm.ehr"] = <
 		name = <"org.openehr.rm.ehr">
-		classes = <"EHR", "EHR_ACCESS", "EHR_STATUS", "ACCESS_CONTROL_SETTINGS"> 
+		classes = <"EHR", "EHR_ACCESS", "EHR_STATUS", "ACCESS_CONTROL_SETTINGS">
 	>
 	["org.openehr.rm.composition"] = <
 		name = <"org.openehr.rm.composition">
-		classes = <"COMPOSITION", "EVENT_CONTEXT"> 
+		classes = <"COMPOSITION", "EVENT_CONTEXT">
 		packages = <
 			["content"] = <
 				name = <"content">
@@ -59,19 +59,15 @@ packages = <
 				packages = <
 					["navigation"] = <
 						name = <"navigation">
-						classes = <"SECTION", ...> 
+						classes = <"SECTION", ...>
 					>
 					["entry"] = <
 						name = <"entry">
-						classes = <"ENTRY", "CARE_ENTRY", "ADMIN_ENTRY", "OBSERVATION", "EVALUATION", "INSTRUCTION", "ACTION", "ACTIVITY", "ISM_TRANSITION", "INSTRUCTION_DETAILS"> 
+						classes = <"ENTRY", "CARE_ENTRY", "ADMIN_ENTRY", "OBSERVATION", "EVALUATION", "INSTRUCTION", "ACTION", "ACTIVITY", "ISM_TRANSITION", "INSTRUCTION_DETAILS">
 					>
 					["integration"] = <
 						name = <"integration">
-						classes = <"GENERIC_ENTRY"> 
-					>
-					["view"] = <
-						name = <"view">
-						classes = <"VIEW_ITEM", "VIEW_SECTION", "VIEW_ENTRY", "CITATION"> 
+						classes = <"GENERIC_ENTRY">
 					>
 				>
 			>
@@ -120,6 +116,14 @@ class_definitions = <
 				name = <"directory">
 				type = <"OBJECT_REF">
 			>
+			["folders"] = (P_BMM_CONTAINER_PROPERTY) <
+					name = <"folders">
+					type_def = <
+							container_type = <"List">
+							type = <"OBJECT_REF">
+					>
+					cardinality = <|>=0|>
+			>
 			["compositions"] = (P_BMM_CONTAINER_PROPERTY) <
 				name = <"compositions">
 				type_def = <
@@ -139,7 +143,7 @@ class_definitions = <
 			>
 			--
 			-- add this function to create a reachability link from EHR to COMPOSITION, which allows
-			-- correct inference that openEHR-EHR-XXX archetypes can be archetypes of COMPOSITION as 
+			-- correct inference that openEHR-EHR-XXX archetypes can be archetypes of COMPOSITION as
 			-- well as EHR objects
 			--
 			["most_recent_composition"] = (P_BMM_SINGLE_PROPERTY) <
@@ -363,7 +367,7 @@ class_definitions = <
 			>
 		>
 	>
-	
+
 	["CARE_ENTRY"] = <
 		name = <"CARE_ENTRY">
 		is_abstract = <True>
@@ -557,72 +561,4 @@ class_definitions = <
 			>
 		>
 	>
-	
-	--
-	--------------------- rm.view ------------------
-	--
-
-	["VIEW_ITEM"] = <
-		name = <"VIEW_ITEM">
-		ancestors = <"CONTENT_ITEM">
-		properties = <
-			["meta_data"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"meta_data">
-				type = <"CLUSTER">
-			>
-		>
-	>
-
-	["VIEW_SECTION"] = <
-		name = <"VIEW_SECTION">
-		ancestors = <"VIEW_ITEM">
-		properties = <
-			["items"] = (P_BMM_CONTAINER_PROPERTY) <
-				name = <"items">
-				type_def = <
-					container_type = <"List">
-					type = <"VIEW_ITEM">
-				>
-				cardinality = <|>=0|>
-			>
-		>
-	>
-
-	["VIEW_ENTRY"] = <
-		name = <"VIEW_ENTRY">
-		ancestors = <"VIEW_ITEM">
-	>
-	
-	["CITATION"] = <
-		name = <"CITATION">
-		ancestors = <"VIEW_ENTRY">
-        generic_parameter_defs = <
-            ["T"] = <
-                name = <"T">
-                conforms_to_type = <"ENTRY">
-            >
-        >
-		properties = <
-			["reference"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"reference">
-				type = <"UID_BASED_ID">
-				is_mandatory = <True>
-			>
-			["parent_reference"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"parent_reference">
-				type = <"UID_BASED_ID">
-				is_mandatory = <True>
-			>
-			["type"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"type">
-				type = <"String">
-			>
-			["resolved"] = (P_BMM_SINGLE_PROPERTY_OPEN) <
-				name = <"resolved">
-				type = <"T">
-			>
-		>
-	>
-	
 >
-
