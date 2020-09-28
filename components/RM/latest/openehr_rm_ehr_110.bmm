@@ -116,6 +116,14 @@ class_definitions = <
 				name = <"directory">
 				type = <"OBJECT_REF">
 			>
+			["folders"] = (P_BMM_CONTAINER_PROPERTY) <
+					name = <"folders">
+					type_def = <
+							container_type = <"List">
+							type = <"OBJECT_REF">
+					>
+					cardinality = <|>=0|>
+			>
 			["compositions"] = (P_BMM_CONTAINER_PROPERTY) <
 				name = <"compositions">
 				type_def = <
