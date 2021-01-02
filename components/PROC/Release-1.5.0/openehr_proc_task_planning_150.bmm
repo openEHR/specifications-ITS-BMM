@@ -55,7 +55,7 @@ packages = <
 	["org.openehr.proc.task_planning"] = <
 		name = <"org.openehr.proc.task_planning">
 		classes = <"SYSTEM_CALL", "PARAMETER_MAPPING", "PARAMETER_DEF", "QUERY_CALL", "API_CALL",
-			"TASK_LIFECYCLE", "TIME_SPECIFIER", "CLOCK_TIME", "CALENDAR_TIME", "CUSTOMARY_TIME",  
+			"TASK_LIFECYCLE", "TIME_SPECIFIER", "CLOCK_TIME", "CUSTOMARY_TIME",  
 			"TEMPORAL_RELATION", "RESUME_TYPE", "PLAN_TIME_ORIGIN"
 		>
 		packages = <
@@ -1461,18 +1461,6 @@ class_definitions = <
 			["time"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"time">
 				type = <"Iso8601_time">
-				is_mandatory = <True>
-			>
-		>
-	>
-
-	["CALENDAR_TIME"] = <
-		name = <"CALENDAR_TIME">
-		ancestors = <"TIME_SPECIFIER">
-		properties = <
-			["time"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"time">
-				type = <"Iso8601_date_time">
 				is_mandatory = <True>
 			>
 		>
