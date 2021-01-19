@@ -598,6 +598,7 @@
   <properties id="action_archetype_id">
    <name>action_archetype_id</name>
    <type>String</type>
+   <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_ehr_1.0.3</source_schema_id>
   <uid>362</uid>

@@ -667,6 +667,7 @@
   <properties id="action_archetype_id">
    <name>action_archetype_id</name>
    <type>String</type>
+   <is_mandatory>true</is_mandatory>
   </properties>
   <source_schema_id>openehr_rm_ehr_1.0.4</source_schema_id>
   <uid>516</uid>

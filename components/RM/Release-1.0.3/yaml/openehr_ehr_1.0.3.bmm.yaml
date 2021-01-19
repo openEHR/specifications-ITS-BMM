@@ -504,6 +504,7 @@ class_definitions:
                   - action_archetype_id: 
                         name: "action_archetype_id"
                         type: "String"
+                        is_mandatory: true
             source_schema_id: "openehr_ehr_1.0.3"
             uid: 362
       - ACTION: 

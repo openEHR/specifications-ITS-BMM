@@ -721,7 +721,8 @@
 				},
 				"action_archetype_id": {
 					"name": "action_archetype_id",
-					"type": "String"
+					"type": "String",
+					"is_mandatory": true
 				}
 			},
 			"source_schema_id": "openehr_rm_ehr_1.0.4",

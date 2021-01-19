@@ -700,6 +700,7 @@
 				["action_archetype_id"] = (P_BMM_SINGLE_PROPERTY) <
 					name = <"action_archetype_id">
 					type = <"String">
+					is_mandatory = <True>
 				>
 			>
 			source_schema_id = <"openehr_rm_ehr_1.0.4">
