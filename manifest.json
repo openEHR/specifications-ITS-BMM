@@ -11,7 +11,7 @@
             "description": "openEHR BMM Schemas",
             "summary": "BMM schemas for use with openEHR systems and tools",
             "micro_summary": "BMM schemas for Task Planning, RM, Expressions, BASE",
-            "link": "latest/components/",
+            "link": "components/",
             "copyright_year": "2017",
             "spec_status": "DEVELOPMENT",
             "keywords": "bmm, schema, its, openehr"
