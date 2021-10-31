@@ -49,7 +49,7 @@ packages = <
 			>
 			["interval"] = <
 				name = <"interval">
-				classes = <"Interval">
+				classes = <"Interval", "Multiplicity_interval", "Cardinality">
 			>
 			["iso8601_time"] = <
 				name = <"iso8601_time">
@@ -343,6 +343,36 @@ primitive_types = <
 			>
 		>
 	>
+    ["Cardinality"] = (P_BMM_CLASS) <
+        name = <"Cardinality">
+        ancestors = <"Any", ...>
+        properties = <
+            ["is_ordered"] = (P_BMM_SINGLE_PROPERTY) <
+                name = <"is_ordered">
+				type = <"Boolean">
+            >
+            ["is_unique"] = (P_BMM_SINGLE_PROPERTY) <
+                name = <"is_unique">
+				type = <"Boolean">
+            >
+            ["interval"] = (P_BMM_SINGLE_PROPERTY) <
+                name = <"interval">
+				type = <"Multiplicity_interval">
+                is_mandatory = <True>
+            >
+        >
+    >
+
+    ["Multiplicity_interval"] = (P_BMM_CLASS) <
+        name = <"Multiplicity_interval">
+		ancestor_defs = <
+			["Interval<Integer>"] = (P_BMM_GENERIC_TYPE) <
+				root_type = <"Interval">
+				generic_parameters = <"Integer">
+			>
+		>
+    >
+
 
 	["Hash"] = <
 		name = <"Hash">
