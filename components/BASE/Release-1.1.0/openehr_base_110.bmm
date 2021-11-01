@@ -78,7 +78,7 @@ packages = <
 			>
 			["resource"] = <
 				name = <"resource">
-				classes = <"AUTHORED_RESOURCE", "TRANSLATION_DETAILS", "RESOURCE_DESCRIPTION", "RESOURCE_DESCRIPTION_ITEM"> 
+				classes = <"AUTHORED_RESOURCE", "TRANSLATION_DETAILS", "RESOURCE_DESCRIPTION", "RESOURCE_DESCRIPTION_ITEM", "RESOURCE_ANNOTATIONS"> 
 			>
 		>
 	>
@@ -413,7 +413,6 @@ class_definitions = <
 			["namespace"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"namespace">
 				type = <"String">
-				is_mandatory = <True>
 			>
 			["type"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"type">
@@ -639,6 +638,10 @@ class_definitions = <
 				name = <"description">
 				type = <"RESOURCE_DESCRIPTION">
 			>
+			["annotations"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"annotations">
+				type = <"RESOURCE_ANNOTATIONS">
+			>
 		>
 	>
 
@@ -685,6 +688,10 @@ class_definitions = <
 				>
 				is_mandatory = <True>
 			>
+			["original_namespace"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"original_namespace">
+				type = <"String">
+			>
 			["other_contributors"] = (P_BMM_CONTAINER_PROPERTY) <
 				name = <"other_contributors">
 				type_def = <
@@ -692,6 +699,22 @@ class_definitions = <
 					type = <"String">
 				>
 				cardinality = <|>=0|>
+			>
+			["custodian_namespace"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"custodian_namespace">
+				type = <"String">
+			>
+			["custodian_organisation"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"custodian_organisation">
+				type = <"String">
+			>
+			["copyright"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"copyright">
+				type = <"String">
+			>
+			["licence"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"licence">
+				type = <"String">
 			>
 			["lifecycle_state"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"lifecycle_state">
@@ -701,6 +724,27 @@ class_definitions = <
 			["resource_package_uri"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"resource_package_uri">
 				type = <"String">
+			>
+			["ip_acknowledgements"] = (P_BMM_GENERIC_PROPERTY) <
+				name = <"ip_acknowledgements">
+				type_def = <
+					root_type = <"Hash">
+					generic_parameters = <"String", "String">
+				>
+			>
+			["references"] = (P_BMM_GENERIC_PROPERTY) <
+				name = <"references">
+				type_def = <
+					root_type = <"Hash">
+					generic_parameters = <"String", "String">
+				>
+			>
+			["conversion_details"] = (P_BMM_GENERIC_PROPERTY) <
+				name = <"conversion_details">
+				type_def = <
+					root_type = <"Hash">
+					generic_parameters = <"String", "String">
+				>
 			>
 			["other_details"] = (P_BMM_GENERIC_PROPERTY) <
 				name = <"other_details">
@@ -720,7 +764,6 @@ class_definitions = <
 					container_type = <"List">
 					type = <"RESOURCE_DESCRIPTION_ITEM">
 				>
-				is_mandatory = <True>
 				cardinality = <|>=1|>
 			>
 		>
@@ -782,4 +825,34 @@ class_definitions = <
 		>
 	>
 
+	["RESOURCE_ANNOTATIONS"] = <
+		name = <"RESOURCE_ANNOTATIONS">
+		ancestors = <"Any">
+		properties = <
+			["documentation"] = (P_BMM_GENERIC_PROPERTY) <
+				name = <"documentation">
+				type_def = <
+					root_type = <"Hash">
+                    generic_parameter_defs = <
+                        ["K"] = (P_BMM_SIMPLE_TYPE) <
+							type = <"String">
+						>
+                        ["V"] = (P_BMM_GENERIC_TYPE) <
+                            root_type = <"Hash">
+							generic_parameter_defs = <
+								["K"] = (P_BMM_SIMPLE_TYPE) <
+									type = <"String">
+								>
+								["V"] = (P_BMM_GENERIC_TYPE) <
+									root_type = <"Hash">
+									generic_parameters = <"String", "String">
+								>
+							>
+                        >
+                    >
+				>
+				is_mandatory = <True>
+			>
+		>
+	>
 >
