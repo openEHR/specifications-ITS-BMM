@@ -118,7 +118,6 @@ class_definitions = <
 
     ["ARCHETYPE"] = (P_BMM_CLASS) <
         name = <"ARCHETYPE">
-        ancestors = <"AUTHORED_RESOURCE">
         properties = <
             ["parent_archetype_id"] = (P_BMM_SINGLE_PROPERTY) <
                 name = <"parent_archetype_id">
