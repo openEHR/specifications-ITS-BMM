@@ -193,7 +193,6 @@ class_definitions = <
                     root_type = <"Hash">
                     generic_parameters = <"String", "ARCHETYPE_TERMINOLOGY">
                 >
-                is_mandatory = <True>
             >
             ["terminology_extracts"] = (P_BMM_GENERIC_PROPERTY) <
                 name = <"terminology_extracts">
