@@ -320,6 +320,23 @@ class_definitions = <
 				type = <"String">
                 is_mandatory = <True>
             >
+            ["text"] = (P_BMM_SINGLE_PROPERTY) <
+                name = <"text">
+				type = <"String">
+                is_mandatory = <True>
+            >
+            ["description"] = (P_BMM_SINGLE_PROPERTY) <
+                name = <"description">
+				type = <"String">
+                is_mandatory = <True>
+            >
+            ["other_items"] = (P_BMM_GENERIC_PROPERTY) <
+                name = <"other_items">
+                type_def = <
+                    root_type = <"Hash">
+                    generic_parameters = <"String", "String">
+                >
+            >
         >
     >
 
