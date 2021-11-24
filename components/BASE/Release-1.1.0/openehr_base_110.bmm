@@ -666,6 +666,10 @@ class_definitions = <
 				name = <"accreditation">
 				type = <"String">
 			>
+			["version_last_translated"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"version_last_translated">
+				type = <"String">
+			>
 			["other_details"] = (P_BMM_GENERIC_PROPERTY) <
 				name = <"other_details">
 				type_def = <
