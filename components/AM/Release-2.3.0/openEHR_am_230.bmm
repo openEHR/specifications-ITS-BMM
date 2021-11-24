@@ -68,7 +68,7 @@ packages = <
 				packages = <
 					["definition"] = <
 						name = <"primitive">
-						classes = <"C_REAL", "C_ORDERED", "C_BOOLEAN", "C_STRING", "C_INTEGER", "C_TERMINOLOGY_CODE",
+						classes = <"C_REAL", "C_ORDERED", "C_BOOLEAN", "C_STRING", "C_INTEGER", "C_TERMINOLOGY_CODE", "CONSTRAINT_STATUS",
 							"C_TEMPORAL", "C_TIME", "C_DATE", "C_DATE_TIME", "C_DURATION"
 						>
 					>
