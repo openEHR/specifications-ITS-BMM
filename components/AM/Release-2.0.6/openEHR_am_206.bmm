@@ -304,6 +304,14 @@ class_definitions = <
 				type = <"String">
                 is_mandatory = <True>
             >
+            ["members"] = (P_BMM_CONTAINER_PROPERTY) <
+                name = <"members">
+                type_def = <
+                    container_type = <"List">
+                    type = <"String">
+                >
+                is_mandatory = <True>
+            >
         >
     >
     ["VALUE_SET"] = (P_BMM_CLASS) <
