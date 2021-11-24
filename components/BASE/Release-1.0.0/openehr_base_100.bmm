@@ -245,7 +245,6 @@ primitive_types = <
 			["uri"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"uri">
 				type = <"Uri">
-				is_mandatory = <True>
 			>
 		>
 	>
