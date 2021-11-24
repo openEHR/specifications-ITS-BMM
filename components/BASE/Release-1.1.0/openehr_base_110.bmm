@@ -166,6 +166,7 @@ primitive_types = <
 			["value"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"value">
 				type = <"String">
+				is_mandatory = <True>
 			>
 		>
 	>
@@ -350,10 +351,12 @@ primitive_types = <
             ["is_ordered"] = (P_BMM_SINGLE_PROPERTY) <
                 name = <"is_ordered">
 				type = <"Boolean">
+                is_mandatory = <True>
             >
             ["is_unique"] = (P_BMM_SINGLE_PROPERTY) <
                 name = <"is_unique">
 				type = <"Boolean">
+                is_mandatory = <True>
             >
             ["interval"] = (P_BMM_SINGLE_PROPERTY) <
                 name = <"interval">
@@ -497,7 +500,6 @@ class_definitions = <
 			["namespace"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"namespace">
 				type = <"String">
-				is_mandatory = <True>
 			>
 			["rm_publisher"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"rm_publisher">
@@ -820,7 +822,6 @@ class_definitions = <
 					root_type = <"Hash">
 					generic_parameters = <"String", "String">
 				>
-				is_mandatory = <True>
 			>
 		>
 	>

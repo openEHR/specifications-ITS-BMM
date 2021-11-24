@@ -154,6 +154,7 @@ primitive_types = <
 			["value"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"value">
 				type = <"String">
+				is_mandatory = <True>
 			>
 		>
 	>

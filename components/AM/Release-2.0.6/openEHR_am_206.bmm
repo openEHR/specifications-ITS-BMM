@@ -1184,7 +1184,6 @@ class_definitions = <
 					root_type = <"Hash">
 					generic_parameters = <"String", "String">
 				>
-				is_mandatory = <True>
 			>
 		>
 	>
