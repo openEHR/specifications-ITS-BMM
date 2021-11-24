@@ -682,7 +682,7 @@ class_definitions = <
 
 	["RESOURCE_DESCRIPTION"] = <
 		name = <"RESOURCE_DESCRIPTION">
-		ancestors = <"Any", ...>
+		ancestors = <"Any">
 		properties = <
 			["original_author"] = (P_BMM_GENERIC_PROPERTY) <
 				name = <"original_author">
