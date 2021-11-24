@@ -1167,10 +1167,6 @@ class_definitions = <
 				name = <"misuse">
 				type = <"String">
 			>
-			["copyright"] = (P_BMM_SINGLE_PROPERTY) <
-				name = <"copyright">
-				type = <"String">
-			>
 			["original_resource_uri"] = (P_BMM_CONTAINER_PROPERTY) <
 				name = <"original_resource_uri">
 				type_def = <
