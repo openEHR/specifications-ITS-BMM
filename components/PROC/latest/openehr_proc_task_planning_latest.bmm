@@ -82,7 +82,7 @@ packages = <
 					"SUBJECT_PRECONDITION", "TASK_COSTING", "EXECUTION_TYPE",
 
 					"TASK_WAIT", "TIMELINE_MOMENT", "MANUAL_NOTIFICATION", "SYSTEM_NOTIFICATION", "TASK_TRANSITION",
-					"EVENT", "PLAN_EVENT", "TIMER_EVENT", "CALENDAR_EVENT", "STATE_TRIGGER",
+					"TP_EVENT", "PLAN_EVENT", "TIMER_EVENT", "CALENDAR_EVENT", "STATE_TRIGGER",
 					"REMINDER", "TIMER_WAIT", "EVENT_WAIT", "EVENT_ACTION", "RESUME_ACTION", "CALLBACK_WAIT", "CALLBACK_NOTIFICATION"
 				> 
 			>
@@ -454,7 +454,7 @@ class_definitions = <
 					container_type = <"List">
 					type_def = (P_BMM_GENERIC_TYPE) <
 						root_type = <"EVENT_WAIT">
-						generic_parameters = <"EVENT">
+						generic_parameters = <"TP_EVENT">
 					>
 				>
 			>
@@ -1214,15 +1214,15 @@ class_definitions = <
 		>
 	>
 
-	["EVENT"] = <
-		name = <"EVENT">
+	["TP_EVENT"] = <
+		name = <"TP_EVENT">
 		ancestors = <"LOCATABLE">
 		is_abstract = <True>
 	>
 
 	["PLAN_EVENT"] = <
 		name = <"PLAN_EVENT">
-		ancestors = <"EVENT">
+		ancestors = <"TP_EVENT">
 		is_abstract = <True>
 		properties = <
 			["delay"] = (P_BMM_SINGLE_PROPERTY) <
@@ -1277,7 +1277,7 @@ class_definitions = <
 
 	["CALLBACK_NOTIFICATION"] = <
 		name = <"CALLBACK_NOTIFICATION">
-		ancestors = <"EVENT">
+		ancestors = <"TP_EVENT">
 		properties = <
 			["task_id"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"task_id">
