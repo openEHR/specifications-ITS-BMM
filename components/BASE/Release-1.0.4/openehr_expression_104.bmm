@@ -113,6 +113,15 @@ class_definitions = <
 				name = <"tag">
 				type = <"String">
 			>
+			["string_expression"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"string_expression">
+				type = <"String">
+			>
+			["expression"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"expression">
+				type = <"String">
+                is_mandatory = <True>
+			>
 		>
 	>
 
