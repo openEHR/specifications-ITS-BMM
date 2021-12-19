@@ -49,13 +49,19 @@ packages = <
 			["expression"] = <
 				name = <"expression">
 				classes = <"STATEMENT", "VARIABLE_DECLARATION", "ASSIGNMENT", "ASSERTION", "EXPRESSION", "EXPR_VALUE", 
-					"EXTERNAL_QUERY", "EXPR_VARIABLE_REF",
-					"EXPR_LEAF", "EXPR_OPERATOR", "EXPR_LITERAL", "EXPR_UNARY_OPERATOR", 
-					"EXPR_BINARY_OPERATOR", "EXPR_VALUE_REF", "EXPR_FUNCTION", "EXPR_TYPE_DEF",
-					"TYPE_DEF_BOOLEAN", "TYPE_DEF_INTEGER", "TYPE_DEF_REAL", "TYPE_DEF_DATE", "TYPE_DEF_DATE_TIME", "TYPE_DEF_TIME", "TYPE_DEF_DURATION",
-					"TYPE_DEF_STRING", "TYPE_DEF_URI", "TYPE_DEF_TERMINOLOGY_CODE", "TYPE_DEF_OBJECT_REF",
-					"BUILTIN_FUNCTIONS", "BUILTIN_OPERATORS", "FUNCTION_DEF", "FUNCTION_DEF_BUILTIN", "OPERATOR_DEF_BUILTIN",
-					"OPERATOR_DEF"
+					"EXTERNAL_QUERY", "EXPR_VARIABLE_REF", "EXPR_LEAF", "EXPR_OPERATOR", "EXPR_LITERAL", "EXPR_UNARY_OPERATOR", 
+					"EXPR_BINARY_OPERATOR", "EXPR_VALUE_REF", "EXPR_FUNCTION",
+					"BUILTIN_FUNCTIONS", "BUILTIN_OPERATORS", "FUNCTION_DEF", "FUNCTION_DEF_BUILTIN", "OPERATOR_DEF_BUILTIN", "OPERATOR_DEF"
+				>
+				packages = <
+					["types"] = <
+						name = <"types">
+						classes = <"EXPR_TYPE_DEF",
+							"TYPE_DEF_BOOLEAN", "TYPE_DEF_INTEGER", "TYPE_DEF_REAL", 
+							"TYPE_DEF_DATE", "TYPE_DEF_DATE_TIME", "TYPE_DEF_TIME", "TYPE_DEF_DURATION",
+							"TYPE_DEF_STRING", "TYPE_DEF_URI", "TYPE_DEF_TERMINOLOGY_CODE", "TYPE_DEF_OBJECT_REF"
+						>
+					>
 				>
 			>
 		>
@@ -126,7 +132,7 @@ class_definitions = <
 			>
 			["expression"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"expression">
-				type = <"String">
+				type = <"EXPRESSION">
                 is_mandatory = <True>
 			>
 		>
@@ -280,7 +286,6 @@ class_definitions = <
 
 	["EXPR_TYPE_DEF"] = <
 		name = <"EXPR_TYPE_DEF">
-		ancestors = <"EXPR_LEAF">
 		is_abstract = <True>
 		properties = <
 			["type_name"] = (P_BMM_SINGLE_PROPERTY) <
