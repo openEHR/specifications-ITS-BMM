@@ -990,13 +990,12 @@ class_definitions = <
 				name = <"is_controlled">
 				type = <"Boolean">
 			>
-			["translations"] = (P_BMM_CONTAINER_PROPERTY) <
+			["translations"] = (P_BMM_GENERIC_PROPERTY) <
 				name = <"translations">
 				type_def = <
-					container_type = <"List">
-					type = <"TRANSLATION_DETAILS">
+					root_type = <"Hash">
+					generic_parameters = <"String", "TRANSLATION_DETAILS">
 				>
-				cardinality = <|>=1|>
 			>
 			["description"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"description">
@@ -1126,11 +1125,11 @@ class_definitions = <
 				type = <"AUTHORED_RESOURCE">
 				is_mandatory = <True>
 			>
-			["details"] = (P_BMM_CONTAINER_PROPERTY) <
+			["details"] = (P_BMM_GENERIC_PROPERTY) <
 				name = <"details">
 				type_def = <
-					container_type = <"List">
-					type = <"RESOURCE_DESCRIPTION_ITEM">
+					root_type = <"Hash">
+					generic_parameters = <"String", "RESOURCE_DESCRIPTION_ITEM">
 				>
 				cardinality = <|>=1|>
 			>
