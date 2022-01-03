@@ -844,6 +844,10 @@ class_definitions = <
                 name = <"assumed_value">
 				type = <"Duration">
             >
+            ["default_value"] = (P_BMM_SINGLE_PROPERTY) <
+                name = <"default_value">
+				type = <"Duration">
+            >
         >
     >
 
