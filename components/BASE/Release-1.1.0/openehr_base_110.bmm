@@ -161,6 +161,7 @@ primitive_types = <
 	["Iso8601_type"] = <
 		name = <"Iso8601_type">
 		documentation = <"Parent of ISO8601 types.">
+		is_abstract = <True>
 		ancestors = <"Temporal">
 		properties = <
 			["value"] = (P_BMM_SINGLE_PROPERTY) <

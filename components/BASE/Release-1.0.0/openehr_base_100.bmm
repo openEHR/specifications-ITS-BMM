@@ -148,6 +148,7 @@ primitive_types = <
 
 	["Iso8601_type"] = <
 		name = <"Iso8601_type">
+		is_abstract = <True>
 		documentation = <"Parent of ISO8601 types.">
 		ancestors = <"Ordered">
 		properties = <
