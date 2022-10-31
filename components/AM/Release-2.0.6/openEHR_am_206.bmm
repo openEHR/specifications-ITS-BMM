@@ -111,6 +111,52 @@ class_definitions = <
 	-- archetype package
 	------------------------------------------------------
 
+	["ARCHETYPE_HRID"] = <
+		name = <"ARCHETYPE_HRID">
+		ancestors = <"Any">
+		properties = <
+			["namespace"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"namespace">
+				type = <"String">
+			>
+			["rm_publisher"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"rm_publisher">
+				type = <"String">
+				is_mandatory = <True>
+			>
+			["rm_package"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"rm_package">
+				type = <"String">
+				is_mandatory = <True>
+			>
+			["rm_class"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"rm_class">
+				type = <"String">
+				is_mandatory = <True>
+			>
+			["concept_id"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"concept_id">
+				type = <"String">
+				is_mandatory = <True>
+			>
+			["release_version"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"release_version">
+				type = <"String">
+				is_mandatory = <True>
+			>
+			["version_status"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"version_status">
+				type = <"VERSION_STATUS">
+				is_mandatory = <True>
+			>
+			["build_count"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"build_count">
+				type = <"String">
+				is_mandatory = <True>
+			>
+		>
+	>
+	
     ["ARCHETYPE"] = (P_BMM_CLASS) <
         name = <"ARCHETYPE">
         properties = <

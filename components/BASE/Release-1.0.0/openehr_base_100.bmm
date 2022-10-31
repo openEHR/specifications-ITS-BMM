@@ -445,11 +445,6 @@ class_definitions = <
 		ancestors = <"OBJECT_ID">
 	>
 	
-	["ARCHETYPE_HRID"] = <
-		name = <"ARCHETYPE_HRID">
-		ancestors = <"OBJECT_ID">
-	>
-	
 	["TEMPLATE_ID"] = <
 		name = <"TEMPLATE_ID">
 		ancestors = <"OBJECT_ID">
