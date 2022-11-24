@@ -234,7 +234,7 @@ class_definitions = <
 			["other_ids"] = (P_BMM_CONTAINER_PROPERTY) <
 				name = <"other_ids">
 				type_def = <
-					container_type = <"Hash">
+					container_type = <"List">
 					type = <"String">
 				>
 				is_im_runtime = <True>
