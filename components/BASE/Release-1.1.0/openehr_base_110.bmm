@@ -723,7 +723,6 @@ class_definitions = <
 					root_type = <"Hash">
 					generic_parameters = <"String", "RESOURCE_DESCRIPTION_ITEM">
 				>
-				cardinality = <|>=1|>
 			>
 		>
 	>

@@ -1000,7 +1000,6 @@ class_definitions = <
 					type = <"RESOURCE_DESCRIPTION_ITEM">
 				>
 				is_mandatory = <True>
-				cardinality = <|>=1|>
 			>
 		>
 	>
