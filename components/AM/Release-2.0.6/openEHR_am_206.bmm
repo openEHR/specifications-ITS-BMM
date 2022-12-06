@@ -90,6 +90,15 @@ packages = <
 			>
 		>
     >
+	["org.openehr.base.base_types"] = <
+		name = <"org.openehr.base.base_types">
+		packages = <
+			["definitions"] = <
+				name = <"definitions">
+				classes = <"VALIDITY_KIND", "VERSION_STATUS">
+			>
+		>
+	>
 >
 
 ------------------------------------------------------
