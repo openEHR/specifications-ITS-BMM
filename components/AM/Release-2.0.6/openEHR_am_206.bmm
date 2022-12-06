@@ -42,7 +42,7 @@ includes = <
     ["1"] = <
         id = <"openehr_base_base_types_1.0.0">
     >
-    ["1"] = <
+    ["2"] = <
         id = <"openehr_lang_beom_1.0.0">
     >
 >
