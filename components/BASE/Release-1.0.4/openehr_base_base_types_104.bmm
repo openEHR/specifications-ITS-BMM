@@ -160,16 +160,30 @@ class_definitions = <
 		name = <"HIER_OBJECT_ID">
 		ancestors = <"UID_BASED_ID">
 	>
-	
+
 	["VERSION_TREE_ID"] = <
 		name = <"VERSION_TREE_ID">
 		ancestors = <"Any">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"value">
+				type = <"String">
+				is_mandatory = <True>
+			>
+		>
 	>
 	
 	["UID"] = <
 		name = <"UID">
 		is_abstract = <True>
 		ancestors = <"Any">
+		properties = <
+			["value"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"value">
+				type = <"String">
+				is_mandatory = <True>
+			>
+		>
 	>
 	
 	["INTERNET_ID"] = <
