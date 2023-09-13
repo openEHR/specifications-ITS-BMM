@@ -37,8 +37,8 @@ packages = <
 	["org.openehr.base.foundation_types"] = <
 		name = <"org.openehr.base.foundation_types">
 		packages = <
-			["base_types"] = <
-				name = <"base_types">
+			["primitive_types"] = <
+				name = <"primitive_types">
 				classes = <"Any", "Ordered", "Numeric", "Ordered_Numeric", "Octet", "Byte", "Boolean", "Integer", 
 					"Integer64", "Real", "Double", "Character", "String", "Uri", "Terminology_code", "Terminology_term"
 				>
@@ -52,7 +52,7 @@ packages = <
 				classes = <"Interval">
 			>
 			["time"] = <
-				name = <"iso8601_time">
+				name = <"time">
 				classes = <
 					"Date", "Time", "Date_time", "Duration",
 					"Iso8601_type", "Iso8601_date", "Iso8601_time", "Iso8601_date_time", "Iso8601_duration"
