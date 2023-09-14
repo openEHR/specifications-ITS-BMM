@@ -275,7 +275,6 @@ class_definitions = <
 	
 	["OPERATOR_KIND"] = <
 		name = <"OPERATOR_KIND">
-		is_abstract = <True>
 		properties = <
 			["identifier"] = (P_BMM_SINGLE_PROPERTY) <
 				name = <"identifier">
