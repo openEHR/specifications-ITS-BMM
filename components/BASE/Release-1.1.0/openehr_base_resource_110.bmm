@@ -138,6 +138,10 @@ class_definitions = <
 				name = <"original_namespace">
 				type = <"String">
 			>
+			["original_publisher"] = (P_BMM_SINGLE_PROPERTY) <
+				name = <"original_publisher">
+				type = <"String">
+			>
 			["other_contributors"] = (P_BMM_CONTAINER_PROPERTY) <
 				name = <"other_contributors">
 				type_def = <
