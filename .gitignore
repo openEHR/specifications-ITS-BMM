@@ -1,0 +1,6 @@
+# IDEs
+.idea/
+.vscode/
+
+# AI assistants
+.claude/settings.local.json
