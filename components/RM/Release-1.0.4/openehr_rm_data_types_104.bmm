@@ -39,7 +39,7 @@ schema_author = <"Thomas Beale <thomas.beale@openehr.org>">
 ------------------------------------------------------
 includes = <
 	["1"] = <
-		id = <"openehr_base_1.1.0">
+		id = <"openehr_base_1.0.4">
 	>
 >
 

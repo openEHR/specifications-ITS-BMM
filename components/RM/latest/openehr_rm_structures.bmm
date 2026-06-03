@@ -24,14 +24,14 @@ bmm_version = <"2.3">
 ------------------------------------------------------
 schema_name = <"rm_structures">
 rm_publisher = <"openehr">
-rm_release = <"1.1.0">
+rm_release = <"1.2.0">
 
 ------------------------------------------------------
 -- schema documentation
 ------------------------------------------------------
-schema_revision = <"1.1.0.1">
+schema_revision = <"1.2.0.1">
 schema_lifecycle_state = <"stable">
-schema_description = <"openEHR Release 1.1.0 structures schema">
+schema_description = <"openEHR Release 1.2.0 structures schema">
 schema_author = <"Thomas Beale <thomas.beale@openehr.org>">
 
 ------------------------------------------------------
@@ -39,7 +39,7 @@ schema_author = <"Thomas Beale <thomas.beale@openehr.org>">
 ------------------------------------------------------
 includes = <
 	["1"] = <
-		id = <"openehr_rm_data_types_1.1.0">
+		id = <"openehr_rm_data_types_1.2.0">
 	>
 >
 
