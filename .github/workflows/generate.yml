@@ -1,0 +1,78 @@
+# Regenerates the ODIN and YAML serializations whenever BMM JSON schemas
+# change, keeping all three serializations consistent on master.
+#
+# Triggered by:
+#  - repository_dispatch (type `bmm-json-updated`) sent by a specifications-*
+#    repository after a push that touched its computable/BMM/*.bmm.json files
+#    (see .github/sender-workflow-example.yml). The payload identifies the
+#    sender: { "repo": "<owner>/<name>", "sha": "<commit sha>" }. The changed
+#    JSON files are imported from the sender checkout before regeneration.
+#  - push to master touching components/*/json/ — safety net for JSON files
+#    committed here directly (note: pushes made by this workflow itself use
+#    GITHUB_TOKEN and therefore do not re-trigger it).
+#  - workflow_dispatch — manual re-run.
+#
+# The regenerated files are committed together with the imported JSON in a
+# single commit, pushed directly to master.
+
+name: Generate ODIN/YAML
+
+on:
+  repository_dispatch:
+    types: [bmm-json-updated]
+  push:
+    branches: [master]
+    paths:
+      - 'components/*/json/*.bmm.json'
+  workflow_dispatch:
+
+# Serialize runs so concurrent dispatches do not race the push to master.
+concurrency:
+  group: generate
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this repository
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Checkout sender repository
+        if: github.event_name == 'repository_dispatch'
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.event.client_payload.repo }}
+          ref: ${{ github.event.client_payload.sha }}
+          path: .sender
+
+      - name: Import updated BMM JSON schemas
+        if: github.event_name == 'repository_dispatch'
+        run: |
+          make import SRC=.sender
+          rm -rf .sender
+
+      - name: Regenerate ODIN and YAML
+        run: make generate
+
+      - name: Commit and push
+        run: |
+          git add components
+          if git diff --cached --quiet; then
+            echo "Nothing changed; no commit needed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
+            msg="Update BMM schemas from ${{ github.event.client_payload.repo }}@${{ github.event.client_payload.sha }}"
+          else
+            msg="Regenerate ODIN/YAML serializations from BMM JSON"
+          fi
+          git commit -m "$msg"
+          git push origin master

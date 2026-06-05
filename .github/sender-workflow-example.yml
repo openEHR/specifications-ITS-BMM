@@ -1,0 +1,35 @@
+# Template for specifications-* repositories that maintain BMM JSON schemas.
+#
+# Copy this file to .github/workflows/notify-its-bmm.yml in the sender
+# repository (NOT here — outside workflows/, this file is inert). On every
+# push to the main branch that touches computable/BMM/*.bmm.json, it notifies
+# openEHR/specifications-ITS-BMM via repository_dispatch; the ITS-BMM
+# `generate` workflow then imports the changed JSON, regenerates ODIN/YAML,
+# and commits all serializations together.
+#
+# Requires the secret SPECIFICATIONS_ITS_BMM_TOKEN — preferably defined once
+# at organization level — holding a fine-grained PAT or GitHub App token with
+# `contents: read & write` on openEHR/specifications-ITS-BMM (write access is
+# what the repository_dispatch API requires; the default GITHUB_TOKEN cannot
+# reach another repository).
+
+name: Notify specifications-ITS-BMM
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'computable/BMM/*.bmm.json'
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send repository_dispatch to specifications-ITS-BMM
+        env:
+          GH_TOKEN: ${{ secrets.SPECIFICATIONS_ITS_BMM_TOKEN }}
+        run: |
+          gh api repos/openEHR/specifications-ITS-BMM/dispatches \
+            -f event_type=bmm-json-updated \
+            -f 'client_payload[repo]=${{ github.repository }}' \
+            -f 'client_payload[sha]=${{ github.sha }}'

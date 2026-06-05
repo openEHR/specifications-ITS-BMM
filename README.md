@@ -21,3 +21,11 @@ The repository is structured as follows:
 ```
 
 Each component directory contains `odin`, `json` and `yaml` subdirectories, one file per component release, named as `openehr_<component>_<release>.bmm[.json|.yaml]`.
+
+## Update flow
+
+The `json` files are the source of truth; the `odin` and `yaml` files are generated from them by the [bmm-publisher](https://github.com/openEHR/bmm-publisher) tool — do not edit them by hand.
+
+Schema changes are made in the corresponding `specifications-*` repository (under `computable/BMM/`). On push, that repository notifies this one via `repository_dispatch` (see `.github/sender-workflow-example.yml`); the [Generate ODIN/YAML](.github/workflows/generate.yml) workflow then imports the changed JSON, regenerates the ODIN/YAML serializations, and commits all three together.
+
+The same pipeline can be run locally with the `Makefile` (requires docker) — run `make help` for an overview.

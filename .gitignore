@@ -1,3 +1,6 @@
+# Build intermediates (bmm-publisher output staging)
+.build/
+
 # IDEs
 .idea/
 .vscode/

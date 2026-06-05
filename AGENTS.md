@@ -4,7 +4,7 @@ Guidance for AI assistants working in this repository.
 
 ## What this repository is
 
-Machine-readable BMM (Basic Meta-Model) schemas of the openEHR component models (AM, BASE, LANG, RM, TERM), consumed by openEHR systems, tools and SDKs. This is a schema-artifact repository: there is **no build system, no test suite, and no linter**. Do not search for build/test commands — they don't exist. Validation of BMM schemas is done externally with openEHR tooling (e.g. Archie, ADL Workbench).
+Machine-readable BMM (Basic Meta-Model) schemas of the openEHR component models (AM, BASE, LANG, RM, TERM), consumed by openEHR systems, tools and SDKs. This is a schema-artifact repository: there is **no test suite and no linter**; the only tooling is a `Makefile` that regenerates the ODIN/YAML serializations from the JSON (see below). Validation of BMM schemas is done externally with openEHR tooling (e.g. Archie, ADL Workbench).
 
 ## Structure
 
@@ -27,9 +27,10 @@ components/<COMPONENT>/{odin,json,yaml}/openehr_<component>_<release>.bmm[.json|
 
 ## Source of truth and update flow
 
-- At this time, the `json` files are the **source of truth**; they are maintained upstream in each respective repository, and the copies here track them.
+- The `json` files in this repository are the **source of truth** for generation; the *working* copies are maintained in each component's `openEHR/specifications-*` repository (under `computable/BMM/`), and changes flow here automatically.
 - The `odin` and `yaml` files are **generated** from the JSON by the `bmm-publisher` tool — do **not** edit them by hand. A schema change lands here as an updated JSON plus regenerated ODIN/YAML, with `schema_revision` bumped consistently across all three.
-- Synchronization is currently a manual process; scripts and GitHub Actions to automate it are planned but do not exist yet. Do not invent or assume sync/build commands.
+- Update flow (see `Makefile` and `.github/workflows/generate.yml`): a push to a `specifications-*` repo touching `computable/BMM/*.bmm.json` sends a `repository_dispatch` (type `bmm-json-updated`) to this repo; the `generate` workflow imports the changed JSON (`make import SRC=<sender checkout>`), regenerates ODIN/YAML (`make generate`), and pushes all serializations to `master` in a single commit. `.github/sender-workflow-example.yml` is the template the sender repos copy.
+- The same `Makefile` works locally (requires docker): `make help` lists the targets; `make generate` regenerates stale ODIN/YAML from the JSON.
 - Keep `manifest.json` (component list, releases, `spec_status`) in step with schema changes; it drives the listing on specifications.openehr.org.
 
 ## History
