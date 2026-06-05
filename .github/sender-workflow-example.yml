@@ -7,11 +7,14 @@
 # `generate` workflow then imports the changed JSON, regenerates ODIN/YAML,
 # and commits all serializations together.
 #
-# Requires the secret SPECIFICATIONS_ITS_BMM_TOKEN — preferably defined once
-# at organization level — holding a fine-grained PAT or GitHub App token with
-# `contents: read & write` on openEHR/specifications-ITS-BMM (write access is
-# what the repository_dispatch API requires; the default GITHUB_TOKEN cannot
-# reach another repository).
+# Authentication uses the org-owned `openehr-bmm-sync` GitHub App (the
+# default GITHUB_TOKEN cannot reach another repository): the workflow mints a
+# short-lived (1 h) installation token scoped to specifications-ITS-BMM. It
+# relies on two organization-level Actions entries, both visible to the
+# sender repositories (see docs/github-app-setup-request.md in
+# specifications-ITS-BMM):
+#   - variable BMM_SYNC_APP_ID          — the App's numeric id
+#   - secret   BMM_SYNC_APP_PRIVATE_KEY — the App's private key (PEM)
 
 name: Notify specifications-ITS-BMM
 
@@ -25,9 +28,18 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
+      - name: Mint installation token
+        id: app-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.BMM_SYNC_APP_ID }}
+          private-key: ${{ secrets.BMM_SYNC_APP_PRIVATE_KEY }}
+          owner: openEHR
+          repositories: specifications-ITS-BMM
+
       - name: Send repository_dispatch to specifications-ITS-BMM
         env:
-          GH_TOKEN: ${{ secrets.SPECIFICATIONS_ITS_BMM_TOKEN }}
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
           gh api repos/openEHR/specifications-ITS-BMM/dispatches \
             -f event_type=bmm-json-updated \
