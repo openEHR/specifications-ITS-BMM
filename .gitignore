@@ -7,3 +7,15 @@
 
 # AI assistants
 .claude/settings.local.json
+
+# Backup files
+*.bak
+
+# temp files
+temp/
+
+# env file
+.env
+
+# Git worktrees (isolated feature checkouts)
+.worktrees/
